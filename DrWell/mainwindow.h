@@ -8,6 +8,13 @@
 //#include "telaregistro.h"
 class TelaLogin;
 class TelaRegistro;
+class TelaAgendaCompleta;
+class TelaGerenciarProntuarios;
+class TelaHistoricoMedico;
+class TelaInicialAdministrador;
+class TelaInicialMedico;
+class TelaInicialSecretario;
+
 
 
 
@@ -33,5 +40,11 @@ private:
 
     TelaLogin* telaLogin;
     TelaRegistro* telaRegistro;
+    TelaAgendaCompleta* telaAgendaCompleta;
+    TelaGerenciarProntuarios* telaGerenciarProntuarios;
+    TelaHistoricoMedico* telaHistoricoMedico;
+    TelaInicialAdministrador* telaInicialAdministrador;
+    TelaInicialMedico* telaInicialMedico;
+    TelaInicialSecretario* telaInicialSecretario;
 };
 #endif // MAINWINDOW_H

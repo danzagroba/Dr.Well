@@ -3,8 +3,12 @@
 
 #include "telalogin.h"
 #include "telaregistro.h"
-#include "ui_telalogin.h"
-#include "ui_telaregistro.h"
+#include "telaagendacompleta.h"
+#include "telagerenciarprontuarios.h"
+#include "telahistoricomedico.h"
+#include "telainicialadministrador.h"
+#include "telainicialmedico.h"
+#include "telainicialsecretario.h"
 
 #include <iostream>
 using namespace std;
@@ -16,8 +20,14 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
     telaLogin = new TelaLogin(this);
-
     telaRegistro = new TelaRegistro(this);
+    telaAgendaCompleta = new TelaAgendaCompleta(this);
+    telaGerenciarProntuarios = new TelaGerenciarProntuarios(this);
+    telaHistoricoMedico = new TelaHistoricoMedico(this);
+    telaInicialAdministrador = new TelaInicialAdministrador(this);
+    telaInicialMedico = new TelaInicialMedico(this);
+    telaInicialSecretario = new TelaInicialSecretario(this);
+
 
     ui->stackedWidget->addWidget(telaLogin);
     ui->stackedWidget->addWidget(telaRegistro);
