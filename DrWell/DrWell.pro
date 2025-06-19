@@ -45,7 +45,6 @@ HEADERS += \
     telaagendacompleta.h \
     telagerenciarprontuarios.h \
     telahistoricomedico.h \
-    telainicialmedico.h \
     telalogin.h \
     telaregistro.h
 
@@ -57,7 +56,6 @@ FORMS += \
     telaagendacompleta.ui \
     telagerenciarprontuarios.ui \
     telahistoricomedico.ui \
-    telainicialmedico.ui \
     telalogin.ui \
     telaregistro.ui
 
