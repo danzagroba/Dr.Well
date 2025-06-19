@@ -20,6 +20,7 @@ SOURCES += \
     Usuario.cpp \
     main.cpp \
     mainwindow.cpp \
+    telainicialmedico.cpp \
     telalogin.cpp \
     telaregistro.cpp \
     GerenciadorBanco.cpp
@@ -35,12 +36,14 @@ HEADERS += \
     Secretario.h \
     Usuario.h \
     mainwindow.h \
+    telainicialmedico.h \
     telalogin.h \
     telaregistro.h \
     GerenciadorBanco.h
 
 FORMS += \
     mainwindow.ui \
+    telainicialmedico.ui \
     telalogin.ui \
     telaregistro.ui
 
