@@ -29,7 +29,7 @@ public:
         TelaRegistro->resize(320, 240);
         buttonBox = new QDialogButtonBox(TelaRegistro);
         buttonBox->setObjectName("buttonBox");
-        buttonBox->setGeometry(QRect(10, 200, 301, 32));
+        buttonBox->setGeometry(QRect(0, 150, 301, 32));
         buttonBox->setOrientation(Qt::Orientation::Horizontal);
         buttonBox->setStandardButtons(QDialogButtonBox::StandardButton::Cancel|QDialogButtonBox::StandardButton::Ok);
 
