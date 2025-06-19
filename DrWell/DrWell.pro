@@ -28,8 +28,6 @@ SOURCES += \
     telaregistro.cpp \
     telainicialmedico.cpp \
     telainicialsecretario.cpp \
-    telalogin.cpp \
-    telaregistro.cpp \
 
 HEADERS += \
     Administrador.h \
