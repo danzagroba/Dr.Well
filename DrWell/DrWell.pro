@@ -21,6 +21,11 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     telainicialadministrador.cpp \
+    telaagendacompleta.cpp \
+    telagerenciarprontuarios.cpp \
+    telahistoricomedico.cpp \
+    telalogin.cpp \
+    telaregistro.cpp \
     telainicialmedico.cpp \
     telainicialsecretario.cpp \
     telalogin.cpp \
@@ -39,6 +44,10 @@ HEADERS += \
     telainicialadministrador.h \
     telainicialmedico.h \
     telainicialsecretario.h \
+    telaagendacompleta.h \
+    telagerenciarprontuarios.h \
+    telahistoricomedico.h \
+    telainicialmedico.h \
     telalogin.h \
     telaregistro.h
 
@@ -47,6 +56,10 @@ FORMS += \
     telainicialadministrador.ui \
     telainicialmedico.ui \
     telainicialsecretario.ui \
+    telaagendacompleta.ui \
+    telagerenciarprontuarios.ui \
+    telahistoricomedico.ui \
+    telainicialmedico.ui \
     telalogin.ui \
     telaregistro.ui
 
