@@ -4,6 +4,11 @@
 #include <QMainWindow>
 #include "Clinica.h"
 #include "Consulta.h"
+//#include "telalogin.h"
+//#include "telaregistro.h"
+class TelaLogin;
+class TelaRegistro;
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -19,7 +24,13 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+    void irParaTelaLogin();
+    void irParaTelaRegistro();
+
 private:
     Ui::MainWindow *ui;
+
+    TelaLogin* telaLogin;
+    TelaRegistro* telaRegistro;
 };
 #endif // MAINWINDOW_H

@@ -1,13 +1,13 @@
 #ifndef TELAREGISTRO_H
 #define TELAREGISTRO_H
 
-#include <QDialog>
+#include <QWidget>
 
 namespace Ui {
 class TelaRegistro;
 }
 
-class TelaRegistro : public QDialog
+class TelaRegistro : public QWidget
 {
     Q_OBJECT
 

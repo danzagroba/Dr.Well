@@ -41,9 +41,11 @@ public:
         stackedWidget->setGeometry(QRect(10, 10, 781, 561));
         page = new QWidget();
         page->setObjectName("page");
+        page->setAutoFillBackground(true);
         stackedWidget->addWidget(page);
         page_2 = new QWidget();
         page_2->setObjectName("page_2");
+        page_2->setAutoFillBackground(true);
         stackedWidget->addWidget(page_2);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);

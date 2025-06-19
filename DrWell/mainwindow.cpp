@@ -1,6 +1,11 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+#include "telalogin.h"
+#include "telaregistro.h"
+#include "ui_telalogin.h"
+#include "ui_telaregistro.h"
+
 #include <iostream>
 using namespace std;
 
@@ -9,7 +14,20 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    Clinica drWell("12.345.678/0001-99");
+
+    telaLogin = new TelaLogin(this);
+
+    telaRegistro = new TelaRegistro(this);
+
+    ui->stackedWidget->addWidget(telaLogin);
+    ui->stackedWidget->addWidget(telaRegistro);
+
+    connect(telaLogin, &TelaLogin::registroRequisitado, this, &MainWindow::irParaTelaRegistro);
+
+
+    irParaTelaLogin();
+
+    /*Clinica drWell("12.345.678/0001-99");
 
     // 2. Cria as pessoas usando ponteiros inteligentes
     auto medico1 = std::make_shared<Medico>("CRM123", "Dr. House", "111.222.333-44", "house@email.com");
@@ -36,10 +54,20 @@ MainWindow::MainWindow(QWidget *parent)
     cout << "\n" << paciente1->getHistorico() << std::endl;
 
     // O secretário agenda a consulta
-    secretario1->agendarConsulta(consulta1);
+    secretario1->agendarConsulta(consulta1);*/
+    this->setAutoFillBackground(true);
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+
+void MainWindow::irParaTelaRegistro() {
+    ui->stackedWidget->setCurrentWidget(telaRegistro);
+}
+
+void MainWindow::irParaTelaLogin() {
+    ui->stackedWidget->setCurrentWidget(telaLogin);
 }
