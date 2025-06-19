@@ -64,6 +64,43 @@ void GerenciadorBanco::inicializar(){
             nome TEXT NOT NULL
         )
         )";
-    qDebug() << "Inicializando: Verificando/Criando tabela de Usuários...";
     this->criarTabela(sqlUsuarios);
+
+    // QString sqlInsereExemplo = R"(
+    //     INSERT INTO usuarios (nome) VALUES ('João Gabriel Klug Teixeira');
+    // )";
+    QString sqlInsereExemplo = R"(
+        DELETE FROM usuarios WHERE nome = 'Daniel';
+    )";
+
+    qDebug() << "Inicializando: Verificando/Criando tabela de Usuários...";
+
+    // Criamos um objeto de query para executar o comando INSERT
+    QSqlQuery queryInsert(m_db); // Associa a query com nossa conexão m_db
+    if (!queryInsert.prepare(sqlInsereExemplo)) {
+        qWarning() << "Erro ao preparar o INSERT:" << queryInsert.lastError().text();
+    }
+    if (!queryInsert.exec()) {
+        qWarning() << "Erro ao executar o INSERT:" << queryInsert.lastError().text();
+    }
+
+    // --- 3. CONSULTAR E IMPRIMIR OS DADOS ---
+    qDebug() << "\n--- Conteúdo Atual da Tabela 'usuarios' ---";
+    QString sqlSelect = "SELECT id, nome FROM usuarios";
+
+    QSqlQuery querySelect(m_db);
+    if (!querySelect.exec(sqlSelect)) {
+        qWarning() << "Erro ao executar o SELECT:" << querySelect.lastError().text();
+        return; // Sai da função se a consulta falhar
+    }
+
+    // Loop para percorrer cada linha do resultado
+    while (querySelect.next()) {
+        int id = querySelect.value("id").toInt();
+        QString nome = querySelect.value("nome").toString();
+
+        // Imprime os dados no console de 'Saída da Aplicação'
+        qDebug() << "ID:" << id << "| Nome:" << nome;
+    }
+    qDebug() << "------------------------------------------\n";
 }
