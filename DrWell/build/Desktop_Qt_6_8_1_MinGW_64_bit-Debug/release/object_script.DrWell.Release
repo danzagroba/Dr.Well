@@ -1,0 +1,11 @@
+release/Administrador.o
+release/Clinica.o
+release/Consulta.o
+release/Medico.o
+release/Paciente.o
+release/Pessoa.o
+release/Secretario.o
+release/Usuario.o
+release/main.o
+release/mainwindow.o
+release/moc_mainwindow.o

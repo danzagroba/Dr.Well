@@ -1,0 +1,11 @@
+debug/Administrador.o
+debug/Clinica.o
+debug/Consulta.o
+debug/Medico.o
+debug/Paciente.o
+debug/Pessoa.o
+debug/Secretario.o
+debug/Usuario.o
+debug/main.o
+debug/mainwindow.o
+debug/moc_mainwindow.o

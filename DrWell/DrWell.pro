@@ -18,7 +18,9 @@ SOURCES += \
     Secretario.cpp \
     Usuario.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    telalogin.cpp \
+    telaregistro.cpp
 
 HEADERS += \
     Administrador.h \
@@ -29,10 +31,14 @@ HEADERS += \
     Pessoa.h \
     Secretario.h \
     Usuario.h \
-    mainwindow.h
+    mainwindow.h \
+    telalogin.h \
+    telaregistro.h
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    telalogin.ui \
+    telaregistro.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

@@ -27,7 +27,7 @@ MainWindow::MainWindow(QWidget *parent)
     drWell.listarPessoas();
 
     // 5. Cria uma consulta, ligando médico e paciente
-    auto consulta1 = new Consulta(101, medico1, paciente1, std::chrono::system_clock::now());
+    auto consulta1 = make_shared<Consulta>(101, medico1, paciente1, std::chrono::system_clock::now());
 
     // Adiciona a consulta ao histórico do paciente
     paciente1->adicionarConsulta(consulta1);
