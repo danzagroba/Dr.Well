@@ -4,19 +4,19 @@
 #include <QWidget>
 
 namespace Ui {
-class telaAgendaCompleta;
+class TelaAgendaCompleta;
 }
 
-class telaAgendaCompleta : public QWidget
+class TelaAgendaCompleta : public QWidget
 {
     Q_OBJECT
 
 public:
-    explicit telaAgendaCompleta(QWidget *parent = nullptr);
-    ~telaAgendaCompleta();
+    explicit TelaAgendaCompleta(QWidget *parent = nullptr);
+    ~TelaAgendaCompleta();
 
 private:
-    Ui::telaAgendaCompleta *ui;
+    Ui::TelaAgendaCompleta *ui;
 };
 
 #endif // TELAAGENDACOMPLETA_H

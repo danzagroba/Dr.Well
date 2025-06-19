@@ -1,14 +1,14 @@
 #include "telagerenciarprontuarios.h"
 #include "ui_telagerenciarprontuarios.h"
 
-telaGerenciarProntuarios::telaGerenciarProntuarios(QWidget *parent)
+TelaGerenciarProntuarios::TelaGerenciarProntuarios(QWidget *parent)
     : QWidget(parent)
-    , ui(new Ui::telaGerenciarProntuarios)
+    , ui(new Ui::TelaGerenciarProntuarios)
 {
     ui->setupUi(this);
 }
 
-telaGerenciarProntuarios::~telaGerenciarProntuarios()
+TelaGerenciarProntuarios::~TelaGerenciarProntuarios()
 {
     delete ui;
 }

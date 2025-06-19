@@ -4,19 +4,19 @@
 #include <QWidget>
 
 namespace Ui {
-class telaGerenciarProntuarios;
+class TelaGerenciarProntuarios;
 }
 
-class telaGerenciarProntuarios : public QWidget
+class TelaGerenciarProntuarios : public QWidget
 {
     Q_OBJECT
 
 public:
-    explicit telaGerenciarProntuarios(QWidget *parent = nullptr);
-    ~telaGerenciarProntuarios();
+    explicit TelaGerenciarProntuarios(QWidget *parent = nullptr);
+    ~TelaGerenciarProntuarios();
 
 private:
-    Ui::telaGerenciarProntuarios *ui;
+    Ui::TelaGerenciarProntuarios *ui;
 };
 
 #endif // TELAGERENCIARPRONTUARIOS_H

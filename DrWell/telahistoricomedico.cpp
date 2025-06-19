@@ -1,14 +1,14 @@
 #include "telahistoricomedico.h"
 #include "ui_telahistoricomedico.h"
 
-telaVisualizarPaciente::telaVisualizarPaciente(QWidget *parent)
+TelaVisualizarPaciente::TelaVisualizarPaciente(QWidget *parent)
     : QWidget(parent)
-    , ui(new Ui::telaVisualizarPaciente)
+    , ui(new Ui::TelaHistoricoMedico)
 {
     ui->setupUi(this);
 }
 
-telaVisualizarPaciente::~telaVisualizarPaciente()
+TelaVisualizarPaciente::~TelaVisualizarPaciente()
 {
     delete ui;
 }

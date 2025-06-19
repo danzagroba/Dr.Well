@@ -10,6 +10,7 @@ class TelaLogin;
 class TelaRegistro;
 
 
+
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;

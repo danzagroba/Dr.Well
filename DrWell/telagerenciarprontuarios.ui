@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>telaGerenciarProntuarios</class>
- <widget class="QWidget" name="telaGerenciarProntuarios">
+ <class>TelaGerenciarProntuarios</class>
+ <widget class="QWidget" name="TelaGerenciarProntuarios">
   <property name="geometry">
    <rect>
     <x>0</x>

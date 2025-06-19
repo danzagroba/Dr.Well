@@ -4,19 +4,19 @@
 #include <QWidget>
 
 namespace Ui {
-class telainicialadministrador;
+class TelaInicialAdministrador;
 }
 
-class telainicialadministrador : public QWidget
+class TelaInicialAdministrador : public QWidget
 {
     Q_OBJECT
 
 public:
-    explicit telainicialadministrador(QWidget *parent = nullptr);
-    ~telainicialadministrador();
+    explicit TelaInicialAdministrador(QWidget *parent = nullptr);
+    ~TelaInicialAdministrador();
 
 private:
-    Ui::telainicialadministrador *ui;
+    Ui::TelaInicialAdministrador *ui;
 };
 
 #endif // TELAINICIALADMINISTRADOR_H

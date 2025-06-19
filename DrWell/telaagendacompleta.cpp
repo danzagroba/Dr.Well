@@ -1,14 +1,14 @@
 #include "telaagendacompleta.h"
 #include "ui_telaagendacompleta.h"
 
-telaAgendaCompleta::telaAgendaCompleta(QWidget *parent)
+TelaAgendaCompleta::TelaAgendaCompleta(QWidget *parent)
     : QWidget(parent)
-    , ui(new Ui::telaAgendaCompleta)
+    , ui(new Ui::TelaAgendaCompleta)
 {
     ui->setupUi(this);
 }
 
-telaAgendaCompleta::~telaAgendaCompleta()
+TelaAgendaCompleta::~TelaAgendaCompleta()
 {
     delete ui;
 }

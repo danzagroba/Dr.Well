@@ -4,19 +4,19 @@
 #include <QWidget>
 
 namespace Ui {
-class telaVisualizarPaciente;
+class TelaHistoricoMedico;
 }
 
-class telaVisualizarPaciente : public QWidget
+class TelaVisualizarPaciente : public QWidget
 {
     Q_OBJECT
 
 public:
-    explicit telaVisualizarPaciente(QWidget *parent = nullptr);
-    ~telaVisualizarPaciente();
+    explicit TelaVisualizarPaciente(QWidget *parent = nullptr);
+    ~TelaVisualizarPaciente();
 
 private:
-    Ui::telaVisualizarPaciente *ui;
+    Ui::TelaHistoricoMedico *ui;
 };
 
 #endif // TELAHISTORICOMEDICO_H

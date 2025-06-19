@@ -1,14 +1,14 @@
 #include "telainicialadministrador.h"
 #include "ui_telainicialadministrador.h"
 
-telainicialadministrador::telainicialadministrador(QWidget *parent)
+TelaInicialAdministrador::TelaInicialAdministrador(QWidget *parent)
     : QWidget(parent)
-    , ui(new Ui::telainicialadministrador)
+    , ui(new Ui::TelaInicialAdministrador)
 {
     ui->setupUi(this);
 }
 
-telainicialadministrador::~telainicialadministrador()
+TelaInicialAdministrador::~TelaInicialAdministrador()
 {
     delete ui;
 }
