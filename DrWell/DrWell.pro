@@ -23,13 +23,11 @@ SOURCES += \
     telainicialmedico.cpp \
     telalogin.cpp \
     telaregistro.cpp \
-    GerenciadorBanco.cpp
 
 HEADERS += \
     Administrador.h \
     Clinica.h \
     Consulta.h \
-    GerenciadorBanco.h \
     Medico.h \
     Paciente.h \
     Pessoa.h \
@@ -38,8 +36,7 @@ HEADERS += \
     mainwindow.h \
     telainicialmedico.h \
     telalogin.h \
-    telaregistro.h \
-    GerenciadorBanco.h
+    telaregistro.h
 
 FORMS += \
     mainwindow.ui \
