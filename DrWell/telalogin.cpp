@@ -20,3 +20,9 @@ void TelaLogin::on_pushButton_2_clicked()
     emit registroRequisitado();
 }
 
+
+void TelaLogin::on_pushButton_clicked()
+{
+
+}
+

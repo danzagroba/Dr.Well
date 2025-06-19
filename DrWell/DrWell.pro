@@ -20,11 +20,17 @@ SOURCES += \
     Usuario.cpp \
     main.cpp \
     mainwindow.cpp \
+<<<<<<< HEAD
     telaagendacompleta.cpp \
     telagerenciarprontuarios.cpp \
     telahistoricomedico.cpp \
     telalogin.cpp \
     telaregistro.cpp
+=======
+    telainicialmedico.cpp \
+    telalogin.cpp \
+    telaregistro.cpp \
+>>>>>>> main
 
 HEADERS += \
     Administrador.h \
@@ -36,17 +42,25 @@ HEADERS += \
     Secretario.h \
     Usuario.h \
     mainwindow.h \
+<<<<<<< HEAD
     telaagendacompleta.h \
     telagerenciarprontuarios.h \
     telahistoricomedico.h \
+=======
+    telainicialmedico.h \
+>>>>>>> main
     telalogin.h \
     telaregistro.h
 
 FORMS += \
     mainwindow.ui \
+<<<<<<< HEAD
     telaagendacompleta.ui \
     telagerenciarprontuarios.ui \
     telahistoricomedico.ui \
+=======
+    telainicialmedico.ui \
+>>>>>>> main
     telalogin.ui \
     telaregistro.ui
 
