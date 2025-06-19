@@ -8,4 +8,8 @@ release/Secretario.o
 release/Usuario.o
 release/main.o
 release/mainwindow.o
+release/telalogin.o
+release/telaregistro.o
 release/moc_mainwindow.o
+release/moc_telalogin.o
+release/moc_telaregistro.o
