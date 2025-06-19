@@ -20,6 +20,9 @@ SOURCES += \
     Usuario.cpp \
     main.cpp \
     mainwindow.cpp \
+    telaagendacompleta.cpp \
+    telagerenciarprontuarios.cpp \
+    telahistoricomedico.cpp \
     telalogin.cpp \
     telaregistro.cpp \
     GerenciadorBanco.cpp
@@ -35,12 +38,18 @@ HEADERS += \
     Secretario.h \
     Usuario.h \
     mainwindow.h \
+    telaagendacompleta.h \
+    telagerenciarprontuarios.h \
+    telahistoricomedico.h \
     telalogin.h \
     telaregistro.h \
     GerenciadorBanco.h
 
 FORMS += \
     mainwindow.ui \
+    telaagendacompleta.ui \
+    telagerenciarprontuarios.ui \
+    telahistoricomedico.ui \
     telalogin.ui \
     telaregistro.ui
 
