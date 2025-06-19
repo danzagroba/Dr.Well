@@ -24,14 +24,12 @@ SOURCES += \
     telagerenciarprontuarios.cpp \
     telahistoricomedico.cpp \
     telalogin.cpp \
-    telaregistro.cpp \
-    GerenciadorBanco.cpp
+    telaregistro.cpp
 
 HEADERS += \
     Administrador.h \
     Clinica.h \
     Consulta.h \
-    GerenciadorBanco.h \
     Medico.h \
     Paciente.h \
     Pessoa.h \
@@ -42,8 +40,7 @@ HEADERS += \
     telagerenciarprontuarios.h \
     telahistoricomedico.h \
     telalogin.h \
-    telaregistro.h \
-    GerenciadorBanco.h
+    telaregistro.h
 
 FORMS += \
     mainwindow.ui \
