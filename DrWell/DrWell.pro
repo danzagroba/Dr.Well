@@ -1,4 +1,5 @@
 QT       += core gui
+QT       += sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -20,12 +21,14 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     telalogin.cpp \
-    telaregistro.cpp
+    telaregistro.cpp \
+    GerenciadorBanco.cpp
 
 HEADERS += \
     Administrador.h \
     Clinica.h \
     Consulta.h \
+    GerenciadorBanco.h \
     Medico.h \
     Paciente.h \
     Pessoa.h \
@@ -33,7 +36,8 @@ HEADERS += \
     Usuario.h \
     mainwindow.h \
     telalogin.h \
-    telaregistro.h
+    telaregistro.h \
+    GerenciadorBanco.h
 
 FORMS += \
     mainwindow.ui \
