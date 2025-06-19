@@ -28,7 +28,6 @@ HEADERS += \
     Administrador.h \
     Clinica.h \
     Consulta.h \
-    GerenciadorBanco.h \
     Medico.h \
     Paciente.h \
     Pessoa.h \

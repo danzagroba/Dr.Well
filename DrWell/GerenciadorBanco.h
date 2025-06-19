@@ -6,7 +6,6 @@
 
 class QSqlQuery;
 
-
 class GerenciadorBanco
 {
 public:
@@ -14,6 +13,7 @@ public:
     bool abrir(const QString& caminho);
     void fechar();
     bool criarTabela(const QString& comandoSql);
+    void inicializar();
 private:
     GerenciadorBanco();
     ~GerenciadorBanco();
@@ -21,7 +21,7 @@ private:
     GerenciadorBanco(const GerenciadorBanco&) = delete;
     GerenciadorBanco& operator=(const GerenciadorBanco&) = delete;
 
-    static GerenciadorBanco* pGB;
+    static GerenciadorBanco* m_instance;
 
     QSqlDatabase m_db;
 };
