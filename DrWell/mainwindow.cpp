@@ -48,7 +48,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     //Navegacao Telas do Login
     connect(telaLogin, &TelaLogin::registroRequisitado, this, &MainWindow::irParaTelaRegistro);
-
+    connect(telaLogin, &TelaLogin::entrarRequisitado, this, &MainWindow::irParaTelaInicialUsuario);
     //Navegacao Telas do Medico
     connect(telaInicialMedico, &TelaInicialMedico::agendaRequisitada, this, &MainWindow::irParaTelaAgendaCompleta);
     connect(telaInicialMedico, &TelaInicialMedico::historicoRequisitado, this, &MainWindow::irParaTelaHistoricoMedico);
@@ -132,4 +132,23 @@ void MainWindow::irParaTelaInicialSecretario(){
 
 void MainWindow::irParaTelaInicialAdministrador(){
     ui->stackedWidget->setCurrentWidget(telaInicialAdministrador);
+}
+
+void MainWindow::irParaTelaInicialUsuario(int id){
+
+    switch (id){
+
+        case 0: //Adm
+            irParaTelaInicialAdministrador();
+            break;
+        case 1:
+            irParaTelaInicialSecretario();
+            break;
+        case 2:
+            irParaTelaInicialMedico();
+            break;
+        default:
+            break;
+    }
+
 }

@@ -23,6 +23,6 @@ void TelaLogin::on_pushButton_2_clicked()
 
 void TelaLogin::on_pushButton_clicked()
 {
-
+    emit entrarRequisitado(ui->comboBox->currentIndex());
 }
 
