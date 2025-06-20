@@ -24,6 +24,8 @@ private slots:
 
     void on_pushButtonAbrir_clicked();
 
+    void on_lineEditPaciente_editingFinished();
+
 private:
     Ui::TelaGerenciarProntuarios *ui;
 };

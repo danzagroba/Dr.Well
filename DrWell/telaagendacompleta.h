@@ -21,6 +21,8 @@ public:
 private slots:
     void on_pushButtonVoltar_clicked();
 
+    void on_lineEditData_editingFinished();
+
 private:
     Ui::TelaAgendaCompleta *ui;
 };

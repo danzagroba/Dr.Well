@@ -49,6 +49,9 @@ MainWindow::MainWindow(QWidget *parent)
     //Navegacao Telas do Login
     connect(telaLogin, &TelaLogin::registroRequisitado, this, &MainWindow::irParaTelaRegistro);
     connect(telaLogin, &TelaLogin::entrarRequisitado, this, &MainWindow::irParaTelaInicialUsuario);
+
+    connect(telaRegistro, &TelaRegistro::confirmarRequisitado, this, &MainWindow::irParaTelaLogin);
+
     //Navegacao Telas do Medico
     connect(telaInicialMedico, &TelaInicialMedico::agendaRequisitada, this, &MainWindow::irParaTelaAgendaCompleta);
     connect(telaInicialMedico, &TelaInicialMedico::historicoRequisitado, this, &MainWindow::irParaTelaHistoricoMedico);
@@ -57,6 +60,14 @@ MainWindow::MainWindow(QWidget *parent)
     connect(telaAgendaCompleta, &TelaAgendaCompleta::voltarRequisitado, this, &MainWindow::irParaTelaInicialMedico);
     connect(telaGerenciarProntuarios, &TelaGerenciarProntuarios::voltarRequisitado, this, &MainWindow::irParaTelaInicialMedico);
     connect(telaHistoricoMedico, &TelaHistoricoMedico::voltarRequisitado, this, &MainWindow::irParaTelaInicialMedico);
+
+    //Navegacao Telas Admin
+    connect(telaInicialAdministrador, &TelaInicialAdministrador::sairRequisitado, this, &MainWindow::irParaTelaLogin);
+
+    //Navegacao Telas Scretario
+    connect(telaInicialSecretario, &TelaInicialSecretario::sairRequisitado, this, &MainWindow::irParaTelaLogin);
+
+
 
 
 

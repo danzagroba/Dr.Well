@@ -13,3 +13,9 @@ TelaRegistro::~TelaRegistro()
 {
     delete ui;
 }
+
+void TelaRegistro::on_pushButtonConfirmar_clicked()
+{
+    emit confirmarRequisitado();
+}
+

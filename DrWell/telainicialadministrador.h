@@ -15,6 +15,12 @@ public:
     explicit TelaInicialAdministrador(QWidget *parent = nullptr);
     ~TelaInicialAdministrador();
 
+signals:
+    void sairRequisitado();
+
+private slots:
+    void on_pushButtonSair_clicked();
+
 private:
     Ui::TelaInicialAdministrador *ui;
 };

@@ -6,6 +6,7 @@ TelaAgendaCompleta::TelaAgendaCompleta(QWidget *parent)
     , ui(new Ui::TelaAgendaCompleta)
 {
     ui->setupUi(this);
+    ui->lineEditData->setPlaceholderText("mm/dd/aaaa");
 }
 
 TelaAgendaCompleta::~TelaAgendaCompleta()
@@ -16,5 +17,13 @@ TelaAgendaCompleta::~TelaAgendaCompleta()
 void TelaAgendaCompleta::on_pushButtonVoltar_clicked()
 {
     emit voltarRequisitado();
+}
+
+
+void TelaAgendaCompleta::on_lineEditData_editingFinished()
+{
+    std::string data = ui->lineEditData->text().toStdString();
+
+    ui->lineEditData->clear();
 }
 

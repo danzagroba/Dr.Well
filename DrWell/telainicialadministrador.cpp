@@ -12,3 +12,9 @@ TelaInicialAdministrador::~TelaInicialAdministrador()
 {
     delete ui;
 }
+
+void TelaInicialAdministrador::on_pushButtonSair_clicked()
+{
+    emit sairRequisitado();
+}
+

@@ -15,6 +15,12 @@ public:
     explicit TelaRegistro(QWidget *parent = nullptr);
     ~TelaRegistro();
 
+signals:
+    void confirmarRequisitado();
+
+private slots:
+    void on_pushButtonConfirmar_clicked();
+
 private:
     Ui::TelaRegistro *ui;
 };

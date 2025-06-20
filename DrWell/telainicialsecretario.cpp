@@ -12,3 +12,9 @@ TelaInicialSecretario::~TelaInicialSecretario()
 {
     delete ui;
 }
+
+void TelaInicialSecretario::on_pushButtonSair_clicked()
+{
+    emit sairRequisitado();
+}
+

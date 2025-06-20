@@ -48,7 +48,7 @@
     </property>
    </item>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="pushButtonConfirmar">
    <property name="geometry">
     <rect>
      <x>280</x>
