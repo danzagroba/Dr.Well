@@ -15,6 +15,15 @@ public:
     explicit TelaGerenciarProntuarios(QWidget *parent = nullptr);
     ~TelaGerenciarProntuarios();
 
+signals:
+    void voltarRequisitado();
+    void abrirRequisitado();
+
+private slots:
+    void on_pushButtonVoltar_clicked();
+
+    void on_pushButtonAbrir_clicked();
+
 private:
     Ui::TelaGerenciarProntuarios *ui;
 };

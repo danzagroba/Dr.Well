@@ -18,7 +18,9 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    this->setAutoFillBackground(true);
 
+    //Inicializando Telas
     telaLogin = new TelaLogin(this);
     telaRegistro = new TelaRegistro(this);
     telaAgendaCompleta = new TelaAgendaCompleta(this);
@@ -28,11 +30,36 @@ MainWindow::MainWindow(QWidget *parent)
     telaInicialMedico = new TelaInicialMedico(this);
     telaInicialSecretario = new TelaInicialSecretario(this);
 
-
+    //Log-in
     ui->stackedWidget->addWidget(telaLogin);
     ui->stackedWidget->addWidget(telaRegistro);
 
+    //Medico
+    ui->stackedWidget->addWidget(telaInicialMedico);
+    ui->stackedWidget->addWidget(telaAgendaCompleta);
+    ui->stackedWidget->addWidget(telaGerenciarProntuarios);
+    ui->stackedWidget->addWidget(telaHistoricoMedico);
+
+    //Secretario
+    ui->stackedWidget->addWidget(telaInicialSecretario);
+
+    //Adm
+    ui->stackedWidget->addWidget(telaInicialAdministrador);
+
+    //Navegacao Telas do Login
     connect(telaLogin, &TelaLogin::registroRequisitado, this, &MainWindow::irParaTelaRegistro);
+
+    //Navegacao Telas do Medico
+    connect(telaInicialMedico, &TelaInicialMedico::agendaRequisitada, this, &MainWindow::irParaTelaAgendaCompleta);
+    connect(telaInicialMedico, &TelaInicialMedico::historicoRequisitado, this, &MainWindow::irParaTelaHistoricoMedico);
+    connect(telaInicialMedico, &TelaInicialMedico::prontuarioRequisitado, this, &MainWindow::irParaTelaGerenciarProntuarios);
+    connect(telaInicialMedico, &TelaInicialMedico::sairRequisitado, this, &MainWindow::irParaTelaLogin);
+    connect(telaAgendaCompleta, &TelaAgendaCompleta::voltarRequisitado, this, &MainWindow::irParaTelaInicialMedico);
+    connect(telaGerenciarProntuarios, &TelaGerenciarProntuarios::voltarRequisitado, this, &MainWindow::irParaTelaInicialMedico);
+    connect(telaHistoricoMedico, &TelaHistoricoMedico::voltarRequisitado, this, &MainWindow::irParaTelaInicialMedico);
+
+
+
 
 
     irParaTelaLogin();
@@ -65,7 +92,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     // O secretário agenda a consulta
     secretario1->agendarConsulta(consulta1);*/
-    this->setAutoFillBackground(true);
+
 }
 
 MainWindow::~MainWindow()
@@ -80,4 +107,29 @@ void MainWindow::irParaTelaRegistro() {
 
 void MainWindow::irParaTelaLogin() {
     ui->stackedWidget->setCurrentWidget(telaLogin);
+}
+
+void MainWindow::irParaTelaInicialMedico(){
+    ui->stackedWidget->setCurrentWidget(telaInicialMedico);
+}
+
+void MainWindow::irParaTelaGerenciarProntuarios(){
+    ui->stackedWidget->setCurrentWidget(telaGerenciarProntuarios);
+}
+
+void MainWindow::irParaTelaHistoricoMedico(){
+    ui->stackedWidget->setCurrentWidget(telaHistoricoMedico);
+}
+
+void MainWindow::irParaTelaAgendaCompleta(){
+    ui->stackedWidget->setCurrentWidget(telaAgendaCompleta);
+}
+
+
+void MainWindow::irParaTelaInicialSecretario(){
+    ui->stackedWidget->setCurrentWidget(telaInicialSecretario);
+}
+
+void MainWindow::irParaTelaInicialAdministrador(){
+    ui->stackedWidget->setCurrentWidget(telaInicialAdministrador);
 }

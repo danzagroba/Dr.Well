@@ -34,6 +34,12 @@ public:
 
     void irParaTelaLogin();
     void irParaTelaRegistro();
+    void irParaTelaInicialMedico();
+    void irParaTelaInicialSecretario();
+    void irParaTelaInicialAdministrador();
+    void irParaTelaAgendaCompleta();
+    void irParaTelaGerenciarProntuarios();
+    void irParaTelaHistoricoMedico();
 
 private:
     Ui::MainWindow *ui;

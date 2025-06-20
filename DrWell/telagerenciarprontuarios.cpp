@@ -12,3 +12,15 @@ TelaGerenciarProntuarios::~TelaGerenciarProntuarios()
 {
     delete ui;
 }
+
+void TelaGerenciarProntuarios::on_pushButtonVoltar_clicked()
+{
+    emit voltarRequisitado();
+}
+
+
+void TelaGerenciarProntuarios::on_pushButtonAbrir_clicked()
+{
+    emit abrirRequisitado();
+}
+

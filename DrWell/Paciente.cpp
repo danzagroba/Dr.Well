@@ -3,7 +3,7 @@
 #include <iostream>
 
 Paciente::Paciente(int id, std::string nome, std::string cpf, int telefone)
-    : Pessoa(nome, cpf, telefone), pacienteId(id) {}
+    : Pessoa(nome, telefone, cpf), pacienteId(id) {}
 
 void Paciente::exibirInformacoes() const {
     std::cout << "Paciente: " << nome << " | CPF: " << cpf << " | Convênio: " << convenio << std::endl;

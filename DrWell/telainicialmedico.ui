@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QLabel" name="label">
+  <widget class="QLabel" name="labelNome">
    <property name="geometry">
     <rect>
      <x>90</x>
@@ -26,7 +26,7 @@
     <string>Nome_do_medico</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_2">
+  <widget class="QLabel" name="labelOpcoes">
    <property name="geometry">
     <rect>
      <x>50</x>
@@ -39,7 +39,7 @@
     <string>Opções</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="pushButtonAgenda">
    <property name="geometry">
     <rect>
      <x>50</x>
@@ -62,7 +62,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLabel" name="label_3">
+  <widget class="QLabel" name="labelAgenda">
    <property name="geometry">
     <rect>
      <x>360</x>
@@ -75,11 +75,11 @@
     <string>Agenda do dia</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="pushButtonProntuario">
    <property name="geometry">
     <rect>
      <x>50</x>
-     <y>210</y>
+     <y>220</y>
      <width>151</width>
      <height>29</height>
     </rect>
@@ -88,24 +88,11 @@
     <string>Gerenciar prontuários</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_3">
+  <widget class="QPushButton" name="pushButtonHistorico">
    <property name="geometry">
     <rect>
      <x>50</x>
-     <y>260</y>
-     <width>151</width>
-     <height>29</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Visualizar pacientes</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_4">
-   <property name="geometry">
-    <rect>
-     <x>50</x>
-     <y>310</y>
+     <y>280</y>
      <width>151</width>
      <height>29</height>
     </rect>
@@ -114,7 +101,7 @@
     <string>Histórico médico</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_4">
+  <widget class="QLabel" name="labelCRM">
    <property name="geometry">
     <rect>
      <x>270</x>
@@ -127,7 +114,7 @@
     <string>CRM</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_5">
+  <widget class="QPushButton" name="pushButtonSair">
    <property name="geometry">
     <rect>
      <x>540</x>

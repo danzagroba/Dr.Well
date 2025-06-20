@@ -12,3 +12,9 @@ TelaAgendaCompleta::~TelaAgendaCompleta()
 {
     delete ui;
 }
+
+void TelaAgendaCompleta::on_pushButtonVoltar_clicked()
+{
+    emit voltarRequisitado();
+}
+

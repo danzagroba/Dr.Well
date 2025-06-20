@@ -24,7 +24,7 @@ private:
     std::weak_ptr<Paciente> paciente;
 
 public:
-    Consulta(int id, std::shared_ptr<Medico> med, std::shared_ptr<Paciente> pac, Horario data);
+    Consulta(int id, Horario data,std::shared_ptr<Medico> med, std::shared_ptr<Paciente> pac);
     ~Consulta() = default;
 
     int getConsultaId() const;

@@ -1,14 +1,26 @@
 #include "telahistoricomedico.h"
 #include "ui_telahistoricomedico.h"
 
-TelaVisualizarPaciente::TelaVisualizarPaciente(QWidget *parent)
+TelaHistoricoMedico::TelaHistoricoMedico(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::TelaHistoricoMedico)
 {
     ui->setupUi(this);
 }
 
-TelaVisualizarPaciente::~TelaVisualizarPaciente()
+TelaHistoricoMedico::~TelaHistoricoMedico()
 {
     delete ui;
 }
+
+void TelaHistoricoMedico::on_pushButtonVoltar_clicked()
+{
+    emit voltarRequisitado();
+}
+
+
+void TelaHistoricoMedico::on_pushButtonAbrir_clicked()
+{
+    emit abrirRequisitado();
+}
+

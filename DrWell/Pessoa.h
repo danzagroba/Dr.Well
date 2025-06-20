@@ -16,7 +16,7 @@ protected:
     Horario dataNascimento;
 
 public:
-    Pessoa(std::string nome, std::string cpf, int telefone);
+    Pessoa(std::string nome, int telefone, std::string cpf);
     virtual ~Pessoa() = default; // Destrutor virtual é crucial!
 
     // Métodos virtuais puros tornam a classe abstrata

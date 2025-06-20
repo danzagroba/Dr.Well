@@ -7,13 +7,22 @@ namespace Ui {
 class TelaHistoricoMedico;
 }
 
-class TelaVisualizarPaciente : public QWidget
+class TelaHistoricoMedico : public QWidget
 {
     Q_OBJECT
 
 public:
-    explicit TelaVisualizarPaciente(QWidget *parent = nullptr);
-    ~TelaVisualizarPaciente();
+    explicit TelaHistoricoMedico(QWidget *parent = nullptr);
+    ~TelaHistoricoMedico();
+
+signals:
+    void voltarRequisitado();
+    void abrirRequisitado();
+
+private slots:
+    void on_pushButtonVoltar_clicked();
+
+    void on_pushButtonAbrir_clicked();
 
 private:
     Ui::TelaHistoricoMedico *ui;

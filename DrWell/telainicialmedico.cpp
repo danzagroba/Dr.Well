@@ -12,3 +12,24 @@ TelaInicialMedico::~TelaInicialMedico()
 {
     delete ui;
 }
+
+void TelaInicialMedico::on_pushButtonAgenda_clicked()
+{
+    emit agendaRequisitada();
+}
+
+void TelaInicialMedico::on_pushButtonProntuario_clicked()
+{
+    emit prontuarioRequisitado();
+}
+
+void TelaInicialMedico::on_pushButtonHistorico_clicked()
+{
+    emit historicoRequisitado();
+}
+
+void TelaInicialMedico::on_pushButtonSair_clicked()
+{
+    emit sairRequisitado();
+}
+

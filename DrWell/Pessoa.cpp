@@ -1,8 +1,8 @@
 #include "Pessoa.h"
 #include <iostream>
 
-Pessoa::Pessoa(std::string nome, std::string cpf, int telefone)
-    : nome(nome), cpf(cpf), telefone(telefone), contatoEmergencia(0) {}
+Pessoa::Pessoa(std::string nome , int telefone, std::string cpf)
+    : nome(nome), telefone(telefone), contatoEmergencia(0), cpf(cpf) {}
 
 void Pessoa::setNome(const std::string& nome) {
     this->nome = nome;

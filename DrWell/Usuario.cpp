@@ -8,7 +8,7 @@
 
 
 Usuario::Usuario(std::string nome, std::string cpf, int telefone, std::string email)
-    : Pessoa(nome, cpf, telefone), email(email), ativo(true), salario(0.0f) {}
+    : Pessoa(nome, telefone, cpf), email(email), ativo(true), salario(0.0f) {}
 
 bool Usuario::realizarAutenticacao(const std::string& senhaFornecida) const {
     return this->senha == senhaFornecida && this->ativo;

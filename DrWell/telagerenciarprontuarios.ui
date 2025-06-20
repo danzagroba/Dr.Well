@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QLabel" name="label">
+  <widget class="QLabel" name="labelNome">
    <property name="geometry">
     <rect>
      <x>50</x>
@@ -26,7 +26,7 @@
     <string>Nome_do_Medico</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_2">
+  <widget class="QLabel" name="labelProntuario">
    <property name="geometry">
     <rect>
      <x>40</x>
@@ -39,7 +39,7 @@
     <string>Gerenciar Prontuario</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit">
+  <widget class="QLineEdit" name="lineEditPaciente">
    <property name="geometry">
     <rect>
      <x>220</x>
@@ -59,7 +59,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_2">
+  <widget class="QLineEdit" name="lineEditNumero">
    <property name="geometry">
     <rect>
      <x>120</x>
@@ -69,7 +69,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="pushButtonAbrir">
    <property name="geometry">
     <rect>
      <x>270</x>
@@ -82,7 +82,7 @@
     <string>Abrir</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="pushButtonVoltar">
    <property name="geometry">
     <rect>
      <x>380</x>
@@ -95,7 +95,7 @@
     <string>Voltar</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_3">
+  <widget class="QLabel" name="labelPaciente">
    <property name="geometry">
     <rect>
      <x>280</x>
@@ -108,7 +108,7 @@
     <string>Paciente</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_4">
+  <widget class="QLabel" name="labelNumero">
    <property name="geometry">
     <rect>
      <x>50</x>
