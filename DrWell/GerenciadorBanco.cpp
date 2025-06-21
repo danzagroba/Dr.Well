@@ -1,8 +1,10 @@
 #include "GerenciadorBanco.h"
-#include <QSqlQuery>
 #include <QSqlError>
 #include <QDebug>
 #include <QDate>
+#include <QSqlRecord>
+#include <QSqlField>
+#include <QVariant>
 
 GerenciadorBanco* GerenciadorBanco::m_instance = nullptr;
 
@@ -45,24 +47,31 @@ void GerenciadorBanco::fechar()
 
 void GerenciadorBanco::inicializar(){
 
-    // QString query = R"(
-    // CREATE TABLE IF NOT EXISTS pessoas (
-    //     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    //     cpf VARCHAR(11) NOT NULL UNIQUE,
-    //     nome VARCHAR(100) NOT NULL,
-    //     sobrenome VARCHAR(150) NOT NULL,
-    //     telefone VARCHAR(20),
-    //     data_nasc DATE
-    // )
-    // )";
 
-    // QString query1 = R"(
-    //     INSERT INTO pessoas (cpf, nome, sobrenome, telefone, data_nasc)
-    //     VALUES ('88833388899', 'Joao', 'Klug', '41882299372', '2004-01-24');
-    // )";
+    QString query1 = R"(
+    CREATE TABLE IF NOT EXISTS consultas (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        crm INTEGER NOT NULL,          -- Chave estrangeira para a tabela de médicos
+        paciente_id INTEGER NOT NULL,        -- Chave estrangeira para a tabela de pacientes
+        data_hora DATETIME NOT NULL,         -- Para armazenar a data e hora da consulta
+        custo FLOAT NOT NULL,                 -- Para armazenar o custo da consulta (float no C++)
+        status VARCHAR(50) NOT NULL,         -- Para armazenar o status da consulta (ex: "Agendada", "Realizada", "Cancelada")
+        FOREIGN KEY (crm) REFERENCES medicos(crm),
+        FOREIGN KEY (paciente_id) REFERENCES pessoas(cpf)
+    );
 
-    // comandoSQL(query1);
-    // QString query = "SELECT * FROM pessoas;";
+    )";
+
+    QString query2 = R"(
+        INSERT INTO usuarios (cpf, email, senha, ativo, salario)
+        VALUES ('12345678900', 'sucupira@gmail.com', 'werweq22342ed', TRUE, 3500.00);
+    )";
+    QString query3 =
+        "SELECT p.cpf, p.sobrenome, u.salario FROM pessoas AS p JOIN usuarios AS u ON u.cpf = p.cpf;"
+    ;
+
+    comandoSQL(query1);
+
 }
 
 bool GerenciadorBanco::comandoSQL(const QString& comando) {
@@ -79,6 +88,29 @@ bool GerenciadorBanco::comandoSQL(const QString& comando) {
         return false;
     }
 
+    // listarSelect(query);
+
     qDebug() << "Comando de tabela executado com sucesso!";
+    return true;
+}
+
+bool GerenciadorBanco::listarSelect(QSqlQuery q) {
+    if (!q.isActive()) {
+        qDebug() << "Erro: QSqlQuery não está ativa. Verifique se o comando foi executado corretamente.";
+        qDebug() << "Erro da query:" << q.lastError().text();
+        return false; // Retorna falso se a query não estiver ativa
+    }
+
+    while (q.next()) {
+        QSqlRecord record = q.record(); // Obtém o registro da linha atual
+        qDebug() << "------";
+
+        for (int i = 0; i < record.count(); ++i) {
+            QString fieldName = record.fieldName(i); // Obtém o nome do campo
+            QVariant fieldValue = record.value(i);   // Obtém o valor do campo
+            qDebug() << "  " << fieldName << ":" << fieldValue.toString();
+        }
+    }
+
     return true;
 }

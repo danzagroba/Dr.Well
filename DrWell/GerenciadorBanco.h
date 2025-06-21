@@ -3,6 +3,7 @@
 
 #include <QSqlDatabase>
 #include <QString>
+#include <QSqlQuery>
 
 class QSqlQuery;
 
@@ -24,6 +25,7 @@ private:
     QSqlDatabase m_db;
 
     bool comandoSQL(const QString& comando);
+    bool listarSelect(QSqlQuery q);
 };
 
 #endif // GERENCIADORBANCO_H
