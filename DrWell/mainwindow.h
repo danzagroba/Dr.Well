@@ -14,6 +14,10 @@ class TelaHistoricoMedico;
 class TelaInicialAdministrador;
 class TelaInicialMedico;
 class TelaInicialSecretario;
+class TelaGerenciarPacientes;
+class TelaGerenciarConsultas;
+class TelaCadastrarPaciente;
+class TelaMarcarConsulta;
 
 
 
@@ -40,8 +44,11 @@ public:
     void irParaTelaAgendaCompleta();
     void irParaTelaGerenciarProntuarios();
     void irParaTelaHistoricoMedico();
-
     void irParaTelaInicialUsuario(int id);
+    void irParaTelaGerenciarPacientes();
+    void irParaTelaGerenciarConsultas();
+    void irParaTelaCadastrarPaciente();
+    void irParaTelaMarcarConsulta();
 
 private:
     Ui::MainWindow *ui;
@@ -54,5 +61,9 @@ private:
     TelaInicialAdministrador* telaInicialAdministrador;
     TelaInicialMedico* telaInicialMedico;
     TelaInicialSecretario* telaInicialSecretario;
+    TelaCadastrarPaciente* telaCadastrarPaciente;
+    TelaGerenciarPacientes* telaGerenciarPacientes;
+    TelaGerenciarConsultas* telaGerenciarConsultas;
+    TelaMarcarConsulta* telaMarcarConsulta;
 };
 #endif // MAINWINDOW_H

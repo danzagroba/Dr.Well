@@ -17,9 +17,15 @@ public:
 
 signals:
     void sairRequisitado();
+    void pacientesRequisitado();
+    void consultasRequisitado();
 
 private slots:
     void on_pushButtonSair_clicked();
+
+    void on_pushButtonConsultas_clicked();
+
+    void on_pushButtonPacientes_clicked();
 
 private:
     Ui::TelaInicialSecretario *ui;

@@ -9,5 +9,6 @@ void Medico::exibirInformacoes() const {
 }
 
 void Medico::adicionarConsulta(std::shared_ptr<Consulta> consulta){
+    agenda.push_back(consulta);
     // Lógica para adicionar na agenda
 }
