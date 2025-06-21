@@ -70,7 +70,7 @@ void GerenciadorBanco::inicializar(){
         "SELECT p.cpf, p.sobrenome, u.salario FROM pessoas AS p JOIN usuarios AS u ON u.cpf = p.cpf;"
     ;
 
-    comandoSQL(query1);
+    comandoSQL(query3);
 
 }
 
@@ -88,7 +88,7 @@ bool GerenciadorBanco::comandoSQL(const QString& comando) {
         return false;
     }
 
-    // listarSelect(query);
+    listarSelect(query);
 
     qDebug() << "Comando de tabela executado com sucesso!";
     return true;

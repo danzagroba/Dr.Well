@@ -28,6 +28,7 @@ SOURCES += \
     telaregistro.cpp \
     telainicialmedico.cpp \
     telainicialsecretario.cpp \
+    GerenciadorBanco.cpp
 
 HEADERS += \
     Administrador.h \
@@ -46,7 +47,9 @@ HEADERS += \
     telagerenciarprontuarios.h \
     telahistoricomedico.h \
     telalogin.h \
-    telaregistro.h
+    telaregistro.h \
+    GerenciadorBanco.h
+
 
 FORMS += \
     mainwindow.ui \
