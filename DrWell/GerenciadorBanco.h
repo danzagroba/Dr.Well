@@ -12,7 +12,6 @@ public:
     static GerenciadorBanco* getInstance();
     bool abrir(const QString& caminho);
     void fechar();
-    bool criarTabela(const QString& comandoSql);
     void inicializar();
 private:
     GerenciadorBanco();
@@ -25,7 +24,6 @@ private:
     QSqlDatabase m_db;
 
     bool comandoSQL(const QString& comando);
-    void listarTabela();
 };
 
 #endif // GERENCIADORBANCO_H
