@@ -22,8 +22,10 @@ private:
     GerenciadorBanco& operator=(const GerenciadorBanco&) = delete;
 
     static GerenciadorBanco* m_instance;
-
     QSqlDatabase m_db;
+
+    bool comandoSQL(const QString& comando);
+    void listarTabela();
 };
 
 #endif // GERENCIADORBANCO_H

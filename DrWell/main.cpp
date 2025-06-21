@@ -12,9 +12,7 @@ int main(int argc, char *argv[])
         qCritical() << "Critico: nao foi possivel iniciar a base";
         return -1;
     }
-
     dbManager->inicializar();
-
 
     MainWindow w;
     w.show();
