@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
     }
     dbManager->inicializar();
 
-    MainWindow w;
-    w.show();
+    // MainWindow w;
+    // w.show();
     return a.exec();
 }

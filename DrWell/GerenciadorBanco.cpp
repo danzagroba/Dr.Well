@@ -49,28 +49,47 @@ void GerenciadorBanco::inicializar(){
 
 
     QString query1 = R"(
-    CREATE TABLE IF NOT EXISTS consultas (
+    CREATE TABLE administradores (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
-        crm INTEGER NOT NULL,          -- Chave estrangeira para a tabela de médicos
-        paciente_id INTEGER NOT NULL,        -- Chave estrangeira para a tabela de pacientes
-        data_hora DATETIME NOT NULL,         -- Para armazenar a data e hora da consulta
-        custo FLOAT NOT NULL,                 -- Para armazenar o custo da consulta (float no C++)
-        status VARCHAR(50) NOT NULL,         -- Para armazenar o status da consulta (ex: "Agendada", "Realizada", "Cancelada")
-        FOREIGN KEY (crm) REFERENCES medicos(crm),
-        FOREIGN KEY (paciente_id) REFERENCES pessoas(cpf)
+        usuario_id INTEGER NOT NULL UNIQUE,
+        super_adm BOOL NOT NULL DEFAULT FALSE,
+
+        CONSTRAINT fk_admin_usuario
+        FOREIGN KEY (usuario_id)
+        REFERENCES usuarios(id)
+        ON DELETE CASCADE
     );
 
     )";
 
-    QString query2 = R"(
-        INSERT INTO usuarios (cpf, email, senha, ativo, salario)
-        VALUES ('12345678900', 'sucupira@gmail.com', 'werweq22342ed', TRUE, 3500.00);
+    QString query = R"(
+        INSERT INTO medicos (usuario_id, crm, especialidade)
+        VALUES (1, 'CRM/PR 12345', 'Cardiologia');
     )";
-    QString query3 =
-        "SELECT p.cpf, p.sobrenome, u.salario FROM pessoas AS p JOIN usuarios AS u ON u.cpf = p.cpf;"
-    ;
 
-    comandoSQL(query3);
+    // comandoSQL(query);
+
+    QStringList queriesParaExecutar;
+
+    // --- Médico 2: Dra. Helena Furtado ---
+    // queriesParaExecutar << R"(
+    // SELECT * FROM secretarios;
+    // )";
+    // queriesParaExecutar << R"(
+    // SELECT * FROM medicos;
+    // )";
+    // queriesParaExecutar << R"(
+    // SELECT * FROM administradores;
+    // )";
+
+    queriesParaExecutar << R"(
+    SELECT u.nome, u.sobrenome, m.crm, m.especialidade FROM usuarios AS u JOIN medicos AS m ON u.id = m.usuario_id;
+    )";
+
+    qDebug() << "Iniciando inserção em lote...";
+    for (const QString &query : queriesParaExecutar) {
+        comandoSQL(query); // Chamando a sua função para cada item da lista
+    }
 
 }
 
@@ -94,7 +113,7 @@ bool GerenciadorBanco::comandoSQL(const QString& comando) {
     return true;
 }
 
-bool GerenciadorBanco::listarSelect(QSqlQuery q) {
+bool GerenciadorBanco::listarSelect(QSqlQuery& q) {
     if (!q.isActive()) {
         qDebug() << "Erro: QSqlQuery não está ativa. Verifique se o comando foi executado corretamente.";
         qDebug() << "Erro da query:" << q.lastError().text();
