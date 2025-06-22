@@ -83,7 +83,7 @@ void GerenciadorBanco::inicializar(){
     // )";
 
     queriesParaExecutar << R"(
-    SELECT u.nome, u.sobrenome, m.crm, m.especialidade FROM usuarios AS u JOIN medicos AS m ON u.id = m.usuario_id;
+    SELECT u.nome, u.sobrenome, u.cpf, m.crm, m.especialidade FROM usuarios AS u JOIN medicos AS m ON u.id = m.usuario_id;
     )";
 
     qDebug() << "Iniciando inserção em lote...";
@@ -136,12 +136,10 @@ bool GerenciadorBanco::listarSelect(QSqlQuery& q) {
 
 std::shared_ptr<Usuario> GerenciadorBanco::autenticarUsuario(const QString& cpfouemail, const QString& senha, int &tipo) {
 
-    int id = -1;
-
     QSqlQuery query(m_db);
-    query.prepare("SELECT ativo FROM usuarios WHERE (cpf = :identificador OR email = :identificador) AND senha_hash = :senhaParam");
+    query.prepare("SELECT ativo FROM usuarios WHERE (cpf = :identificador OR email = :identificador) "); //AND senha_hash = :senhaParam
     query.bindValue(":identificador", cpfouemail);
-    query.bindValue(":senhaParam", senha);
+    //query.bindValue(":senhaParam", senha);
 
     if (!query.exec()) {
         qDebug() << "Erro ao executar consulta de autenticacao:" << query.lastError().text();
@@ -161,9 +159,8 @@ std::shared_ptr<Usuario> GerenciadorBanco::autenticarUsuario(const QString& cpfo
             if (medicoQuery.exec()) {
                 if (medicoQuery.next()) {
                     qDebug() << "Usuario e um Medico.";
-                    id = medicoQuery.value("U.id").toInt();
                     tipo = 1; // Retorna 1 para Médico
-                    return recuperarUsuarioPorId(id);
+                    return recuperarUsuarioPorCpf(cpfouemail, tipo);
                 }
             } else {
                 qDebug() << "Erro na query de Medico: " << medicoQuery.lastError().text();
@@ -176,8 +173,7 @@ std::shared_ptr<Usuario> GerenciadorBanco::autenticarUsuario(const QString& cpfo
                 if (secretarioQuery.next()) {
                     qDebug() << "Usuario e um Secretario.";
                     tipo = 2;
-                    id = secretarioQuery.value("U.id").toInt();
-                    return recuperarUsuarioPorId(id);
+                    return recuperarUsuarioPorCpf(cpfouemail, tipo);
                 }
             } else {
                 qDebug() << "Erro na query de Secretario: " << secretarioQuery.lastError().text();
@@ -190,8 +186,7 @@ std::shared_ptr<Usuario> GerenciadorBanco::autenticarUsuario(const QString& cpfo
                 if (administradorQuery.next()) {
                     qDebug() << "Usuario e um Administrador.";
                     tipo = 3;
-                    id = administradorQuery.value("U.id").toInt();
-                    return recuperarUsuarioPorId(id);
+                    return recuperarUsuarioPorCpf(cpfouemail, tipo);
                 }
             } else {
                 qDebug() << "Erro na query de Administrador: " << administradorQuery.lastError().text();
@@ -282,53 +277,52 @@ bool GerenciadorBanco::criarUsuario(const QVariantMap& dadosUsuario, const QVari
     return true;
 }
 
-std::shared_ptr<Usuario> GerenciadorBanco::recuperarUsuarioPorId(int usuarioId) {
-    // 1. Buscar os dados comuns da tabela 'usuarios'
-    QSqlQuery queryUsuario(m_db);
-    queryUsuario.prepare("SELECT nome, cpf, email, telefone FROM usuarios WHERE id = :id");
-    queryUsuario.bindValue(":id", usuarioId);
+std::shared_ptr<Usuario> GerenciadorBanco::recuperarUsuarioPorCpf(const QString& cpf, const int tipo)  {
 
-    if (!queryUsuario.exec() || !queryUsuario.next()) {
-        qDebug() << "recuperarUsuarioPorId falhou: Nenhum usuário encontrado com o ID:" << usuarioId;
+    QSqlQuery query(m_db);
+    QString sql;
+
+    // 2. Monta a query com o JOIN apropriado baseado no cargo.
+    if (tipo == 1) {
+        sql = "SELECT u.nome,u.sobrenome, u.email, u.telefone, m.crm, m.especialidade "
+              "FROM usuarios AS u JOIN medicos AS m ON u.id = m.usuario_id "
+              "WHERE u.cpf = :cpf";
+    } else if (tipo ==  2) {
+        sql = "SELECT u.nome,u.sobrenome, u.email, u.telefone, s.ramal "
+              "FROM usuarios AS u JOIN secretarios AS s ON u.id = s.usuario_id "
+              "WHERE u.cpf = :cpf";
+    } else if (tipo == 3) {
+        sql = "SELECT u.nome,u.sobrenome, u.email, u.telefone, a.super_adm "
+              "FROM usuarios AS u JOIN administradores AS a ON u.id = a.usuario_id "
+              "WHERE u.cpf = :cpf";
+    }
+
+    query.prepare(sql);
+    query.bindValue(":cpf", cpf);
+
+    if (!query.exec() || !query.next()) {
+        qDebug() << "recuperarUsuarioPorCpf falhou ao executar a query JOIN para o CPF:" << cpf;
         return nullptr;
     }
 
-    // Armazena os dados comuns que serão usados nos construtores
-    std::string nome = queryUsuario.value("nome").toString().toStdString();
-    std::string cpf = queryUsuario.value("cpf").toString().toStdString();
-    std::string email = queryUsuario.value("email").toString().toStdString();
-    //int telefone = queryUsuario.value("telefone").toInt(); // Supondo que o construtor base use
+    // 3. Extrai os dados e cria o objeto correto.
+    std::string nome = query.value("nome").toString().toStdString() + " " + query.value("sobrenome").toString().toStdString() ;
+    std::string email = query.value("email").toString().toStdString();
+    std::string cpfStdStr = cpf.toStdString();
+    //int telefone = query.value("telefone").toInt();
 
-    // 2. Descobrir o tipo específico (Médico, Secretário, etc.) e buscar dados adicionais
-    QSqlQuery queryTipo(m_db);
-
-    // Tenta buscar na tabela de médicos
-    queryTipo.prepare("SELECT crm, especialidade FROM medicos WHERE usuario_id = :id");
-    queryTipo.bindValue(":id", usuarioId);
-    if (queryTipo.exec() && queryTipo.next()) {
-        std::string crm = queryTipo.value("crm").toString().toStdString();
-        // Ajuste o construtor conforme a definição da sua classe Medico
-        return std::make_shared<Medico>(crm, nome, cpf, email);
+    if (tipo == 1) {
+        std::string crm = query.value("crm").toString().toStdString();
+        // std::string especialidade = query.value("especialidade").toString().toStdString(); // Descomente se precisar
+        return std::make_shared<Medico>(crm, nome, cpfStdStr, email);
+    } else if (tipo == 2) {
+        int ramal = query.value("ramal").toInt();
+        return std::make_shared<Secretario>(nome, cpfStdStr, email, ramal);
+    } else if (tipo == 3) {
+        bool isSuper = query.value("super_adm").toBool();
+        return std::make_shared<Administrador>(0,nome, cpfStdStr, email, isSuper);
     }
 
-    // Se não for médico, tenta secretário
-    queryTipo.prepare("SELECT ramal FROM secretarios WHERE usuario_id = :id");
-    queryTipo.bindValue(":id", usuarioId);
-    if (queryTipo.exec() && queryTipo.next()) {
-        int ramal = queryTipo.value("ramal").toInt();
-        // Ajuste o construtor conforme a definição da sua classe Secretario
-        return std::make_shared<Secretario>(nome, cpf, email, ramal);
-    }
-
-    // Finalmente, tenta administrador
-    queryTipo.prepare("SELECT super_adm FROM administradores WHERE usuario_id = :id");
-    queryTipo.bindValue(":id", usuarioId);
-    if (queryTipo.exec() && queryTipo.next()) {
-        bool isSuper = queryTipo.value("super_adm").toBool();
-        // Ajuste o construtor conforme a definição da sua classe Administrador
-        return std::make_shared<Administrador>(usuarioId, nome, cpf, email, isSuper);
-    }
-
-    qDebug() << "recuperarUsuarioPorId: Usuário com ID" << usuarioId << "existe, mas não tem um tipo definido.";
-    return nullptr;
+    return nullptr; // Fallback de segurança
 }
+

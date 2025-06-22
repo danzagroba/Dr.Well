@@ -20,7 +20,7 @@ public:
 
     std::shared_ptr<Usuario> autenticarUsuario(const QString& cpfouemail, const QString& senha, int &tipo);
     bool criarUsuario(const QVariantMap& dadosUsuario, const QVariantMap& dadosEspecificos, int tipo);
-    std::shared_ptr<Usuario> recuperarUsuarioPorId(int usuarioId);
+    std::shared_ptr<Usuario> recuperarUsuarioPorCpf(const QString& cpf, const int tipo);
 
 private:
     GerenciadorBanco();
