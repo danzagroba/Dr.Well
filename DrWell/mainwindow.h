@@ -41,7 +41,7 @@ public:
     void irParaTelaGerenciarProntuarios();
     void irParaTelaHistoricoMedico();
 
-    void irParaTelaInicialUsuario(int id);
+    void irParaTelaInicialUsuario();
 
 private:
     Ui::MainWindow *ui;

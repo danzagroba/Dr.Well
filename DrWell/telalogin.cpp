@@ -23,11 +23,10 @@ void TelaLogin::on_pushButton_2_clicked()
 
 void TelaLogin::on_pushButton_clicked()
 {
-    int id = ui->comboBox->currentIndex();
     std::string cpf = ui->textEdit->toPlainText().toStdString();
     std::string email = ui->textEdit_2->toPlainText().toStdString();
 
 
-    emit entrarRequisitado(id);
+    emit entrarRequisitado();
 }
 

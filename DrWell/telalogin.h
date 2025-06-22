@@ -19,7 +19,7 @@ public:
 signals:
     //Para enviar para a MainWindow
     void registroRequisitado();
-    void entrarRequisitado(int id);
+    void entrarRequisitado();
 
 private slots:
     void on_pushButton_clicked();

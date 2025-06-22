@@ -133,3 +133,27 @@ bool GerenciadorBanco::listarSelect(QSqlQuery& q) {
 
     return true;
 }
+
+int GerenciadorBanco::autenticarUsuario(const QString& cpfouemail, const QString& senha) {
+
+    QSqlQuery query(m_db);
+    query.prepare("SELECT tipo_usuario, senha, ativo FROM usuarios WHERE (cpf = :identificador OR email = :identificador) AND senha = :senhaParam");
+    query.bindValue(":identificador", cpfouemail); // Use um único placeholder se a entrada for um OU outro
+    query.bindValue(":senhaParam", senha);
+
+    if (!query.exec()) {
+        qDebug() << "Erro ao executar consulta de autenticacao:" << query.lastError().text();
+        return -1;
+    }
+
+    if (query.next()) {
+        bool ativo = query.value("ativo").toBool();
+        int tipoUsuario = query.value("tipo_usuario").toInt();
+
+        if (ativo) {
+            return tipoUsuario;
+        }
+    }
+
+    return -1;
+}

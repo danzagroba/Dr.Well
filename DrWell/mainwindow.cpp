@@ -145,21 +145,6 @@ void MainWindow::irParaTelaInicialAdministrador(){
     ui->stackedWidget->setCurrentWidget(telaInicialAdministrador);
 }
 
-void MainWindow::irParaTelaInicialUsuario(int id){
-
-    switch (id){
-
-        case 0: //Adm
-            irParaTelaInicialAdministrador();
-            break;
-        case 1:
-            irParaTelaInicialSecretario();
-            break;
-        case 2:
-            irParaTelaInicialMedico();
-            break;
-        default:
-            break;
-    }
+void MainWindow::irParaTelaInicialUsuario(){
 
 }
