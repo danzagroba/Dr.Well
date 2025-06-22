@@ -20,11 +20,15 @@ SOURCES += \
     Usuario.cpp \
     main.cpp \
     mainwindow.cpp \
+    telacadastrarpaciente.cpp \
+    telagerenciarconsultas.cpp \
+    telagerenciarpacientes.cpp \
     telainicialadministrador.cpp \
     telaagendacompleta.cpp \
     telagerenciarprontuarios.cpp \
     telahistoricomedico.cpp \
     telalogin.cpp \
+    telamarcarconsulta.cpp \
     telaregistro.cpp \
     telainicialmedico.cpp \
     telainicialsecretario.cpp \
@@ -40,6 +44,9 @@ HEADERS += \
     Secretario.h \
     Usuario.h \
     mainwindow.h \
+    telacadastrarpaciente.h \
+    telagerenciarconsultas.h \
+    telagerenciarpacientes.h \
     telainicialadministrador.h \
     telainicialmedico.h \
     telainicialsecretario.h \
@@ -50,9 +57,12 @@ HEADERS += \
     telaregistro.h \
     GerenciadorBanco.h
 
+    telaregistro.h
 
 FORMS += \
     mainwindow.ui \
+    telacadastrarpaciente.ui \
+    telagerenciarconsultas.ui \
     telainicialadministrador.ui \
     telainicialmedico.ui \
     telainicialsecretario.ui \
@@ -60,6 +70,7 @@ FORMS += \
     telagerenciarprontuarios.ui \
     telahistoricomedico.ui \
     telalogin.ui \
+    telamarcarconsulta.ui \
     telaregistro.ui
 
 # Default rules for deployment.

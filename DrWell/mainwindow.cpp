@@ -9,6 +9,10 @@
 #include "telainicialadministrador.h"
 #include "telainicialmedico.h"
 #include "telainicialsecretario.h"
+#include "telagerenciarconsultas.h"
+#include "telagerenciarpacientes.h"
+#include "telamarcarconsulta.h"
+#include "telacadastrarpaciente.h"
 
 #include <iostream>
 using namespace std;
@@ -29,6 +33,10 @@ MainWindow::MainWindow(QWidget *parent)
     telaInicialAdministrador = new TelaInicialAdministrador(this);
     telaInicialMedico = new TelaInicialMedico(this);
     telaInicialSecretario = new TelaInicialSecretario(this);
+    telaGerenciarConsultas = new TelaGerenciarConsultas(this);
+    telaGerenciarPacientes = new TelaGerenciarPacientes(this);
+    telaCadastrarPaciente = new TelaCadastrarPaciente(this);
+    telaMarcarConsulta = new TelaMarcarConsulta(this);
 
     //Log-in
     ui->stackedWidget->addWidget(telaLogin);
@@ -45,6 +53,10 @@ MainWindow::MainWindow(QWidget *parent)
 
     //Adm
     ui->stackedWidget->addWidget(telaInicialAdministrador);
+    ui->stackedWidget->addWidget(telaGerenciarPacientes);
+    ui->stackedWidget->addWidget(telaCadastrarPaciente);
+    ui->stackedWidget->addWidget(telaGerenciarConsultas);
+    ui->stackedWidget->addWidget(telaMarcarConsulta);
 
     //Navegacao Telas do Login
     connect(telaLogin, &TelaLogin::registroRequisitado, this, &MainWindow::irParaTelaRegistro);
@@ -66,10 +78,16 @@ MainWindow::MainWindow(QWidget *parent)
 
     //Navegacao Telas Scretario
     connect(telaInicialSecretario, &TelaInicialSecretario::sairRequisitado, this, &MainWindow::irParaTelaLogin);
+    connect(telaInicialSecretario, &TelaInicialSecretario::pacientesRequisitado, this, &MainWindow::irParaTelaGerenciarPacientes);
+    connect(telaInicialSecretario, &TelaInicialSecretario::consultasRequisitado, this, &MainWindow::irParaTelaGerenciarConsultas);
 
+    connect(telaGerenciarPacientes, &TelaGerenciarPacientes::voltarRequisitado, this, &MainWindow::irParaTelaInicialSecretario);
+    connect(telaGerenciarPacientes, &TelaGerenciarPacientes::cadastrarRequisitado, this, &MainWindow::irParaTelaCadastrarPaciente);
+    connect(telaCadastrarPaciente, &TelaCadastrarPaciente::voltarRequisitado, this, &MainWindow::irParaTelaGerenciarPacientes);
 
-
-
+    connect(telaGerenciarConsultas, &TelaGerenciarConsultas::voltarRequisitado, this, &MainWindow::irParaTelaInicialSecretario);
+    connect(telaGerenciarConsultas, &TelaGerenciarConsultas::marcarRequisitado, this, &MainWindow::irParaTelaMarcarConsulta);
+    connect(telaMarcarConsulta, &TelaMarcarConsulta::voltarRequisitado, this, &MainWindow::irParaTelaGerenciarConsultas);
 
 
 
@@ -162,4 +180,20 @@ void MainWindow::irParaTelaInicialUsuario(int id){
         irParaTelaLogin();
         break;
     }
+}
+
+void MainWindow::irParaTelaGerenciarPacientes(){
+    ui->stackedWidget->setCurrentWidget(telaGerenciarPacientes);
+}
+
+void MainWindow::irParaTelaCadastrarPaciente(){
+    ui->stackedWidget->setCurrentWidget(telaCadastrarPaciente);
+}
+
+void MainWindow::irParaTelaGerenciarConsultas(){
+    ui->stackedWidget->setCurrentWidget(telaGerenciarConsultas);
+}
+
+void MainWindow::irParaTelaMarcarConsulta(){
+    ui->stackedWidget->setCurrentWidget(telaMarcarConsulta);
 }
