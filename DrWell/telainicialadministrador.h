@@ -2,6 +2,7 @@
 #define TELAINICIALADMINISTRADOR_H
 
 #include <QWidget>
+#include <Administrador.h>
 
 namespace Ui {
 class TelaInicialAdministrador;
@@ -15,6 +16,7 @@ public:
     explicit TelaInicialAdministrador(QWidget *parent = nullptr);
     ~TelaInicialAdministrador();
 
+    void setAdministrador(std::shared_ptr<Administrador> a);
 signals:
     void sairRequisitado();
 
@@ -22,7 +24,11 @@ private slots:
     void on_pushButtonSair_clicked();
 
 private:
+
+    void atualizarLabels();
+
     Ui::TelaInicialAdministrador *ui;
+    std::shared_ptr<Administrador> administrador;
 };
 
 #endif // TELAINICIALADMINISTRADOR_H

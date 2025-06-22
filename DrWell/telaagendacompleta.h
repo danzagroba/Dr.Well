@@ -2,6 +2,7 @@
 #define TELAAGENDACOMPLETA_H
 
 #include <QWidget>
+#include <Medico.h>
 
 namespace Ui {
 class TelaAgendaCompleta;
@@ -18,6 +19,8 @@ public:
     explicit TelaAgendaCompleta(QWidget *parent = nullptr);
     ~TelaAgendaCompleta();
 
+    void setMedico(std::shared_ptr<Medico> m);
+
 private slots:
     void on_pushButtonVoltar_clicked();
 
@@ -25,6 +28,9 @@ private slots:
 
 private:
     Ui::TelaAgendaCompleta *ui;
+    std::shared_ptr<Medico> medico;
+
+    void atualizarLabels();
 };
 
 #endif // TELAAGENDACOMPLETA_H

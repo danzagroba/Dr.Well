@@ -32,39 +32,43 @@ public:
     QPushButton *pushButtonVoltar;
     QLabel *labelPaciente;
     QLabel *labelNumero;
+    QLabel *labelCRM;
 
     void setupUi(QWidget *TelaGerenciarProntuarios)
     {
         if (TelaGerenciarProntuarios->objectName().isEmpty())
             TelaGerenciarProntuarios->setObjectName("TelaGerenciarProntuarios");
-        TelaGerenciarProntuarios->resize(462, 342);
+        TelaGerenciarProntuarios->resize(624, 406);
         labelNome = new QLabel(TelaGerenciarProntuarios);
         labelNome->setObjectName("labelNome");
-        labelNome->setGeometry(QRect(50, 20, 131, 18));
+        labelNome->setGeometry(QRect(50, 20, 211, 18));
         labelProntuario = new QLabel(TelaGerenciarProntuarios);
         labelProntuario->setObjectName("labelProntuario");
-        labelProntuario->setGeometry(QRect(40, 60, 141, 18));
+        labelProntuario->setGeometry(QRect(110, 80, 141, 18));
         lineEditPaciente = new QLineEdit(TelaGerenciarProntuarios);
         lineEditPaciente->setObjectName("lineEditPaciente");
-        lineEditPaciente->setGeometry(QRect(220, 60, 171, 26));
+        lineEditPaciente->setGeometry(QRect(310, 80, 171, 26));
         tableView = new QTableView(TelaGerenciarProntuarios);
         tableView->setObjectName("tableView");
-        tableView->setGeometry(QRect(30, 90, 401, 192));
+        tableView->setGeometry(QRect(60, 111, 491, 221));
         lineEditNumero = new QLineEdit(TelaGerenciarProntuarios);
         lineEditNumero->setObjectName("lineEditNumero");
-        lineEditNumero->setGeometry(QRect(120, 300, 113, 26));
+        lineEditNumero->setGeometry(QRect(220, 350, 113, 26));
         pushButtonAbrir = new QPushButton(TelaGerenciarProntuarios);
         pushButtonAbrir->setObjectName("pushButtonAbrir");
-        pushButtonAbrir->setGeometry(QRect(270, 300, 61, 26));
+        pushButtonAbrir->setGeometry(QRect(350, 350, 61, 26));
         pushButtonVoltar = new QPushButton(TelaGerenciarProntuarios);
         pushButtonVoltar->setObjectName("pushButtonVoltar");
-        pushButtonVoltar->setGeometry(QRect(380, 20, 61, 26));
+        pushButtonVoltar->setGeometry(QRect(530, 20, 61, 26));
         labelPaciente = new QLabel(TelaGerenciarProntuarios);
         labelPaciente->setObjectName("labelPaciente");
-        labelPaciente->setGeometry(QRect(280, 40, 66, 18));
+        labelPaciente->setGeometry(QRect(370, 60, 66, 18));
         labelNumero = new QLabel(TelaGerenciarProntuarios);
         labelNumero->setObjectName("labelNumero");
-        labelNumero->setGeometry(QRect(50, 300, 66, 18));
+        labelNumero->setGeometry(QRect(150, 350, 66, 18));
+        labelCRM = new QLabel(TelaGerenciarProntuarios);
+        labelCRM->setObjectName("labelCRM");
+        labelCRM->setGeometry(QRect(280, 20, 111, 18));
 
         retranslateUi(TelaGerenciarProntuarios);
 
@@ -80,6 +84,7 @@ public:
         pushButtonVoltar->setText(QCoreApplication::translate("TelaGerenciarProntuarios", "Voltar", nullptr));
         labelPaciente->setText(QCoreApplication::translate("TelaGerenciarProntuarios", "Paciente", nullptr));
         labelNumero->setText(QCoreApplication::translate("TelaGerenciarProntuarios", "Numero", nullptr));
+        labelCRM->setText(QCoreApplication::translate("TelaGerenciarProntuarios", "CRM", nullptr));
     } // retranslateUi
 
 };

@@ -24,12 +24,12 @@ class Ui_TelaInicialSecretario
 public:
     QPushButton *pushButtonConsultas;
     QPushButton *pushButtonPacientes;
-    QLabel *label;
+    QLabel *labelNome;
     QLabel *label_2;
     QPushButton *pushButtonSair;
     QLabel *label_3;
     QTableView *tableView;
-    QLabel *label_4;
+    QLabel *labelID;
 
     void setupUi(QWidget *TelaInicialSecretario)
     {
@@ -42,9 +42,9 @@ public:
         pushButtonPacientes = new QPushButton(TelaInicialSecretario);
         pushButtonPacientes->setObjectName("pushButtonPacientes");
         pushButtonPacientes->setGeometry(QRect(30, 200, 151, 29));
-        label = new QLabel(TelaInicialSecretario);
-        label->setObjectName("label");
-        label->setGeometry(QRect(70, 40, 141, 20));
+        labelNome = new QLabel(TelaInicialSecretario);
+        labelNome->setObjectName("labelNome");
+        labelNome->setGeometry(QRect(70, 40, 141, 20));
         label_2 = new QLabel(TelaInicialSecretario);
         label_2->setObjectName("label_2");
         label_2->setGeometry(QRect(30, 100, 63, 20));
@@ -57,9 +57,9 @@ public:
         tableView = new QTableView(TelaInicialSecretario);
         tableView->setObjectName("tableView");
         tableView->setGeometry(QRect(330, 140, 281, 251));
-        label_4 = new QLabel(TelaInicialSecretario);
-        label_4->setObjectName("label_4");
-        label_4->setGeometry(QRect(250, 40, 63, 20));
+        labelID = new QLabel(TelaInicialSecretario);
+        labelID->setObjectName("labelID");
+        labelID->setGeometry(QRect(250, 40, 63, 20));
 
         retranslateUi(TelaInicialSecretario);
 
@@ -71,11 +71,11 @@ public:
         TelaInicialSecretario->setWindowTitle(QCoreApplication::translate("TelaInicialSecretario", "Form", nullptr));
         pushButtonConsultas->setText(QCoreApplication::translate("TelaInicialSecretario", "Gerenciar consultas", nullptr));
         pushButtonPacientes->setText(QCoreApplication::translate("TelaInicialSecretario", "Gerenciar pacientes", nullptr));
-        label->setText(QCoreApplication::translate("TelaInicialSecretario", "Nome_do_secretario", nullptr));
+        labelNome->setText(QCoreApplication::translate("TelaInicialSecretario", "Nome_do_secretario", nullptr));
         label_2->setText(QCoreApplication::translate("TelaInicialSecretario", "Op\303\247\303\265es", nullptr));
         pushButtonSair->setText(QCoreApplication::translate("TelaInicialSecretario", "Sair", nullptr));
         label_3->setText(QCoreApplication::translate("TelaInicialSecretario", "Agenda do dia", nullptr));
-        label_4->setText(QCoreApplication::translate("TelaInicialSecretario", "SCT ID", nullptr));
+        labelID->setText(QCoreApplication::translate("TelaInicialSecretario", "SCT ID", nullptr));
     } // retranslateUi
 
 };

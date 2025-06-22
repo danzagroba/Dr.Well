@@ -21,8 +21,11 @@ signals:
 private slots:
     void on_pushButtonVoltar_clicked();
 
+    void on_pushButtonCadastrar_clicked();
+
 private:
     Ui::TelaCadastrarPaciente *ui;
+
 };
 
 #endif // TELACADASTRARPACIENTE_H

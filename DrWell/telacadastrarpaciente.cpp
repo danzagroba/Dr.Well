@@ -18,3 +18,9 @@ void TelaCadastrarPaciente::on_pushButtonVoltar_clicked()
     emit voltarRequisitado();
 }
 
+
+void TelaCadastrarPaciente::on_pushButtonCadastrar_clicked()
+{
+
+}
+

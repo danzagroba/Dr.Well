@@ -23,7 +23,7 @@ QT_BEGIN_NAMESPACE
 class Ui_TelaGerenciarPacientes
 {
 public:
-    QLabel *labelSecretario;
+    QLabel *labelNome;
     QLabel *labelPacientes;
     QLineEdit *lineEditPaciente;
     QTableView *tableView;
@@ -32,16 +32,16 @@ public:
     QPushButton *pushButtonEditar;
     QPushButton *pushButtonVoltar;
     QPushButton *pushButtonCadastrar;
-    QPushButton *pushButton_2;
+    QPushButton *pushButtonRemover;
 
     void setupUi(QWidget *TelaGerenciarPacientes)
     {
         if (TelaGerenciarPacientes->objectName().isEmpty())
             TelaGerenciarPacientes->setObjectName("TelaGerenciarPacientes");
         TelaGerenciarPacientes->resize(504, 353);
-        labelSecretario = new QLabel(TelaGerenciarPacientes);
-        labelSecretario->setObjectName("labelSecretario");
-        labelSecretario->setGeometry(QRect(20, 20, 141, 18));
+        labelNome = new QLabel(TelaGerenciarPacientes);
+        labelNome->setObjectName("labelNome");
+        labelNome->setGeometry(QRect(40, 20, 141, 18));
         labelPacientes = new QLabel(TelaGerenciarPacientes);
         labelPacientes->setObjectName("labelPacientes");
         labelPacientes->setGeometry(QRect(80, 60, 66, 18));
@@ -66,9 +66,9 @@ public:
         pushButtonCadastrar = new QPushButton(TelaGerenciarPacientes);
         pushButtonCadastrar->setObjectName("pushButtonCadastrar");
         pushButtonCadastrar->setGeometry(QRect(320, 300, 71, 31));
-        pushButton_2 = new QPushButton(TelaGerenciarPacientes);
-        pushButton_2->setObjectName("pushButton_2");
-        pushButton_2->setGeometry(QRect(80, 320, 71, 20));
+        pushButtonRemover = new QPushButton(TelaGerenciarPacientes);
+        pushButtonRemover->setObjectName("pushButtonRemover");
+        pushButtonRemover->setGeometry(QRect(80, 320, 71, 20));
 
         retranslateUi(TelaGerenciarPacientes);
 
@@ -78,13 +78,13 @@ public:
     void retranslateUi(QWidget *TelaGerenciarPacientes)
     {
         TelaGerenciarPacientes->setWindowTitle(QCoreApplication::translate("TelaGerenciarPacientes", "Form", nullptr));
-        labelSecretario->setText(QCoreApplication::translate("TelaGerenciarPacientes", "Nome_do_secretario", nullptr));
+        labelNome->setText(QCoreApplication::translate("TelaGerenciarPacientes", "Nome_do_secretario", nullptr));
         labelPacientes->setText(QCoreApplication::translate("TelaGerenciarPacientes", "Pacientes", nullptr));
         labelNumero->setText(QCoreApplication::translate("TelaGerenciarPacientes", "Numero", nullptr));
         pushButtonEditar->setText(QCoreApplication::translate("TelaGerenciarPacientes", "Editar", nullptr));
         pushButtonVoltar->setText(QCoreApplication::translate("TelaGerenciarPacientes", "Voltar", nullptr));
         pushButtonCadastrar->setText(QCoreApplication::translate("TelaGerenciarPacientes", "Cadastrar", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("TelaGerenciarPacientes", "Remover", nullptr));
+        pushButtonRemover->setText(QCoreApplication::translate("TelaGerenciarPacientes", "Remover", nullptr));
     } // retranslateUi
 
 };

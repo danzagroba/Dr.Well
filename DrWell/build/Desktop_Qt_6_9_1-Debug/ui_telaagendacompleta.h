@@ -28,27 +28,35 @@ public:
     QTableView *tableView;
     QLabel *labelNome;
     QLineEdit *lineEditData;
+    QLabel *label;
+    QLabel *labelCRM;
 
     void setupUi(QWidget *TelaAgendaCompleta)
     {
         if (TelaAgendaCompleta->objectName().isEmpty())
             TelaAgendaCompleta->setObjectName("TelaAgendaCompleta");
-        TelaAgendaCompleta->resize(449, 333);
+        TelaAgendaCompleta->resize(577, 333);
         labelAgenda = new QLabel(TelaAgendaCompleta);
         labelAgenda->setObjectName("labelAgenda");
-        labelAgenda->setGeometry(QRect(70, 70, 121, 18));
+        labelAgenda->setGeometry(QRect(90, 90, 121, 18));
         pushButtonVoltar = new QPushButton(TelaAgendaCompleta);
         pushButtonVoltar->setObjectName("pushButtonVoltar");
-        pushButtonVoltar->setGeometry(QRect(350, 20, 51, 26));
+        pushButtonVoltar->setGeometry(QRect(480, 20, 51, 26));
         tableView = new QTableView(TelaAgendaCompleta);
         tableView->setObjectName("tableView");
-        tableView->setGeometry(QRect(20, 100, 411, 201));
+        tableView->setGeometry(QRect(40, 120, 481, 201));
         labelNome = new QLabel(TelaAgendaCompleta);
         labelNome->setObjectName("labelNome");
-        labelNome->setGeometry(QRect(50, 30, 131, 18));
+        labelNome->setGeometry(QRect(50, 30, 191, 18));
         lineEditData = new QLineEdit(TelaAgendaCompleta);
         lineEditData->setObjectName("lineEditData");
-        lineEditData->setGeometry(QRect(220, 70, 113, 26));
+        lineEditData->setGeometry(QRect(310, 90, 113, 20));
+        label = new QLabel(TelaAgendaCompleta);
+        label->setObjectName("label");
+        label->setGeometry(QRect(350, 70, 31, 18));
+        labelCRM = new QLabel(TelaAgendaCompleta);
+        labelCRM->setObjectName("labelCRM");
+        labelCRM->setGeometry(QRect(280, 30, 121, 18));
 
         retranslateUi(TelaAgendaCompleta);
 
@@ -62,6 +70,8 @@ public:
         pushButtonVoltar->setText(QCoreApplication::translate("TelaAgendaCompleta", "Voltar", nullptr));
         labelNome->setText(QCoreApplication::translate("TelaAgendaCompleta", "Nome_do_medico", nullptr));
         lineEditData->setText(QString());
+        label->setText(QCoreApplication::translate("TelaAgendaCompleta", "Data", nullptr));
+        labelCRM->setText(QCoreApplication::translate("TelaAgendaCompleta", "CRM", nullptr));
     } // retranslateUi
 
 };

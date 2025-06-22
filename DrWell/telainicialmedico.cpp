@@ -30,8 +30,9 @@ void TelaInicialMedico::atualizarLabels(){
     QString nome = QString::fromStdString(medico->getNome());
     QString crm = QString::fromStdString(medico->getCrm());
 
-    ui->labelNome->setText(nome);
     ui->labelCRM->setText(crm);
+    ui->labelNome->setText(nome);
+
 }
 
 void TelaInicialMedico::on_pushButtonAgenda_clicked()

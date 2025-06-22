@@ -23,7 +23,7 @@ QT_BEGIN_NAMESPACE
 class Ui_TelaGerenciarConsultas
 {
 public:
-    QLabel *labelSecretario;
+    QLabel *labelNome;
     QPushButton *pushButtonVoltar;
     QLabel *labelConsultas;
     QLineEdit *lineEditConsulta;
@@ -40,9 +40,9 @@ public:
         if (TelaGerenciarConsultas->objectName().isEmpty())
             TelaGerenciarConsultas->setObjectName("TelaGerenciarConsultas");
         TelaGerenciarConsultas->resize(492, 366);
-        labelSecretario = new QLabel(TelaGerenciarConsultas);
-        labelSecretario->setObjectName("labelSecretario");
-        labelSecretario->setGeometry(QRect(20, 20, 141, 18));
+        labelNome = new QLabel(TelaGerenciarConsultas);
+        labelNome->setObjectName("labelNome");
+        labelNome->setGeometry(QRect(20, 20, 141, 18));
         pushButtonVoltar = new QPushButton(TelaGerenciarConsultas);
         pushButtonVoltar->setObjectName("pushButtonVoltar");
         pushButtonVoltar->setGeometry(QRect(410, 20, 51, 26));
@@ -82,7 +82,7 @@ public:
     void retranslateUi(QWidget *TelaGerenciarConsultas)
     {
         TelaGerenciarConsultas->setWindowTitle(QCoreApplication::translate("TelaGerenciarConsultas", "Form", nullptr));
-        labelSecretario->setText(QCoreApplication::translate("TelaGerenciarConsultas", "Nome_do_secretario", nullptr));
+        labelNome->setText(QCoreApplication::translate("TelaGerenciarConsultas", "Nome_do_secretario", nullptr));
         pushButtonVoltar->setText(QCoreApplication::translate("TelaGerenciarConsultas", "Voltar", nullptr));
         labelConsultas->setText(QCoreApplication::translate("TelaGerenciarConsultas", "Gerenciar Consultas", nullptr));
         labelNumero->setText(QCoreApplication::translate("TelaGerenciarConsultas", "Numero", nullptr));
