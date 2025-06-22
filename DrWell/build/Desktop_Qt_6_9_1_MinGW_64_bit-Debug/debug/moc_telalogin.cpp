@@ -43,6 +43,8 @@ template <> constexpr inline auto TelaLogin::qt_create_metaobjectdata<qt_meta_ta
         "",
         "entrarRequisitado",
         "id",
+        "std::shared_ptr<Usuario>",
+        "usuario",
         "on_pushButton_clicked",
         "on_pushButton_2_clicked"
     };
@@ -51,13 +53,13 @@ template <> constexpr inline auto TelaLogin::qt_create_metaobjectdata<qt_meta_ta
         // Signal 'registroRequisitado'
         QtMocHelpers::SignalData<void()>(1, 2, QMC::AccessPublic, QMetaType::Void),
         // Signal 'entrarRequisitado'
-        QtMocHelpers::SignalData<void(int)>(3, 2, QMC::AccessPublic, QMetaType::Void, {{
-            { QMetaType::Int, 4 },
+        QtMocHelpers::SignalData<void(int, std::shared_ptr<Usuario>)>(3, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::Int, 4 }, { 0x80000000 | 5, 6 },
         }}),
         // Slot 'on_pushButton_clicked'
-        QtMocHelpers::SlotData<void()>(5, 2, QMC::AccessPrivate, QMetaType::Void),
+        QtMocHelpers::SlotData<void()>(7, 2, QMC::AccessPrivate, QMetaType::Void),
         // Slot 'on_pushButton_2_clicked'
-        QtMocHelpers::SlotData<void()>(6, 2, QMC::AccessPrivate, QMetaType::Void),
+        QtMocHelpers::SlotData<void()>(8, 2, QMC::AccessPrivate, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -82,7 +84,7 @@ void TelaLogin::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
         case 0: _t->registroRequisitado(); break;
-        case 1: _t->entrarRequisitado((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 1: _t->entrarRequisitado((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<std::shared_ptr<Usuario>>>(_a[2]))); break;
         case 2: _t->on_pushButton_clicked(); break;
         case 3: _t->on_pushButton_2_clicked(); break;
         default: ;
@@ -91,7 +93,7 @@ void TelaLogin::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
     if (_c == QMetaObject::IndexOfMethod) {
         if (QtMocHelpers::indexOfMethod<void (TelaLogin::*)()>(_a, &TelaLogin::registroRequisitado, 0))
             return;
-        if (QtMocHelpers::indexOfMethod<void (TelaLogin::*)(int )>(_a, &TelaLogin::entrarRequisitado, 1))
+        if (QtMocHelpers::indexOfMethod<void (TelaLogin::*)(int , std::shared_ptr<Usuario> )>(_a, &TelaLogin::entrarRequisitado, 1))
             return;
     }
 }
@@ -134,8 +136,8 @@ void TelaLogin::registroRequisitado()
 }
 
 // SIGNAL 1
-void TelaLogin::entrarRequisitado(int _t1)
+void TelaLogin::entrarRequisitado(int _t1, std::shared_ptr<Usuario> _t2)
 {
-    QMetaObject::activate<void>(this, &staticMetaObject, 1, nullptr, _t1);
+    QMetaObject::activate<void>(this, &staticMetaObject, 1, nullptr, _t1, _t2);
 }
 QT_WARNING_POP

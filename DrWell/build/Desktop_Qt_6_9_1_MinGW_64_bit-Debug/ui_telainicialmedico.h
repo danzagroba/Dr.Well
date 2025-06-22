@@ -39,7 +39,7 @@ public:
         TelaInicialMedico->resize(644, 476);
         labelNome = new QLabel(TelaInicialMedico);
         labelNome->setObjectName("labelNome");
-        labelNome->setGeometry(QRect(90, 50, 131, 20));
+        labelNome->setGeometry(QRect(60, 50, 201, 20));
         labelOpcoes = new QLabel(TelaInicialMedico);
         labelOpcoes->setObjectName("labelOpcoes");
         labelOpcoes->setGeometry(QRect(50, 110, 63, 20));
@@ -60,7 +60,7 @@ public:
         pushButtonHistorico->setGeometry(QRect(50, 280, 151, 29));
         labelCRM = new QLabel(TelaInicialMedico);
         labelCRM->setObjectName("labelCRM");
-        labelCRM->setGeometry(QRect(270, 50, 63, 20));
+        labelCRM->setGeometry(QRect(270, 50, 191, 20));
         pushButtonSair = new QPushButton(TelaInicialMedico);
         pushButtonSair->setObjectName("pushButtonSair");
         pushButtonSair->setGeometry(QRect(540, 20, 83, 29));

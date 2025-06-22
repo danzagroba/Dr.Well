@@ -76,15 +76,15 @@ void GerenciadorBanco::inicializar(){
     // SELECT * FROM secretarios;
     // )";
     // queriesParaExecutar << R"(
-    // SELECT * FROM medicos;
+    // SELECT u.email, u.senha FROM usuarios AS u JOIN medicos AS m ON u.id = m.usuario_id;
     // )";
     // queriesParaExecutar << R"(
-    // SELECT * FROM administradores;
+    // SELECT * FROM usuarios;
     // )";
 
-    queriesParaExecutar << R"(
-    SELECT u.nome, u.sobrenome, u.cpf, m.crm, m.especialidade FROM usuarios AS u JOIN medicos AS m ON u.id = m.usuario_id;
-    )";
+    // queriesParaExecutar << R"(
+    // SELECT u.nome, u.sobrenome, u.cpf, m.crm, m.especialidade FROM usuarios AS u JOIN medicos AS m ON u.id = m.usuario_id;
+    // )";
 
     qDebug() << "Iniciando inserção em lote...";
     for (const QString &query : queriesParaExecutar) {

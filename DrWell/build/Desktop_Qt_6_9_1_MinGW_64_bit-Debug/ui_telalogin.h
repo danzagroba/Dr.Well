@@ -11,7 +11,6 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QComboBox>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QTextEdit>
@@ -28,7 +27,6 @@ public:
     QPushButton *pushButton_2;
     QTextEdit *textEdit_2;
     QPushButton *pushButton;
-    QComboBox *comboBox;
 
     void setupUi(QWidget *TelaLogin)
     {
@@ -43,22 +41,17 @@ public:
         label->setGeometry(QRect(120, 40, 81, 20));
         textEdit = new QTextEdit(TelaLogin);
         textEdit->setObjectName("textEdit");
+        textEdit->setEnabled(true);
         textEdit->setGeometry(QRect(120, 70, 271, 31));
         pushButton_2 = new QPushButton(TelaLogin);
         pushButton_2->setObjectName("pushButton_2");
-        pushButton_2->setGeometry(QRect(140, 280, 191, 29));
+        pushButton_2->setGeometry(QRect(100, 230, 191, 29));
         textEdit_2 = new QTextEdit(TelaLogin);
         textEdit_2->setObjectName("textEdit_2");
         textEdit_2->setGeometry(QRect(120, 150, 271, 31));
         pushButton = new QPushButton(TelaLogin);
         pushButton->setObjectName("pushButton");
         pushButton->setGeometry(QRect(310, 230, 83, 29));
-        comboBox = new QComboBox(TelaLogin);
-        comboBox->addItem(QString());
-        comboBox->addItem(QString());
-        comboBox->addItem(QString());
-        comboBox->setObjectName("comboBox");
-        comboBox->setGeometry(QRect(120, 230, 141, 28));
 
         retranslateUi(TelaLogin);
 
@@ -70,12 +63,16 @@ public:
         TelaLogin->setWindowTitle(QCoreApplication::translate("TelaLogin", "Form", nullptr));
         label_2->setText(QCoreApplication::translate("TelaLogin", "Senha", nullptr));
         label->setText(QCoreApplication::translate("TelaLogin", "CPF/Email", nullptr));
+        textEdit->setHtml(QCoreApplication::translate("TelaLogin", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"hr { height: 1px; border-width: 0; }\n"
+"li.unchecked::marker { content: \"\\2610\"; }\n"
+"li.checked::marker { content: \"\\2612\"; }\n"
+"</style></head><body style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", nullptr));
         pushButton_2->setText(QCoreApplication::translate("TelaLogin", "N\303\243o possui cadastro?", nullptr));
         pushButton->setText(QCoreApplication::translate("TelaLogin", "Entrar", nullptr));
-        comboBox->setItemText(0, QCoreApplication::translate("TelaLogin", "Administrador", nullptr));
-        comboBox->setItemText(1, QCoreApplication::translate("TelaLogin", "Secret\303\241rio", nullptr));
-        comboBox->setItemText(2, QCoreApplication::translate("TelaLogin", "M\303\251dico", nullptr));
-
     } // retranslateUi
 
 };
