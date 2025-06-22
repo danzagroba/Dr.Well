@@ -137,8 +137,8 @@ bool GerenciadorBanco::listarSelect(QSqlQuery& q) {
 int GerenciadorBanco::autenticarUsuario(const QString& cpfouemail, const QString& senha) {
 
     QSqlQuery query(m_db);
-    query.prepare("SELECT tipo_usuario, senha, ativo FROM usuarios WHERE (cpf = :identificador OR email = :identificador) AND senha = :senhaParam");
-    query.bindValue(":identificador", cpfouemail); // Use um único placeholder se a entrada for um OU outro
+    query.prepare("SELECT ativo FROM usuarios WHERE (cpf = :identificador OR email = :identificador) AND senha_hash = :senhaParam");
+    query.bindValue(":identificador", cpfouemail);
     query.bindValue(":senhaParam", senha);
 
     if (!query.exec()) {
@@ -148,12 +148,49 @@ int GerenciadorBanco::autenticarUsuario(const QString& cpfouemail, const QString
 
     if (query.next()) {
         bool ativo = query.value("ativo").toBool();
-        int tipoUsuario = query.value("tipo_usuario").toInt();
 
         if (ativo) {
-            return tipoUsuario;
+
+
+            QSqlQuery medicoQuery(m_db);
+            medicoQuery.prepare("SELECT U.id FROM usuarios AS U JOIN medicos AS A ON U.id = A.usuario_id WHERE U.cpf = :identificador OR U.email = :identificador");
+            medicoQuery.bindValue(":identificador", cpfouemail);
+            if (medicoQuery.exec()) {
+                if (medicoQuery.next()) {
+                    qDebug() << "Usuario e um Medico.";
+                    return 1; // Retorna 1 para Médico
+                }
+            } else {
+                qDebug() << "Erro na query de Medico: " << medicoQuery.lastError().text();
+            }
+
+            QSqlQuery secretarioQuery(m_db);
+            secretarioQuery.prepare("SELECT U.id FROM usuarios AS U JOIN secretarios AS A ON U.id = A.usuario_id WHERE U.cpf = :identificador OR U.email = :identificador");
+            secretarioQuery.bindValue(":identificador", cpfouemail);
+            if (secretarioQuery.exec()) {
+                if (secretarioQuery.next()) {
+                    qDebug() << "Usuario e um Secretario.";
+                    return 2;
+                }
+            } else {
+                qDebug() << "Erro na query de Secretario: " << secretarioQuery.lastError().text();
+            }
+
+            QSqlQuery administradorQuery(m_db);
+            administradorQuery.prepare("SELECT U.id FROM usuarios AS U JOIN administradores AS A ON U.id = A.usuario_id WHERE U.cpf = :identificador OR U.email = :identificador");
+            administradorQuery.bindValue(":identificador", cpfouemail);
+            if (administradorQuery.exec()) {
+                if (administradorQuery.next()) {
+                    qDebug() << "Usuario e um Administrador.";
+                    return 3;
+                }
+            } else {
+                qDebug() << "Erro na query de Administrador: " << administradorQuery.lastError().text();
+            }
+
+            qDebug() << "AAAAAAAAAAAAAAAA";
+
         }
     }
-
     return -1;
 }

@@ -15,7 +15,7 @@ public:
     void fechar();
     void inicializar();
 
-    autenticarUsuario(const QString& cpfouemail, const QString& senha);
+    int autenticarUsuario(const QString& cpfouemail, const QString& senha);
 private:
     GerenciadorBanco();
     ~GerenciadorBanco();

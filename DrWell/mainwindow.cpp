@@ -145,6 +145,21 @@ void MainWindow::irParaTelaInicialAdministrador(){
     ui->stackedWidget->setCurrentWidget(telaInicialAdministrador);
 }
 
-void MainWindow::irParaTelaInicialUsuario(){
 
+void MainWindow::irParaTelaInicialUsuario(int id){
+    switch (id){
+    case 1:
+        irParaTelaInicialMedico();
+        break;
+    case 2:
+        irParaTelaInicialSecretario();
+        break;
+    case 3:
+        irParaTelaInicialAdministrador();
+        break;
+    default:
+        qDebug() << "Tipo de usuario desconhecido ou login falhou: " << id;
+        irParaTelaLogin();
+        break;
+    }
 }

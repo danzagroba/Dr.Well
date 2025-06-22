@@ -41,6 +41,7 @@ static constexpr auto qt_meta_stringdata_ZN9TelaLoginE = QtMocHelpers::stringDat
     "registroRequisitado",
     "",
     "entrarRequisitado",
+    "id",
     "on_pushButton_clicked",
     "on_pushButton_2_clicked"
 );
@@ -63,15 +64,15 @@ Q_CONSTINIT static const uint qt_meta_data_ZN9TelaLoginE[] = {
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
        1,    0,   38,    2, 0x06,    1 /* Public */,
-       3,    0,   39,    2, 0x06,    2 /* Public */,
+       3,    1,   39,    2, 0x06,    2 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       4,    0,   40,    2, 0x08,    3 /* Private */,
-       5,    0,   41,    2, 0x08,    4 /* Private */,
+       5,    0,   42,    2, 0x08,    4 /* Private */,
+       6,    0,   43,    2, 0x08,    5 /* Private */,
 
  // signals: parameters
     QMetaType::Void,
-    QMetaType::Void,
+    QMetaType::Void, QMetaType::Int,    4,
 
  // slots: parameters
     QMetaType::Void,
@@ -93,6 +94,7 @@ Q_CONSTINIT const QMetaObject TelaLogin::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'entrarRequisitado'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
         // method 'on_pushButton_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_pushButton_2_clicked'
@@ -107,7 +109,7 @@ void TelaLogin::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
         case 0: _t->registroRequisitado(); break;
-        case 1: _t->entrarRequisitado(); break;
+        case 1: _t->entrarRequisitado((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
         case 2: _t->on_pushButton_clicked(); break;
         case 3: _t->on_pushButton_2_clicked(); break;
         default: ;
@@ -123,7 +125,7 @@ void TelaLogin::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
             }
         }
         {
-            using _q_method_type = void (TelaLogin::*)();
+            using _q_method_type = void (TelaLogin::*)(int );
             if (_q_method_type _q_method = &TelaLogin::entrarRequisitado; *reinterpret_cast<_q_method_type *>(_a[1]) == _q_method) {
                 *result = 1;
                 return;
@@ -170,8 +172,9 @@ void TelaLogin::registroRequisitado()
 }
 
 // SIGNAL 1
-void TelaLogin::entrarRequisitado()
+void TelaLogin::entrarRequisitado(int _t1)
 {
-    QMetaObject::activate(this, &staticMetaObject, 1, nullptr);
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
+    QMetaObject::activate(this, &staticMetaObject, 1, _a);
 }
 QT_WARNING_POP
