@@ -46,6 +46,7 @@ HEADERS += \
     mainwindow.h \
     telacadastrarpaciente.h \
     telagerenciarconsultas.h \
+    telamarcarconsulta.h \
     telagerenciarpacientes.h \
     telainicialadministrador.h \
     telainicialmedico.h \
@@ -57,12 +58,11 @@ HEADERS += \
     telaregistro.h \
     GerenciadorBanco.h
 
-    telaregistro.h
-
 FORMS += \
     mainwindow.ui \
     telacadastrarpaciente.ui \
     telagerenciarconsultas.ui \
+    telagerenciarpacientes.ui \
     telainicialadministrador.ui \
     telainicialmedico.ui \
     telainicialsecretario.ui \
