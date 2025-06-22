@@ -137,9 +137,9 @@ bool GerenciadorBanco::listarSelect(QSqlQuery& q) {
 std::shared_ptr<Usuario> GerenciadorBanco::autenticarUsuario(const QString& cpfouemail, const QString& senha, int &tipo) {
 
     QSqlQuery query(m_db);
-    query.prepare("SELECT ativo FROM usuarios WHERE (cpf = :identificador OR email = :identificador) "); //AND senha_hash = :senhaParam
+    query.prepare("SELECT ativo FROM usuarios WHERE (cpf = :identificador OR email = :identificador) AND senha_hash = :senhaParam ");
     query.bindValue(":identificador", cpfouemail);
-    //query.bindValue(":senhaParam", senha);
+    query.bindValue(":senhaParam", senha);
 
     if (!query.exec()) {
         qDebug() << "Erro ao executar consulta de autenticacao:" << query.lastError().text();
