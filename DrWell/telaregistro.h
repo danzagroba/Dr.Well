@@ -21,6 +21,10 @@ signals:
 private slots:
     void on_pushButtonConfirmar_clicked();
 
+    void on_pushButtonConfirmar_2_clicked();
+
+    void on_comboBox_currentIndexChanged(int index);
+
 private:
     Ui::TelaRegistro *ui;
 };

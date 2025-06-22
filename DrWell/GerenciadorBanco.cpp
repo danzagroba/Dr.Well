@@ -187,10 +187,88 @@ int GerenciadorBanco::autenticarUsuario(const QString& cpfouemail, const QString
             } else {
                 qDebug() << "Erro na query de Administrador: " << administradorQuery.lastError().text();
             }
-
-            qDebug() << "AAAAAAAAAAAAAAAA";
-
         }
     }
     return -1;
+}
+
+bool GerenciadorBanco::criarUsuario(const QVariantMap& dadosUsuario, const QVariantMap& dadosEspecificos, int tipo) {
+
+    if (!m_db.transaction()) {
+        qDebug() << "Falha ao iniciar a transacao:" << m_db.lastError().text();
+        return false;
+    }
+
+    int novoUsuarioId = -1;
+
+    {
+        QSqlQuery queryUsuario(m_db);
+        queryUsuario.prepare("INSERT INTO usuarios (nome, sobrenome, cpf, email, senha_hash, telefone, data_nasc, salario, ativo) "
+                             "VALUES (:nome, :sobrenome, :cpf, :email, :senha_hash, :telefone, :data_nasc, :salario, :ativo)");
+
+        queryUsuario.bindValue(":nome", dadosUsuario["nome"]);
+        queryUsuario.bindValue(":sobrenome", dadosUsuario["sobrenome"]);
+        queryUsuario.bindValue(":cpf", dadosUsuario["cpf"]);
+        queryUsuario.bindValue(":email", dadosUsuario["email"]);
+        queryUsuario.bindValue(":senha_hash", dadosUsuario["senha_hash"]);
+        queryUsuario.bindValue(":telefone", dadosUsuario["telefone"]);
+        queryUsuario.bindValue(":data_nasc", dadosUsuario["data_nasc"]);
+        queryUsuario.bindValue(":salario", dadosUsuario["salario"]);
+        queryUsuario.bindValue(":ativo", dadosUsuario.value("ativo", true));
+
+        if (!queryUsuario.exec()) {
+            qDebug() << "Falha ao inserir na tabela usuarios:" << queryUsuario.lastError().text();
+            m_db.rollback();
+            return false;
+        }
+        novoUsuarioId = queryUsuario.lastInsertId().toLongLong();
+        if (novoUsuarioId <= 0) {
+            qDebug() << "Nao foi possivel obter o ID do ultimo usuario inserido.";
+            m_db.rollback();
+            return false;
+        }
+    }
+    QSqlQuery queryTipo(m_db);
+    QString sqlTipo;
+    switch (tipo) {
+    case 2:
+        sqlTipo = "INSERT INTO medicos (usuario_id, crm, especialidade) VALUES (:usuario_id, :crm, :especialidade)";
+        queryTipo.prepare(sqlTipo);
+        queryTipo.bindValue(":crm", dadosEspecificos["crm"]);
+        queryTipo.bindValue(":especialidade", dadosEspecificos["especialidade"]);
+        break;
+
+    case 1:
+        sqlTipo = "INSERT INTO secretarios (usuario_id, ramal) VALUES (:usuario_id, :ramal)";
+        queryTipo.prepare(sqlTipo);
+        queryTipo.bindValue(":ramal", dadosEspecificos["ramal"]);
+        break;
+
+    case 0:
+        sqlTipo = "INSERT INTO administradores (usuario_id, super_adm) VALUES (:usuario_id, :super_adm)";
+        queryTipo.prepare(sqlTipo);
+        queryTipo.bindValue(":super_adm", dadosEspecificos.value("super_adm", false));
+        break;
+
+    default:
+        qDebug() << "Tipo de usuario invalido fornecido.";
+        m_db.rollback();
+        return false;
+    }
+
+    queryTipo.bindValue(":usuario_id", novoUsuarioId);
+
+    if (!queryTipo.exec()) {
+        qDebug() << "Falha ao inserir na tabela de tipo:" << queryTipo.lastError().text();
+        m_db.rollback();
+        return false;
+    }
+    if (!m_db.commit()) {
+        qDebug() << "Falha ao comitar a transacao:" << m_db.lastError().text();
+        m_db.rollback();
+        return false;
+    }
+
+    qDebug() << "Usuario e seu tipo cadastrados com sucesso! ID do usuario:" << novoUsuarioId;
+    return true;
 }

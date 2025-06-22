@@ -16,6 +16,7 @@ public:
     void inicializar();
 
     int autenticarUsuario(const QString& cpfouemail, const QString& senha);
+    bool criarUsuario(const QVariantMap& dadosUsuario, const QVariantMap& dadosEspecificos, int tipo);
 private:
     GerenciadorBanco();
     ~GerenciadorBanco();
