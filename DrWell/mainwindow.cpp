@@ -164,10 +164,11 @@ void MainWindow::irParaTelaInicialAdministrador(){
 }
 
 
-void MainWindow::irParaTelaInicialUsuario(int id){
+void MainWindow::irParaTelaInicialUsuario(int id, std::shared_ptr<Usuario> usuario){
     switch (id){
     case 1:
         irParaTelaInicialMedico();
+        telaInicialMedico->setMedico(std::dynamic_pointer_cast<Medico>(usuario));
         break;
     case 2:
         irParaTelaInicialSecretario();

@@ -44,7 +44,7 @@ public:
     void irParaTelaAgendaCompleta();
     void irParaTelaGerenciarProntuarios();
     void irParaTelaHistoricoMedico();
-    void irParaTelaInicialUsuario(int id);
+    void irParaTelaInicialUsuario(int id, std::shared_ptr<Usuario> usuario);
     void irParaTelaGerenciarPacientes();
     void irParaTelaGerenciarConsultas();
     void irParaTelaCadastrarPaciente();

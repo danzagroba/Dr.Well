@@ -2,6 +2,7 @@
 #define TELAINICIALMEDICO_H
 
 #include <QWidget>
+#include <Medico.h>
 
 namespace Ui {
 class TelaInicialMedico;
@@ -14,6 +15,8 @@ class TelaInicialMedico : public QWidget
 public:
     explicit TelaInicialMedico(QWidget *parent = nullptr);
     ~TelaInicialMedico();
+
+    void setMedico(std::shared_ptr<Medico> m);
 
 signals:
     void agendaRequisitada();
@@ -32,6 +35,9 @@ private slots:
 
 private:
     Ui::TelaInicialMedico *ui;
+    std::shared_ptr<Medico> medico;
+
+    void atualizarLabels();
 };
 
 #endif // TELAINICIALMEDICO_H

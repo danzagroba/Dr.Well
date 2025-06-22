@@ -13,6 +13,27 @@ TelaInicialMedico::~TelaInicialMedico()
     delete ui;
 }
 
+void TelaInicialMedico::setMedico(std::shared_ptr<Medico> m){
+
+    if(!m){
+        return;
+    }
+
+    medico = m;
+
+    atualizarLabels();
+
+}
+
+void TelaInicialMedico::atualizarLabels(){
+
+    QString nome = QString::fromStdString(medico->getNome());
+    QString crm = QString::fromStdString(medico->getCrm());
+
+    ui->labelNome->setText(nome);
+    ui->labelCRM->setText("CRM: " + crm);
+}
+
 void TelaInicialMedico::on_pushButtonAgenda_clicked()
 {
     emit agendaRequisitada();

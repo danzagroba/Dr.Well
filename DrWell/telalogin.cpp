@@ -25,6 +25,9 @@ void TelaLogin::on_pushButton_2_clicked()
 
 void TelaLogin::on_pushButton_clicked()
 {
+    int tipoUsuarioLogado = -1;
+    std::shared_ptr<Usuario> usuario = nullptr;
+
     QString cpfouemail = ui->textEdit->toPlainText();
     QString senha = ui->textEdit_2->toPlainText();//da pra mudar pra lineedit depois
     if (cpfouemail.isEmpty()) {
@@ -35,9 +38,9 @@ void TelaLogin::on_pushButton_clicked()
         QMessageBox::warning(this, "Login Inválido", "Por favor, insira sua senha.");
         return;
     }
-    int tipoUsuarioLogado = GerenciadorBanco::getInstance()->autenticarUsuario(cpfouemail, senha);
-    if (tipoUsuarioLogado != -1) {
-        emit entrarRequisitado(tipoUsuarioLogado);
+    usuario = GerenciadorBanco::getInstance()->autenticarUsuario(cpfouemail, senha, tipoUsuarioLogado);
+    if (tipoUsuarioLogado != -1 && usuario) {
+        emit entrarRequisitado(tipoUsuarioLogado, usuario);
 
         ui->textEdit->clear();
         ui->textEdit_2->clear();

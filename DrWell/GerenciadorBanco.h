@@ -4,6 +4,9 @@
 #include <QSqlDatabase>
 #include <QString>
 #include <QSqlQuery>
+#include "Medico.h"
+#include "Secretario.h"
+#include "Administrador.h"
 
 class QSqlQuery;
 
@@ -15,8 +18,10 @@ public:
     void fechar();
     void inicializar();
 
-    int autenticarUsuario(const QString& cpfouemail, const QString& senha);
+    std::shared_ptr<Usuario> autenticarUsuario(const QString& cpfouemail, const QString& senha, int &tipo);
     bool criarUsuario(const QVariantMap& dadosUsuario, const QVariantMap& dadosEspecificos, int tipo);
+    std::shared_ptr<Usuario> recuperarUsuarioPorId(int usuarioId);
+
 private:
     GerenciadorBanco();
     ~GerenciadorBanco();

@@ -20,6 +20,8 @@ public:
 
     void exibirInformacoes() const override;
     void adicionarConsulta(std::shared_ptr<Consulta> consulta);
+
+    std::string getCrm() const {return crm;}
 };
 
 #endif // MEDICO_H
