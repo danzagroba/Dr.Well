@@ -121,7 +121,7 @@
     <string>Cadastrar</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="pushButtonRemover">
    <property name="geometry">
     <rect>
      <x>80</x>

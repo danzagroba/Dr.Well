@@ -27,6 +27,8 @@ private slots:
 
     void on_pushButtonAbrir_clicked();
 
+    void on_lineEditPaciente_editingFinished();
+
 private:
     Ui::TelaHistoricoMedico *ui;
     std::shared_ptr<Medico> medico;

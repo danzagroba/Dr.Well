@@ -26,6 +26,14 @@ private slots:
 
     void on_pushButtonMarcar_clicked();
 
+    void on_lineEditConsulta_editingFinished();
+
+    void on_pushButtonEditar_clicked();
+
+    void on_pushButtonConfirmar_clicked();
+
+    void on_pushButtonCancelar_clicked();
+
 private:
     Ui::TelaGerenciarConsultas *ui;
     std::shared_ptr<Secretario> secretario;

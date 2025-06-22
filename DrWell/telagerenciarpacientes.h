@@ -27,6 +27,12 @@ private slots:
 
     void on_pushButtonCadastrar_clicked();
 
+    void on_lineEditPaciente_editingFinished();
+
+    void on_pushButtonRemover_clicked();
+
+    void on_pushButtonEditar_clicked();
+
 private:
     Ui::TelaGerenciarPacientes *ui;
     std::shared_ptr<Secretario> secretario;

@@ -43,7 +43,10 @@ template <> constexpr inline auto TelaGerenciarPacientes::qt_create_metaobjectda
         "",
         "cadastrarRequisitado",
         "on_pushButtonVoltar_clicked",
-        "on_pushButtonCadastrar_clicked"
+        "on_pushButtonCadastrar_clicked",
+        "on_lineEditPaciente_editingFinished",
+        "on_pushButtonRemover_clicked",
+        "on_pushButtonEditar_clicked"
     };
 
     QtMocHelpers::UintData qt_methods {
@@ -55,6 +58,12 @@ template <> constexpr inline auto TelaGerenciarPacientes::qt_create_metaobjectda
         QtMocHelpers::SlotData<void()>(4, 2, QMC::AccessPrivate, QMetaType::Void),
         // Slot 'on_pushButtonCadastrar_clicked'
         QtMocHelpers::SlotData<void()>(5, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'on_lineEditPaciente_editingFinished'
+        QtMocHelpers::SlotData<void()>(6, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'on_pushButtonRemover_clicked'
+        QtMocHelpers::SlotData<void()>(7, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'on_pushButtonEditar_clicked'
+        QtMocHelpers::SlotData<void()>(8, 2, QMC::AccessPrivate, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -82,6 +91,9 @@ void TelaGerenciarPacientes::qt_static_metacall(QObject *_o, QMetaObject::Call _
         case 1: _t->cadastrarRequisitado(); break;
         case 2: _t->on_pushButtonVoltar_clicked(); break;
         case 3: _t->on_pushButtonCadastrar_clicked(); break;
+        case 4: _t->on_lineEditPaciente_editingFinished(); break;
+        case 5: _t->on_pushButtonRemover_clicked(); break;
+        case 6: _t->on_pushButtonEditar_clicked(); break;
         default: ;
         }
     }
@@ -112,14 +124,14 @@ int TelaGerenciarPacientes::qt_metacall(QMetaObject::Call _c, int _id, void **_a
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 4)
+        if (_id < 7)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 4;
+        _id -= 7;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 4)
+        if (_id < 7)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 4;
+        _id -= 7;
     }
     return _id;
 }

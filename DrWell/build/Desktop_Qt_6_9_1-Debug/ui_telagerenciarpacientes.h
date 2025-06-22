@@ -32,7 +32,7 @@ public:
     QPushButton *pushButtonEditar;
     QPushButton *pushButtonVoltar;
     QPushButton *pushButtonCadastrar;
-    QPushButton *pushButton_2;
+    QPushButton *pushButtonRemover;
 
     void setupUi(QWidget *TelaGerenciarPacientes)
     {
@@ -66,9 +66,9 @@ public:
         pushButtonCadastrar = new QPushButton(TelaGerenciarPacientes);
         pushButtonCadastrar->setObjectName("pushButtonCadastrar");
         pushButtonCadastrar->setGeometry(QRect(320, 300, 71, 31));
-        pushButton_2 = new QPushButton(TelaGerenciarPacientes);
-        pushButton_2->setObjectName("pushButton_2");
-        pushButton_2->setGeometry(QRect(80, 320, 71, 20));
+        pushButtonRemover = new QPushButton(TelaGerenciarPacientes);
+        pushButtonRemover->setObjectName("pushButtonRemover");
+        pushButtonRemover->setGeometry(QRect(80, 320, 71, 20));
 
         retranslateUi(TelaGerenciarPacientes);
 
@@ -84,7 +84,7 @@ public:
         pushButtonEditar->setText(QCoreApplication::translate("TelaGerenciarPacientes", "Editar", nullptr));
         pushButtonVoltar->setText(QCoreApplication::translate("TelaGerenciarPacientes", "Voltar", nullptr));
         pushButtonCadastrar->setText(QCoreApplication::translate("TelaGerenciarPacientes", "Cadastrar", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("TelaGerenciarPacientes", "Remover", nullptr));
+        pushButtonRemover->setText(QCoreApplication::translate("TelaGerenciarPacientes", "Remover", nullptr));
     } // retranslateUi
 
 };

@@ -42,9 +42,9 @@ void TelaGerenciarConsultas::atualizarLabels(){
 
 void TelaGerenciarConsultas::on_lineEditConsulta_editingFinished()
 {
-    td::string data = ui->lineEditConsulta->text().toStdString();
+    std::string data = ui->lineEditConsulta->text().toStdString();
 
-    ui->lineEditData->clear();
+    ui->lineEditConsulta->clear();
 }
 
 

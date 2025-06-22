@@ -41,12 +41,12 @@ void TelaGerenciarPacientes::atualizarLabels(){
 
 void TelaGerenciarPacientes::on_lineEditPaciente_editingFinished()
 {
-    td::string cpf = ui->lineEditPaciente->text().toStdString();
+    std::string cpf = ui->lineEditPaciente->text().toStdString();
     if(cpf != ""){
         qDebug() << "Buscar paciente: " << cpf;
         //buscarPaciente(cpf);
     }
-    ui->lineEditData->clear();
+    ui->lineEditPaciente->clear();
 }
 
 
