@@ -2,6 +2,7 @@
 #define TELAGERENCIARPACIENTES_H
 
 #include <QWidget>
+#include <Secretario.h>
 
 namespace Ui {
 class TelaGerenciarPacientes;
@@ -15,6 +16,8 @@ public:
     explicit TelaGerenciarPacientes(QWidget *parent = nullptr);
     ~TelaGerenciarPacientes();
 
+    void setSecretario(std::shared_ptr<Secretario> s);
+
 signals:
     void voltarRequisitado();
     void cadastrarRequisitado();
@@ -26,6 +29,9 @@ private slots:
 
 private:
     Ui::TelaGerenciarPacientes *ui;
+    std::shared_ptr<Secretario> secretario;
+
+    void atualizarLabels();
 };
 
 #endif // TELAGERENCIARPACIENTES_H

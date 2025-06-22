@@ -2,7 +2,7 @@
 #define TELAGERENCIARPRONTUARIOS_H
 
 #include <QWidget>
-
+#include <Medico.h>
 namespace Ui {
 class TelaGerenciarProntuarios;
 }
@@ -14,6 +14,8 @@ class TelaGerenciarProntuarios : public QWidget
 public:
     explicit TelaGerenciarProntuarios(QWidget *parent = nullptr);
     ~TelaGerenciarProntuarios();
+
+    void setMedico(std::shared_ptr<Medico> m);
 
 signals:
     void voltarRequisitado();
@@ -28,6 +30,9 @@ private slots:
 
 private:
     Ui::TelaGerenciarProntuarios *ui;
+    std::shared_ptr<Medico> medico;
+
+    void atualizarLabels();
 };
 
 #endif // TELAGERENCIARPRONTUARIOS_H

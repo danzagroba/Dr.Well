@@ -23,7 +23,7 @@ QT_BEGIN_NAMESPACE
 class Ui_TelaGerenciarPacientes
 {
 public:
-    QLabel *labelSecretario;
+    QLabel *labelNome;
     QLabel *labelPacientes;
     QLineEdit *lineEditPaciente;
     QTableView *tableView;
@@ -39,9 +39,9 @@ public:
         if (TelaGerenciarPacientes->objectName().isEmpty())
             TelaGerenciarPacientes->setObjectName("TelaGerenciarPacientes");
         TelaGerenciarPacientes->resize(504, 353);
-        labelSecretario = new QLabel(TelaGerenciarPacientes);
-        labelSecretario->setObjectName("labelSecretario");
-        labelSecretario->setGeometry(QRect(20, 20, 141, 18));
+        labelNome = new QLabel(TelaGerenciarPacientes);
+        labelNome->setObjectName("labelNome");
+        labelNome->setGeometry(QRect(40, 20, 141, 18));
         labelPacientes = new QLabel(TelaGerenciarPacientes);
         labelPacientes->setObjectName("labelPacientes");
         labelPacientes->setGeometry(QRect(80, 60, 66, 18));
@@ -78,7 +78,7 @@ public:
     void retranslateUi(QWidget *TelaGerenciarPacientes)
     {
         TelaGerenciarPacientes->setWindowTitle(QCoreApplication::translate("TelaGerenciarPacientes", "Form", nullptr));
-        labelSecretario->setText(QCoreApplication::translate("TelaGerenciarPacientes", "Nome_do_secretario", nullptr));
+        labelNome->setText(QCoreApplication::translate("TelaGerenciarPacientes", "Nome_do_secretario", nullptr));
         labelPacientes->setText(QCoreApplication::translate("TelaGerenciarPacientes", "Pacientes", nullptr));
         labelNumero->setText(QCoreApplication::translate("TelaGerenciarPacientes", "Numero", nullptr));
         pushButtonEditar->setText(QCoreApplication::translate("TelaGerenciarPacientes", "Editar", nullptr));

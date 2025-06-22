@@ -2,6 +2,7 @@
 #define TELAINICIALSECRETARIO_H
 
 #include <QWidget>
+#include <Secretario.h>
 
 namespace Ui {
 class TelaInicialSecretario;
@@ -14,6 +15,8 @@ class TelaInicialSecretario : public QWidget
 public:
     explicit TelaInicialSecretario(QWidget *parent = nullptr);
     ~TelaInicialSecretario();
+
+    void setSecretario(std::shared_ptr<Secretario> s);
 
 signals:
     void sairRequisitado();
@@ -28,7 +31,13 @@ private slots:
     void on_pushButtonPacientes_clicked();
 
 private:
+
+    void atualizarLabels();
+
     Ui::TelaInicialSecretario *ui;
+    std::shared_ptr<Secretario> secretario;
+
+
 };
 
 #endif // TELAINICIALSECRETARIO_H

@@ -13,6 +13,13 @@ TelaInicialSecretario::~TelaInicialSecretario()
     delete ui;
 }
 
+void TelaInicialSecretario::setSecretario(std::shared_ptr<Secretario> s){
+    if(s){
+        secretario = s;
+        atualizarLabels();
+    }
+}
+
 void TelaInicialSecretario::on_pushButtonSair_clicked()
 {
     emit sairRequisitado();
@@ -28,5 +35,12 @@ void TelaInicialSecretario::on_pushButtonConsultas_clicked()
 void TelaInicialSecretario::on_pushButtonPacientes_clicked()
 {
     emit pacientesRequisitado();
+}
+
+void TelaInicialSecretario::atualizarLabels(){
+
+    QString nome = QString::fromStdString(secretario->getNome());
+    ui->labelNome->setText(nome);
+
 }
 

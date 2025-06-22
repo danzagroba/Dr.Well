@@ -14,6 +14,13 @@ TelaAgendaCompleta::~TelaAgendaCompleta()
     delete ui;
 }
 
+void TelaAgendaCompleta::setMedico(std::shared_ptr<Medico> m){
+    if(m){
+        medico = m;
+        atualizarLabels();
+    }
+}
+
 void TelaAgendaCompleta::on_pushButtonVoltar_clicked()
 {
     emit voltarRequisitado();
@@ -27,3 +34,11 @@ void TelaAgendaCompleta::on_lineEditData_editingFinished()
     ui->lineEditData->clear();
 }
 
+void TelaAgendaCompleta::atualizarLabels(){
+
+    QString nome = QString::fromStdString(medico->getNome());
+    QString crm = QString::fromStdString(medico->getCrm());
+    ui->labelCRM->setText(crm);
+
+    ui->labelNome->setText(nome);
+}

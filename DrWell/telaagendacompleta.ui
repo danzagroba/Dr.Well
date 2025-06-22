@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>449</width>
+    <width>577</width>
     <height>333</height>
    </rect>
   </property>
@@ -16,8 +16,8 @@
   <widget class="QLabel" name="labelAgenda">
    <property name="geometry">
     <rect>
-     <x>70</x>
-     <y>70</y>
+     <x>90</x>
+     <y>90</y>
      <width>121</width>
      <height>18</height>
     </rect>
@@ -29,7 +29,7 @@
   <widget class="QPushButton" name="pushButtonVoltar">
    <property name="geometry">
     <rect>
-     <x>350</x>
+     <x>480</x>
      <y>20</y>
      <width>51</width>
      <height>26</height>
@@ -42,9 +42,9 @@
   <widget class="QTableView" name="tableView">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>100</y>
-     <width>411</width>
+     <x>40</x>
+     <y>120</y>
+     <width>481</width>
      <height>201</height>
     </rect>
    </property>
@@ -54,7 +54,7 @@
     <rect>
      <x>50</x>
      <y>30</y>
-     <width>131</width>
+     <width>191</width>
      <height>18</height>
     </rect>
    </property>
@@ -65,14 +65,40 @@
   <widget class="QLineEdit" name="lineEditData">
    <property name="geometry">
     <rect>
-     <x>220</x>
-     <y>70</y>
+     <x>310</x>
+     <y>90</y>
      <width>113</width>
-     <height>26</height>
+     <height>20</height>
     </rect>
    </property>
    <property name="text">
     <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>70</y>
+     <width>31</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Data</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelCRM">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>30</y>
+     <width>121</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>CRM</string>
    </property>
   </widget>
  </widget>

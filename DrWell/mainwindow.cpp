@@ -169,12 +169,19 @@ void MainWindow::irParaTelaInicialUsuario(int id, std::shared_ptr<Usuario> usuar
     case 1:
         irParaTelaInicialMedico();
         telaInicialMedico->setMedico(std::dynamic_pointer_cast<Medico>(usuario));
+        telaAgendaCompleta->setMedico(std::dynamic_pointer_cast<Medico>(usuario));
+        telaGerenciarProntuarios->setMedico(std::dynamic_pointer_cast<Medico>(usuario));
+        telaHistoricoMedico->setMedico(std::dynamic_pointer_cast<Medico>(usuario));
         break;
     case 2:
         irParaTelaInicialSecretario();
+        telaInicialSecretario->setSecretario(std::dynamic_pointer_cast<Secretario>(usuario));
+        telaGerenciarConsultas->setSecretario(std::dynamic_pointer_cast<Secretario>(usuario));
+        telaGerenciarPacientes->setSecretario(std::dynamic_pointer_cast<Secretario>(usuario));
         break;
     case 3:
         irParaTelaInicialAdministrador();
+        telaInicialAdministrador->setAdministrador(std::dynamic_pointer_cast<Administrador>(usuario));
         break;
     default:
         qDebug() << "Tipo de usuario desconhecido ou login falhou: " << id;

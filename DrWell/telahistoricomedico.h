@@ -2,6 +2,7 @@
 #define TELAHISTORICOMEDICO_H
 
 #include <QWidget>
+#include <Medico.h>
 
 namespace Ui {
 class TelaHistoricoMedico;
@@ -15,6 +16,8 @@ public:
     explicit TelaHistoricoMedico(QWidget *parent = nullptr);
     ~TelaHistoricoMedico();
 
+    void setMedico(std::shared_ptr<Medico> m);
+
 signals:
     void voltarRequisitado();
     void abrirRequisitado();
@@ -26,6 +29,9 @@ private slots:
 
 private:
     Ui::TelaHistoricoMedico *ui;
+    std::shared_ptr<Medico> medico;
+
+    void atualizarLabels();
 };
 
 #endif // TELAHISTORICOMEDICO_H

@@ -23,6 +23,7 @@ private slots:
 
 private:
     Ui::TelaCadastrarPaciente *ui;
+
 };
 
 #endif // TELACADASTRARPACIENTE_H

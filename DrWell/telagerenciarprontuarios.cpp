@@ -9,6 +9,7 @@ TelaGerenciarProntuarios::TelaGerenciarProntuarios(QWidget *parent)
     , ui(new Ui::TelaGerenciarProntuarios)
 {
     ui->setupUi(this);
+    ui->lineEditPaciente->setPlaceholderText("CPF");
 }
 
 TelaGerenciarProntuarios::~TelaGerenciarProntuarios()
@@ -37,17 +38,32 @@ void TelaGerenciarProntuarios::on_pushButtonAbrir_clicked()
     ui->lineEditNumero->clear();
 
 }
-
+void TelaGerenciarProntuarios::setMedico(std::shared_ptr<Medico> m){
+    if(m){
+        medico = m;
+        atualizarLabels();
+    }
+}
 
 void TelaGerenciarProntuarios::on_lineEditPaciente_editingFinished()
 {
-    std::string nomePaciente = ui->lineEditPaciente->text().toStdString();
+    std::string cpf = ui->lineEditPaciente->text().toStdString();
 
-    if(nomePaciente != ""){
-        qDebug() << "Buscar paciente: " << nomePaciente;
+    if(cpf != ""){
+        qDebug() << "Buscar paciente: " << cpf;
         //buscarPaciente(nomePaciente);
     }
 
     ui->lineEditPaciente->clear();
 }
+
+void TelaGerenciarProntuarios::atualizarLabels(){
+
+    QString nome = QString::fromStdString(medico->getNome());
+    ui->labelNome->setText(nome);
+    QString crm = QString::fromStdString(medico->getCrm());
+    ui->labelCRM->setText(crm);
+}
+
+
 
