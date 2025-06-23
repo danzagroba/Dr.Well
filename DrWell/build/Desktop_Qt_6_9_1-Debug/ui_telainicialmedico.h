@@ -48,7 +48,7 @@ public:
         pushButtonAgenda->setGeometry(QRect(50, 160, 151, 29));
         tableView = new QTableView(TelaInicialMedico);
         tableView->setObjectName("tableView");
-        tableView->setGeometry(QRect(230, 150, 431, 251));
+        tableView->setGeometry(QRect(240, 150, 431, 251));
         labelAgenda = new QLabel(TelaInicialMedico);
         labelAgenda->setObjectName("labelAgenda");
         labelAgenda->setGeometry(QRect(400, 120, 121, 20));

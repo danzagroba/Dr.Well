@@ -327,19 +327,20 @@ std::shared_ptr<Usuario> GerenciadorBanco::recuperarUsuarioPorCpf(const QString&
     return nullptr; // Fallback de segurança
 }
 
-QList<Consulta> GerenciadorBanco::recuperarConsultasMedico(const QString& cpf, const QDate& data) {
+QList<Consulta> GerenciadorBanco::recuperarConsultasMedico(const QString& medico_crm, const QDate& data) {
     QList<Consulta> consultas;
     if (!m_db.isOpen()) {
         qDebug() << "Banco de dados não está aberto.";
         return consultas;
     }
 
+    // A query agora faz JOIN com a tabela de pacientes usando o id_paciente
+    // e filtra pelo crm do médico diretamente na tabela de consultas.
     QString sql = R"(
-        SELECT c.id, c.data_hora, c.status, c.custo, u.cpf AS medico_cpf, c.id_paciente
+        SELECT c.id, c.data_hora, c.status, c.preco_consulta, c.crm AS medico_crm, p.nome AS paciente_nome
         FROM consultas c
-        JOIN medicos m ON c.id_medico = m.id
-        JOIN usuarios u ON m.usuario_id = u.id
-        WHERE u.cpf = :cpf
+        JOIN pacientes p ON c.id_paciente = p.id
+        WHERE c.crm = :crm
     )";
 
     if (data.isValid()) {
@@ -348,7 +349,7 @@ QList<Consulta> GerenciadorBanco::recuperarConsultasMedico(const QString& cpf, c
 
     QSqlQuery query(m_db);
     query.prepare(sql);
-    query.bindValue(":cpf", cpf);
+    query.bindValue(":crm", medico_crm);
 
     if (data.isValid()) {
         query.bindValue(":data", data.toString(Qt::ISODate));
@@ -363,12 +364,13 @@ QList<Consulta> GerenciadorBanco::recuperarConsultasMedico(const QString& cpf, c
         int id = query.value("id").toInt();
         QDateTime dataHoraQt = query.value("data_hora").toDateTime();
         Horario dataHora = Consulta::fromQDateTime(dataHoraQt);
-        float custo = query.value("custo").toFloat();
+        float custo = query.value("preco_consulta").toFloat();
         std::string status = query.value("status").toString().toStdString();
-        std::string medicoCpf = query.value("medico_cpf").toString().toStdString();
-        int pacienteId = query.value("id_paciente").toInt();
+        std::string crm = query.value("medico_crm").toString().toStdString();
+        std::string pacienteNome = query.value("paciente_nome").toString().toStdString();
 
-        consultas.append(Consulta(id, dataHora, custo, status, medicoCpf, pacienteId));
+        consultas.append(Consulta(id, dataHora, custo, status, crm, pacienteNome));
+        qDebug() << "Achou:" << query.lastError().text();
     }
 
     return consultas;
@@ -381,11 +383,11 @@ QList<Consulta> GerenciadorBanco::recuperarConsultasPaciente(int id_paciente, co
         return consultas;
     }
 
+    // A query agora junta com a tabela de pacientes para obter o nome
     QString sql = R"(
-        SELECT c.id, c.data_hora, c.status, c.custo, u.cpf AS medico_cpf, c.id_paciente
+        SELECT c.id, c.data_hora, c.status, c.custo, c.crm AS medico_crm, p.nome AS paciente_nome
         FROM consultas c
-        JOIN medicos m ON c.id_medico = m.id
-        JOIN usuarios u ON m.usuario_id = u.id
+        JOIN pacientes p ON c.id_paciente = p.id
         WHERE c.id_paciente = :id_paciente
     )";
 
@@ -412,10 +414,10 @@ QList<Consulta> GerenciadorBanco::recuperarConsultasPaciente(int id_paciente, co
         Horario dataHora = Consulta::fromQDateTime(dataHoraQt);
         float custo = query.value("custo").toFloat();
         std::string status = query.value("status").toString().toStdString();
-        std::string medicoCpf = query.value("medico_cpf").toString().toStdString();
-        int pacienteId = query.value("id_paciente").toInt();
+        std::string crm = query.value("medico_crm").toString().toStdString();
+        std::string pacienteNome = query.value("paciente_nome").toString().toStdString();
 
-        consultas.append(Consulta(id, dataHora, custo, status, medicoCpf, pacienteId));
+        consultas.append(Consulta(id, dataHora, custo, status, crm, pacienteNome));
     }
 
     return consultas;
@@ -428,12 +430,12 @@ QList<Consulta> GerenciadorBanco::recuperarConsultasDia(const QDate& data) {
         return consultas;
     }
 
+    // A query agora junta com a tabela de pacientes para obter o nome
     QSqlQuery query(m_db);
     query.prepare(R"(
-        SELECT c.id, c.data_hora, c.status, c.custo, u.cpf AS medico_cpf, c.id_paciente
+        SELECT c.id, c.data_hora, c.status, c.custo, c.crm AS medico_crm, p.nome AS paciente_nome
         FROM consultas c
-        JOIN medicos m ON c.id_medico = m.id
-        JOIN usuarios u ON m.usuario_id = u.id
+        JOIN pacientes p ON c.id_paciente = p.id
         WHERE DATE(c.data_hora) = :data
     )");
     query.bindValue(":data", data.toString(Qt::ISODate));
@@ -449,11 +451,12 @@ QList<Consulta> GerenciadorBanco::recuperarConsultasDia(const QDate& data) {
         Horario dataHora = Consulta::fromQDateTime(dataHoraQt);
         float custo = query.value("custo").toFloat();
         std::string status = query.value("status").toString().toStdString();
-        std::string medicoCpf = query.value("medico_cpf").toString().toStdString();
-        int pacienteId = query.value("id_paciente").toInt();
+        std::string crm = query.value("medico_crm").toString().toStdString();
+        std::string pacienteNome = query.value("paciente_nome").toString().toStdString();
 
-        consultas.append(Consulta(id, dataHora, custo, status, medicoCpf, pacienteId));
+        consultas.append(Consulta(id, dataHora, custo, status, crm, pacienteNome));
     }
 
     return consultas;
 }
+

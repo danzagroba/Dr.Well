@@ -27,7 +27,7 @@ public:
     std::shared_ptr<Usuario> recuperarUsuarioPorCpf(const QString& cpf, const int tipo);
 
     QList<Consulta> recuperarConsultasDia(const QDate& data);
-    QList<Consulta> recuperarConsultasMedico(const QString& cpf, const QDate& data = QDate()); // QDate() é uma data nula/inválida
+    QList<Consulta> recuperarConsultasMedico(const QString& medico_crm, const QDate& data = QDate()); // QDate() é uma data nula/inválida
     QList<Consulta> recuperarConsultasPaciente(int id_paciente, const QDate& data = QDate());
 
 private:

@@ -20,9 +20,9 @@ private:
     float custo;
     std::string status;
 
-    // IDs para quando carregamos do banco
-    std::string medicoCpf;
-    int pacienteId;
+    // Para quando carregamos do banco
+    std::string medicoCRM;    // Novo atributo
+    std::string nomePaciente; // Novo atributo
     
     // Ponteiros fracos para evitar ciclos de referência
     std::weak_ptr<Medico> medico;
@@ -32,7 +32,7 @@ public:
     Consulta(int id, Horario data, float custo, std::string status, std::shared_ptr<Medico> med, std::shared_ptr<Paciente> pac);
 
     // Construtor para carregar do banco de dados
-    Consulta(int id, Horario data, float custo, std::string status, std::string medCpf, int pacId);
+   Consulta(int id, Horario data, float custo, std::string status, std::string crm, std::string pacNome);
 
     ~Consulta() = default;
 
@@ -40,8 +40,8 @@ public:
     std::string getStatus() const { return status; }
     Horario getDataHora() const { return dataHora; }
     float getCusto() const { return custo; }
-    std::string getMedicoCpf() const{return medicoCpf;}
-    int getPacienteId() const { return pacienteId; }
+    std::string getMedicoCpf() const{return medicoCRM;}
+    std::string getNomePaciente() const{ return nomePaciente; }
 
     // Função para converter QDateTime para Horario
     static Horario fromQDateTime(const QDateTime& qdt) {
