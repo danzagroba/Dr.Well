@@ -36,7 +36,7 @@ public:
     {
         if (TelaInicialMedico->objectName().isEmpty())
             TelaInicialMedico->setObjectName("TelaInicialMedico");
-        TelaInicialMedico->resize(644, 476);
+        TelaInicialMedico->resize(745, 476);
         labelNome = new QLabel(TelaInicialMedico);
         labelNome->setObjectName("labelNome");
         labelNome->setGeometry(QRect(60, 50, 201, 20));
@@ -48,10 +48,10 @@ public:
         pushButtonAgenda->setGeometry(QRect(50, 160, 151, 29));
         tableView = new QTableView(TelaInicialMedico);
         tableView->setObjectName("tableView");
-        tableView->setGeometry(QRect(350, 150, 281, 251));
+        tableView->setGeometry(QRect(230, 150, 431, 251));
         labelAgenda = new QLabel(TelaInicialMedico);
         labelAgenda->setObjectName("labelAgenda");
-        labelAgenda->setGeometry(QRect(360, 110, 121, 20));
+        labelAgenda->setGeometry(QRect(400, 120, 121, 20));
         pushButtonProntuario = new QPushButton(TelaInicialMedico);
         pushButtonProntuario->setObjectName("pushButtonProntuario");
         pushButtonProntuario->setGeometry(QRect(50, 220, 151, 29));
