@@ -35,7 +35,7 @@ void TelaGerenciarPacientes::on_pushButtonCadastrar_clicked()
 void TelaGerenciarPacientes::atualizarLabels(){
 
     QString nome = QString::fromStdString(secretario->getNome());
-    ui->labelNome->setText(nome);
+    // ui->labelNome->setText(nome);
 
 }
 

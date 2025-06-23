@@ -49,13 +49,13 @@ void GerenciadorBanco::inicializar(){
 
     QStringList queriesParaExecutar;
 
-    queriesParaExecutar << R"(
-        select pa.nome, pa.sobrenome, p.tipo_registro, p.detalhes from prontuarios as p join consultas as c on p.id_consulta = c.id join pacientes as pa on c.id_paciente = pa.id ;
-    )";
+    // queriesParaExecutar << R"(
+    //     select pa.nome, pa.sobrenome, p.tipo_registro, p.detalhes from prontuarios as p join consultas as c on p.id_consulta = c.id join pacientes as pa on c.id_paciente = pa.id ;
+    // )";
 
-    queriesParaExecutar << R"(
-        select * from historicos join medicos;
-    )";
+    // queriesParaExecutar << R"(
+    //     select * from historicos join medicos;
+    // )";
 
     // select para obter nomes completos do medico e do paciente e na consulta e a data hora dessa
     // c.id, u.nome, u.sobrenome, p.nome, p.sobrenome, c.data_hora
@@ -67,11 +67,11 @@ void GerenciadorBanco::inicializar(){
     // )";
 
     // queriesParaExecutar << R"(
-    //     select * from historicos;
+    //     select cpf, senha_hash from usuarios;
     // )";
 
 
-    qDebug() << "Iniciando inserção em lote...";
+
     for (const QString &query : queriesParaExecutar) {
         comandoSQL(query); // Chamando a sua função para cada item da lista
     }

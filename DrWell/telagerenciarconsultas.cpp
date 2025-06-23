@@ -35,7 +35,7 @@ void TelaGerenciarConsultas::on_pushButtonMarcar_clicked()
 void TelaGerenciarConsultas::atualizarLabels(){
 
     QString nome = QString::fromStdString(secretario->getNome());
-    ui->labelNome->setText(nome);
+    // ui->labelNome->setText(nome);
 
 }
 
