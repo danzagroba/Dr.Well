@@ -29,7 +29,6 @@ public:
     QLabel *label_3;
     QTableView *tableView;
     QLabel *labelID;
-    QLabel *labelDepartamento;
 
     void setupUi(QWidget *TelaInicialAdministrador)
     {
@@ -57,9 +56,6 @@ public:
         labelID = new QLabel(TelaInicialAdministrador);
         labelID->setObjectName("labelID");
         labelID->setGeometry(QRect(250, 40, 63, 20));
-        labelDepartamento = new QLabel(TelaInicialAdministrador);
-        labelDepartamento->setObjectName("labelDepartamento");
-        labelDepartamento->setGeometry(QRect(340, 40, 111, 20));
 
         retranslateUi(TelaInicialAdministrador);
 
@@ -75,7 +71,6 @@ public:
         pushButtonSair->setText(QCoreApplication::translate("TelaInicialAdministrador", "Sair", nullptr));
         label_3->setText(QCoreApplication::translate("TelaInicialAdministrador", "Agenda do dia", nullptr));
         labelID->setText(QCoreApplication::translate("TelaInicialAdministrador", "ADM ID", nullptr));
-        labelDepartamento->setText(QCoreApplication::translate("TelaInicialAdministrador", "Departamento", nullptr));
     } // retranslateUi
 
 };

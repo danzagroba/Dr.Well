@@ -137,9 +137,9 @@ bool GerenciadorBanco::listarSelect(QSqlQuery& q) {
 std::shared_ptr<Usuario> GerenciadorBanco::autenticarUsuario(const QString& cpfouemail, const QString& senha, int &tipo) {
 
     QSqlQuery query(m_db);
-    query.prepare("SELECT ativo FROM usuarios WHERE (cpf = :identificador OR email = :identificador) "); //AND senha_hash = :senhaParam
+    query.prepare("SELECT ativo FROM usuarios WHERE (cpf = :identificador OR email = :identificador) AND senha_hash = :senhaParam");
     query.bindValue(":identificador", cpfouemail);
-    //query.bindValue(":senhaParam", senha);
+    query.bindValue(":senhaParam", senha);
 
     if (!query.exec()) {
         qDebug() << "Erro ao executar consulta de autenticacao:" << query.lastError().text();
@@ -292,7 +292,7 @@ std::shared_ptr<Usuario> GerenciadorBanco::recuperarUsuarioPorCpf(const QString&
               "FROM usuarios AS u JOIN secretarios AS s ON u.id = s.usuario_id "
               "WHERE u.cpf = :cpf";
     } else if (tipo == 3) {
-        sql = "SELECT u.nome,u.sobrenome, u.email, u.telefone, a.super_adm "
+        sql = "SELECT u.id, u.nome,u.sobrenome, u.email, u.telefone, a.super_adm "
               "FROM usuarios AS u JOIN administradores AS a ON u.id = a.usuario_id "
               "WHERE u.cpf = :cpf";
     }
@@ -320,7 +320,8 @@ std::shared_ptr<Usuario> GerenciadorBanco::recuperarUsuarioPorCpf(const QString&
         return std::make_shared<Secretario>(nome, cpfStdStr, email, ramal);
     } else if (tipo == 3) {
         bool isSuper = query.value("super_adm").toBool();
-        return std::make_shared<Administrador>(0,nome, cpfStdStr, email, isSuper);
+        int id = query.value("id").toInt();
+        return std::make_shared<Administrador>(id,nome, cpfStdStr, email, isSuper);
     }
 
     return nullptr; // Fallback de segurança
