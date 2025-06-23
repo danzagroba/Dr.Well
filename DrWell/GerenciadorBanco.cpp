@@ -47,44 +47,29 @@ void GerenciadorBanco::fechar()
 
 void GerenciadorBanco::inicializar(){
 
-
-    QString query1 = R"(
-    CREATE TABLE administradores (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        usuario_id INTEGER NOT NULL UNIQUE,
-        super_adm BOOL NOT NULL DEFAULT FALSE,
-
-        CONSTRAINT fk_admin_usuario
-        FOREIGN KEY (usuario_id)
-        REFERENCES usuarios(id)
-        ON DELETE CASCADE
-    );
-
-    )";
-
-    QString query = R"(
-        INSERT INTO medicos (usuario_id, crm, especialidade)
-        VALUES (1, 'CRM/PR 12345', 'Cardiologia');
-    )";
-
-    // comandoSQL(query);
-
     QStringList queriesParaExecutar;
 
-    // --- Médico 2: Dra. Helena Furtado ---
+    queriesParaExecutar << R"(
+        select pa.nome, pa.sobrenome, p.tipo_registro, p.detalhes from prontuarios as p join consultas as c on p.id_consulta = c.id join pacientes as pa on c.id_paciente = pa.id ;
+    )";
+
+    queriesParaExecutar << R"(
+        select * from historicos join medicos;
+    )";
+
+    // select para obter nomes completos do medico e do paciente e na consulta e a data hora dessa
+    // c.id, u.nome, u.sobrenome, p.nome, p.sobrenome, c.data_hora
     // queriesParaExecutar << R"(
-    // SELECT * FROM secretarios;
-    // )";
-    // queriesParaExecutar << R"(
-    // SELECT u.email, u.senha FROM usuarios AS u JOIN medicos AS m ON u.id = m.usuario_id;
-    // )";
-    // queriesParaExecutar << R"(
-    // SELECT * FROM usuarios;
+    //     SELECT *
+    //     FROM usuarios u JOIN medicos m ON u.id = m.usuario_id JOIN consultas c ON m.crm = c.crm JOIN pacientes p ON c.id_paciente = p.id
+    //     WHERE m.crm = 'CRM/PR 12347'
+    //     ;
     // )";
 
     // queriesParaExecutar << R"(
-    // SELECT u.nome, u.sobrenome, u.cpf, m.crm, m.especialidade FROM usuarios AS u JOIN medicos AS m ON u.id = m.usuario_id;
+    //     select * from historicos;
     // )";
+
 
     qDebug() << "Iniciando inserção em lote...";
     for (const QString &query : queriesParaExecutar) {
@@ -103,7 +88,7 @@ bool GerenciadorBanco::comandoSQL(const QString& comando) {
     // Execução do comando
     QSqlQuery query(m_db);
     if (!query.exec(comando)) {
-        qDebug() << "Erro ao executar " << comando << query.lastError().text();
+        qDebug() << "Erro ao executar " << query.lastError().text();
         return false;
     }
 

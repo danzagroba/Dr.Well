@@ -38,7 +38,7 @@ void TelaAgendaCompleta::atualizarLabels(){
 
     QString nome = QString::fromStdString(medico->getNome());
     QString crm = QString::fromStdString(medico->getCrm());
-    ui->labelCRM->setText(crm);
+    // ui->labelCRM->setText(crm);
 
     ui->labelNome->setText(nome);
 }

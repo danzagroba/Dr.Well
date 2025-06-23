@@ -35,9 +35,9 @@ void TelaHistoricoMedico::on_pushButtonAbrir_clicked()
 void TelaHistoricoMedico::atualizarLabels(){
 
     QString nome = QString::fromStdString(medico->getNome());
-    ui->labelNome->setText(nome);
+    // ui->labelNome->setText(nome);
     QString crm = QString::fromStdString(medico->getCrm());
-    ui->labelCRM->setText(crm);
+    // ui->labelCRM->setText(crm);
 
 }
 

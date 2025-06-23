@@ -28,6 +28,6 @@ void TelaInicialAdministrador::on_pushButtonSair_clicked()
 void TelaInicialAdministrador::atualizarLabels(){
 
     QString nome = QString::fromStdString(administrador->getNome());
-    ui->labelNome->setText(nome);
+    // ui->labelNome->setText(nome);
 
 }
