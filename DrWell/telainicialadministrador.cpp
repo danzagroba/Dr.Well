@@ -1,5 +1,6 @@
 #include "telainicialadministrador.h"
 #include "ui_telainicialadministrador.h"
+#include <string>
 
 TelaInicialAdministrador::TelaInicialAdministrador(QWidget *parent)
     : QWidget(parent)
@@ -28,6 +29,7 @@ void TelaInicialAdministrador::on_pushButtonSair_clicked()
 void TelaInicialAdministrador::atualizarLabels(){
 
     QString nome = QString::fromStdString(administrador->getNome());
-    // ui->labelNome->setText(nome);
-
+    QString id = QString::fromStdString(std::to_string(administrador->getId()));
+    ui->labelNome->setText(nome);
+    ui->labelID->setText("ID: " + id);
 }

@@ -14,6 +14,7 @@ public:
 
     void exibirInformacoes() const override;
     bool isSuperAdmin() const;
+    int getId() const { return adminId;}
 };
 
 #endif // ADMINISTRADOR_H

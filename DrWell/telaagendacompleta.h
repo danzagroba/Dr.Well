@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <Medico.h>
+#include <QStandardItemModel>
 
 namespace Ui {
 class TelaAgendaCompleta;
@@ -29,8 +30,10 @@ private slots:
 private:
     Ui::TelaAgendaCompleta *ui;
     std::shared_ptr<Medico> medico;
+    QStandardItemModel *m_agendaModel;
 
     void atualizarLabels();
+    void carregarAgendaCompletaMedico();
 };
 
 #endif // TELAAGENDACOMPLETA_H

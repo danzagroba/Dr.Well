@@ -101,19 +101,6 @@
     <string>ADM ID</string>
    </property>
   </widget>
-  <widget class="QLabel" name="labelDepartamento">
-   <property name="geometry">
-    <rect>
-     <x>340</x>
-     <y>40</y>
-     <width>111</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Departamento</string>
-   </property>
-  </widget>
  </widget>
  <resources/>
  <connections/>

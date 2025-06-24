@@ -4,9 +4,13 @@
 #include <QSqlDatabase>
 #include <QString>
 #include <QSqlQuery>
+#include <QList>
+#include <QDate>
+
 #include "Medico.h"
 #include "Secretario.h"
 #include "Administrador.h"
+#include "Consulta.h"
 
 class QSqlQuery;
 
@@ -22,6 +26,14 @@ public:
     bool criarUsuario(const QVariantMap& dadosUsuario, const QVariantMap& dadosEspecificos, int tipo);
     std::shared_ptr<Usuario> recuperarUsuarioPorCpf(const QString& cpf, const int tipo);
 
+    QList<Consulta> recuperarConsultasDia(const QDate& data);
+    QList<Consulta> recuperarConsultasMedico(const QString& medico_crm, const QDate& data = QDate()); // QDate() é uma data nula/inválida
+    QList<Consulta> recuperarConsultasPaciente(int id_paciente, const QDate& data = QDate());
+    QList<Consulta> recuperarTodasConsultas();
+
+    bool atualizarStatusConsulta(int consultaId, const QString& novoStatus);
+    bool marcarConsulta(const QDateTime& dataHora, float custo, const QString& medicoCrm, const QString& pacienteCpf);
+
 private:
     GerenciadorBanco();
     ~GerenciadorBanco();
@@ -34,6 +46,7 @@ private:
 
     bool comandoSQL(const QString& comando);
     bool listarSelect(QSqlQuery& q);
+
 };
 
 #endif // GERENCIADORBANCO_H

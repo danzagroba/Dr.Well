@@ -21,6 +21,8 @@ signals:
 private slots:
     void on_pushButtonVoltar_clicked();
 
+    void on_pushButtonMarcar_clicked();
+
 private:
     Ui::TelaMarcarConsulta *ui;
 };
