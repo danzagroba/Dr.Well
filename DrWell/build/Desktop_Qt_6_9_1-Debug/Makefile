@@ -1159,6 +1159,9 @@ moc_mainwindow.cpp: ../../mainwindow.h \
 		../../Secretario.h \
 		../../Administrador.h \
 		../../Consulta.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/QDate \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qdatetime.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qcalendar.h \
 		moc_predefs.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/libexec/moc
 	/home/joaoklug/Qt/6.9.1/gcc_64/libexec/moc $(DEFINES) --include /home/joaoklug/Documentos/Projetos/Dr.Well/DrWell/build/Desktop_Qt_6_9_1-Debug/moc_predefs.h -I/home/joaoklug/Qt/6.9.1/gcc_64/mkspecs/linux-g++ -I/home/joaoklug/Documentos/Projetos/Dr.Well/DrWell -I/home/joaoklug/Qt/6.9.1/gcc_64/include -I/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets -I/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui -I/home/joaoklug/Qt/6.9.1/gcc_64/include/QtSql -I/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore -I. -I/usr/include/c++/13 -I/usr/include/x86_64-linux-gnu/c++/13 -I/usr/include/c++/13/backward -I/usr/lib/gcc/x86_64-linux-gnu/13/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../../mainwindow.h -o moc_mainwindow.cpp
@@ -1561,6 +1564,12 @@ moc_telagerenciarconsultas.cpp: ../../telagerenciarconsultas.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qinputmethod.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qlocale.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qguiapplication_platform.h \
+		../../Secretario.h \
+		../../Usuario.h \
+		../../Pessoa.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/QStandardItemModel \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qstandarditemmodel.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qabstractitemmodel.h \
 		moc_predefs.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/libexec/moc
 	/home/joaoklug/Qt/6.9.1/gcc_64/libexec/moc $(DEFINES) --include /home/joaoklug/Documentos/Projetos/Dr.Well/DrWell/build/Desktop_Qt_6_9_1-Debug/moc_predefs.h -I/home/joaoklug/Qt/6.9.1/gcc_64/mkspecs/linux-g++ -I/home/joaoklug/Documentos/Projetos/Dr.Well/DrWell -I/home/joaoklug/Qt/6.9.1/gcc_64/include -I/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets -I/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui -I/home/joaoklug/Qt/6.9.1/gcc_64/include/QtSql -I/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore -I. -I/usr/include/c++/13 -I/usr/include/x86_64-linux-gnu/c++/13 -I/usr/include/c++/13/backward -I/usr/lib/gcc/x86_64-linux-gnu/13/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../../telagerenciarconsultas.h -o moc_telagerenciarconsultas.cpp
@@ -1963,6 +1972,9 @@ moc_telagerenciarpacientes.cpp: ../../telagerenciarpacientes.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qinputmethod.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qlocale.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qguiapplication_platform.h \
+		../../Secretario.h \
+		../../Usuario.h \
+		../../Pessoa.h \
 		moc_predefs.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/libexec/moc
 	/home/joaoklug/Qt/6.9.1/gcc_64/libexec/moc $(DEFINES) --include /home/joaoklug/Documentos/Projetos/Dr.Well/DrWell/build/Desktop_Qt_6_9_1-Debug/moc_predefs.h -I/home/joaoklug/Qt/6.9.1/gcc_64/mkspecs/linux-g++ -I/home/joaoklug/Documentos/Projetos/Dr.Well/DrWell -I/home/joaoklug/Qt/6.9.1/gcc_64/include -I/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets -I/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui -I/home/joaoklug/Qt/6.9.1/gcc_64/include/QtSql -I/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore -I. -I/usr/include/c++/13 -I/usr/include/x86_64-linux-gnu/c++/13 -I/usr/include/c++/13/backward -I/usr/lib/gcc/x86_64-linux-gnu/13/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../../telagerenciarpacientes.h -o moc_telagerenciarpacientes.cpp
@@ -2164,6 +2176,9 @@ moc_telainicialadministrador.cpp: ../../telainicialadministrador.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qinputmethod.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qlocale.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qguiapplication_platform.h \
+		../../Administrador.h \
+		../../Usuario.h \
+		../../Pessoa.h \
 		moc_predefs.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/libexec/moc
 	/home/joaoklug/Qt/6.9.1/gcc_64/libexec/moc $(DEFINES) --include /home/joaoklug/Documentos/Projetos/Dr.Well/DrWell/build/Desktop_Qt_6_9_1-Debug/moc_predefs.h -I/home/joaoklug/Qt/6.9.1/gcc_64/mkspecs/linux-g++ -I/home/joaoklug/Documentos/Projetos/Dr.Well/DrWell -I/home/joaoklug/Qt/6.9.1/gcc_64/include -I/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets -I/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui -I/home/joaoklug/Qt/6.9.1/gcc_64/include/QtSql -I/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore -I. -I/usr/include/c++/13 -I/usr/include/x86_64-linux-gnu/c++/13 -I/usr/include/c++/13/backward -I/usr/lib/gcc/x86_64-linux-gnu/13/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../../telainicialadministrador.h -o moc_telainicialadministrador.cpp
@@ -2365,6 +2380,12 @@ moc_telainicialmedico.cpp: ../../telainicialmedico.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qinputmethod.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qlocale.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qguiapplication_platform.h \
+		../../Medico.h \
+		../../Usuario.h \
+		../../Pessoa.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/QStandardItemModel \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qstandarditemmodel.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qabstractitemmodel.h \
 		moc_predefs.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/libexec/moc
 	/home/joaoklug/Qt/6.9.1/gcc_64/libexec/moc $(DEFINES) --include /home/joaoklug/Documentos/Projetos/Dr.Well/DrWell/build/Desktop_Qt_6_9_1-Debug/moc_predefs.h -I/home/joaoklug/Qt/6.9.1/gcc_64/mkspecs/linux-g++ -I/home/joaoklug/Documentos/Projetos/Dr.Well/DrWell -I/home/joaoklug/Qt/6.9.1/gcc_64/include -I/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets -I/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui -I/home/joaoklug/Qt/6.9.1/gcc_64/include/QtSql -I/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore -I. -I/usr/include/c++/13 -I/usr/include/x86_64-linux-gnu/c++/13 -I/usr/include/c++/13/backward -I/usr/lib/gcc/x86_64-linux-gnu/13/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../../telainicialmedico.h -o moc_telainicialmedico.cpp
@@ -2566,6 +2587,9 @@ moc_telainicialsecretario.cpp: ../../telainicialsecretario.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qinputmethod.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qlocale.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qguiapplication_platform.h \
+		../../Secretario.h \
+		../../Usuario.h \
+		../../Pessoa.h \
 		moc_predefs.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/libexec/moc
 	/home/joaoklug/Qt/6.9.1/gcc_64/libexec/moc $(DEFINES) --include /home/joaoklug/Documentos/Projetos/Dr.Well/DrWell/build/Desktop_Qt_6_9_1-Debug/moc_predefs.h -I/home/joaoklug/Qt/6.9.1/gcc_64/mkspecs/linux-g++ -I/home/joaoklug/Documentos/Projetos/Dr.Well/DrWell -I/home/joaoklug/Qt/6.9.1/gcc_64/include -I/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets -I/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui -I/home/joaoklug/Qt/6.9.1/gcc_64/include/QtSql -I/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore -I. -I/usr/include/c++/13 -I/usr/include/x86_64-linux-gnu/c++/13 -I/usr/include/c++/13/backward -I/usr/lib/gcc/x86_64-linux-gnu/13/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../../telainicialsecretario.h -o moc_telainicialsecretario.cpp
@@ -2767,6 +2791,12 @@ moc_telaagendacompleta.cpp: ../../telaagendacompleta.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qinputmethod.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qlocale.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qguiapplication_platform.h \
+		../../Medico.h \
+		../../Usuario.h \
+		../../Pessoa.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/QStandardItemModel \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qstandarditemmodel.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qabstractitemmodel.h \
 		moc_predefs.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/libexec/moc
 	/home/joaoklug/Qt/6.9.1/gcc_64/libexec/moc $(DEFINES) --include /home/joaoklug/Documentos/Projetos/Dr.Well/DrWell/build/Desktop_Qt_6_9_1-Debug/moc_predefs.h -I/home/joaoklug/Qt/6.9.1/gcc_64/mkspecs/linux-g++ -I/home/joaoklug/Documentos/Projetos/Dr.Well/DrWell -I/home/joaoklug/Qt/6.9.1/gcc_64/include -I/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets -I/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui -I/home/joaoklug/Qt/6.9.1/gcc_64/include/QtSql -I/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore -I. -I/usr/include/c++/13 -I/usr/include/x86_64-linux-gnu/c++/13 -I/usr/include/c++/13/backward -I/usr/lib/gcc/x86_64-linux-gnu/13/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../../telaagendacompleta.h -o moc_telaagendacompleta.cpp
@@ -2968,6 +2998,9 @@ moc_telagerenciarprontuarios.cpp: ../../telagerenciarprontuarios.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qinputmethod.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qlocale.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qguiapplication_platform.h \
+		../../Medico.h \
+		../../Usuario.h \
+		../../Pessoa.h \
 		moc_predefs.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/libexec/moc
 	/home/joaoklug/Qt/6.9.1/gcc_64/libexec/moc $(DEFINES) --include /home/joaoklug/Documentos/Projetos/Dr.Well/DrWell/build/Desktop_Qt_6_9_1-Debug/moc_predefs.h -I/home/joaoklug/Qt/6.9.1/gcc_64/mkspecs/linux-g++ -I/home/joaoklug/Documentos/Projetos/Dr.Well/DrWell -I/home/joaoklug/Qt/6.9.1/gcc_64/include -I/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets -I/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui -I/home/joaoklug/Qt/6.9.1/gcc_64/include/QtSql -I/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore -I. -I/usr/include/c++/13 -I/usr/include/x86_64-linux-gnu/c++/13 -I/usr/include/c++/13/backward -I/usr/lib/gcc/x86_64-linux-gnu/13/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../../telagerenciarprontuarios.h -o moc_telagerenciarprontuarios.cpp
@@ -3169,6 +3202,9 @@ moc_telahistoricomedico.cpp: ../../telahistoricomedico.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qinputmethod.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qlocale.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qguiapplication_platform.h \
+		../../Medico.h \
+		../../Usuario.h \
+		../../Pessoa.h \
 		moc_predefs.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/libexec/moc
 	/home/joaoklug/Qt/6.9.1/gcc_64/libexec/moc $(DEFINES) --include /home/joaoklug/Documentos/Projetos/Dr.Well/DrWell/build/Desktop_Qt_6_9_1-Debug/moc_predefs.h -I/home/joaoklug/Qt/6.9.1/gcc_64/mkspecs/linux-g++ -I/home/joaoklug/Documentos/Projetos/Dr.Well/DrWell -I/home/joaoklug/Qt/6.9.1/gcc_64/include -I/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets -I/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui -I/home/joaoklug/Qt/6.9.1/gcc_64/include/QtSql -I/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore -I. -I/usr/include/c++/13 -I/usr/include/x86_64-linux-gnu/c++/13 -I/usr/include/c++/13/backward -I/usr/lib/gcc/x86_64-linux-gnu/13/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../../telahistoricomedico.h -o moc_telahistoricomedico.cpp
@@ -3370,6 +3406,8 @@ moc_telalogin.cpp: ../../telalogin.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qinputmethod.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qlocale.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qguiapplication_platform.h \
+		../../Usuario.h \
+		../../Pessoa.h \
 		moc_predefs.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/libexec/moc
 	/home/joaoklug/Qt/6.9.1/gcc_64/libexec/moc $(DEFINES) --include /home/joaoklug/Documentos/Projetos/Dr.Well/DrWell/build/Desktop_Qt_6_9_1-Debug/moc_predefs.h -I/home/joaoklug/Qt/6.9.1/gcc_64/mkspecs/linux-g++ -I/home/joaoklug/Documentos/Projetos/Dr.Well/DrWell -I/home/joaoklug/Qt/6.9.1/gcc_64/include -I/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets -I/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui -I/home/joaoklug/Qt/6.9.1/gcc_64/include/QtSql -I/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore -I. -I/usr/include/c++/13 -I/usr/include/x86_64-linux-gnu/c++/13 -I/usr/include/c++/13/backward -I/usr/lib/gcc/x86_64-linux-gnu/13/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../../telalogin.h -o moc_telalogin.cpp
@@ -3659,6 +3697,133 @@ Clinica.o: ../../Clinica.cpp ../../Clinica.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o Clinica.o ../../Clinica.cpp
 
 Consulta.o: ../../Consulta.cpp ../../Consulta.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/QDate \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qdatetime.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qcalendar.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qglobal.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtcoreglobal.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtversionchecks.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtconfiginclude.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qconfig.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtcore-config.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtconfigmacros.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtdeprecationdefinitions.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qcompilerdetection.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qprocessordetection.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qsystemdetection.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtcoreexports.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtdeprecationmarkers.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtclasshelpermacros.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtpreprocessorsupport.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qassert.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtnoop.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtypes.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtversion.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtypeinfo.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qcontainerfwd.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qsysinfo.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qlogging.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qflags.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qcompare_impl.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qatomic.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qbasicatomic.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qatomic_cxx11.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qgenericatomic.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qyieldcpu.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qconstructormacros.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qdarwinhelpers.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qexceptionhandling.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qforeach.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qttypetraits.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qfunctionpointer.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qglobalstatic.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qmalloc.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qminmax.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qnumeric.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qoverload.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qswap.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtenvironmentvariables.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtresource.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qttranslation.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qversiontagging.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qlocale.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qvariant.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qcompare.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qstdlibdetection.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qcomparehelpers.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/q20type_traits.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qmetatype.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qbytearray.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qrefcount.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qnamespace.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtmetamacros.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qarraydata.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qpair.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qarraydatapointer.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qarraydataops.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qcontainertools_impl.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qxptype_traits.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/q20functional.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/q20memory.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/q17memory.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qbytearrayalgorithms.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qbytearrayview.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qstringfwd.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qdatastream.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qscopedpointer.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qiodevicebase.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qfloat16.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qhashfunctions.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qstring.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qchar.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qstringview.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qstringliteral.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qstringalgorithms.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qlatin1stringview.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qanystringview.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qutf8stringview.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qstringtokenizer.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qstringbuilder.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qstringconverter.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qstringconverter_base.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qmath.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qalgorithms.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtformat_impl.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qiterable.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qmetacontainer.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qcontainerinfo.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtaggedpointer.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qobjectdefs.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qfunctionaltools_impl.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qscopeguard.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qdebug.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtextstream.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qcontiguouscache.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qsharedpointer.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qshareddata.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qsharedpointer_impl.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qlist.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qiterator.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qbytearraylist.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qstringlist.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qstringmatcher.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qmap.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qshareddata_impl.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qset.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qhash.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qvarlengtharray.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/q23utility.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/q20utility.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qobject.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qcoreevent.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qbasictimer.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qabstracteventdispatcher.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qeventloop.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qdeadlinetimer.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qelapsedtimer.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qobject_impl.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qbindingstorage.h \
 		../../Medico.h \
 		../../Usuario.h \
 		../../Pessoa.h \
@@ -3672,7 +3837,134 @@ Medico.o: ../../Medico.cpp ../../Medico.h \
 
 Paciente.o: ../../Paciente.cpp ../../Paciente.h \
 		../../Pessoa.h \
-		../../Consulta.h
+		../../Consulta.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/QDate \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qdatetime.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qcalendar.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qglobal.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtcoreglobal.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtversionchecks.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtconfiginclude.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qconfig.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtcore-config.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtconfigmacros.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtdeprecationdefinitions.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qcompilerdetection.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qprocessordetection.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qsystemdetection.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtcoreexports.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtdeprecationmarkers.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtclasshelpermacros.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtpreprocessorsupport.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qassert.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtnoop.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtypes.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtversion.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtypeinfo.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qcontainerfwd.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qsysinfo.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qlogging.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qflags.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qcompare_impl.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qatomic.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qbasicatomic.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qatomic_cxx11.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qgenericatomic.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qyieldcpu.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qconstructormacros.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qdarwinhelpers.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qexceptionhandling.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qforeach.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qttypetraits.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qfunctionpointer.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qglobalstatic.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qmalloc.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qminmax.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qnumeric.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qoverload.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qswap.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtenvironmentvariables.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtresource.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qttranslation.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qversiontagging.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qlocale.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qvariant.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qcompare.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qstdlibdetection.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qcomparehelpers.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/q20type_traits.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qmetatype.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qbytearray.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qrefcount.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qnamespace.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtmetamacros.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qarraydata.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qpair.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qarraydatapointer.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qarraydataops.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qcontainertools_impl.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qxptype_traits.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/q20functional.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/q20memory.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/q17memory.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qbytearrayalgorithms.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qbytearrayview.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qstringfwd.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qdatastream.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qscopedpointer.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qiodevicebase.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qfloat16.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qhashfunctions.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qstring.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qchar.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qstringview.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qstringliteral.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qstringalgorithms.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qlatin1stringview.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qanystringview.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qutf8stringview.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qstringtokenizer.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qstringbuilder.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qstringconverter.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qstringconverter_base.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qmath.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qalgorithms.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtformat_impl.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qiterable.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qmetacontainer.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qcontainerinfo.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtaggedpointer.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qobjectdefs.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qfunctionaltools_impl.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qscopeguard.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qdebug.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtextstream.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qcontiguouscache.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qsharedpointer.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qshareddata.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qsharedpointer_impl.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qlist.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qiterator.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qbytearraylist.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qstringlist.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qstringmatcher.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qmap.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qshareddata_impl.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qset.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qhash.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qvarlengtharray.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/q23utility.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/q20utility.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qobject.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qcoreevent.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qbasictimer.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qabstracteventdispatcher.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qeventloop.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qdeadlinetimer.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qelapsedtimer.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qobject_impl.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qbindingstorage.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o Paciente.o ../../Paciente.cpp
 
 Pessoa.o: ../../Pessoa.cpp ../../Pessoa.h
@@ -3682,6 +3974,133 @@ Secretario.o: ../../Secretario.cpp ../../Secretario.h \
 		../../Usuario.h \
 		../../Pessoa.h \
 		../../Consulta.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/QDate \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qdatetime.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qcalendar.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qglobal.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtcoreglobal.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtversionchecks.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtconfiginclude.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qconfig.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtcore-config.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtconfigmacros.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtdeprecationdefinitions.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qcompilerdetection.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qprocessordetection.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qsystemdetection.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtcoreexports.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtdeprecationmarkers.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtclasshelpermacros.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtpreprocessorsupport.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qassert.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtnoop.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtypes.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtversion.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtypeinfo.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qcontainerfwd.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qsysinfo.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qlogging.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qflags.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qcompare_impl.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qatomic.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qbasicatomic.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qatomic_cxx11.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qgenericatomic.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qyieldcpu.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qconstructormacros.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qdarwinhelpers.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qexceptionhandling.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qforeach.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qttypetraits.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qfunctionpointer.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qglobalstatic.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qmalloc.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qminmax.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qnumeric.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qoverload.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qswap.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtenvironmentvariables.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtresource.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qttranslation.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qversiontagging.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qlocale.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qvariant.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qcompare.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qstdlibdetection.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qcomparehelpers.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/q20type_traits.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qmetatype.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qbytearray.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qrefcount.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qnamespace.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtmetamacros.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qarraydata.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qpair.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qarraydatapointer.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qarraydataops.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qcontainertools_impl.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qxptype_traits.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/q20functional.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/q20memory.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/q17memory.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qbytearrayalgorithms.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qbytearrayview.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qstringfwd.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qdatastream.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qscopedpointer.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qiodevicebase.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qfloat16.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qhashfunctions.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qstring.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qchar.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qstringview.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qstringliteral.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qstringalgorithms.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qlatin1stringview.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qanystringview.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qutf8stringview.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qstringtokenizer.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qstringbuilder.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qstringconverter.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qstringconverter_base.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qmath.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qalgorithms.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtformat_impl.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qiterable.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qmetacontainer.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qcontainerinfo.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtaggedpointer.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qobjectdefs.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qfunctionaltools_impl.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qscopeguard.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qdebug.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qtextstream.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qcontiguouscache.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qsharedpointer.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qshareddata.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qsharedpointer_impl.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qlist.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qiterator.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qbytearraylist.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qstringlist.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qstringmatcher.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qmap.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qshareddata_impl.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qset.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qhash.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qvarlengtharray.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/q23utility.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/q20utility.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qobject.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qcoreevent.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qbasictimer.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qabstracteventdispatcher.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qeventloop.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qdeadlinetimer.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qelapsedtimer.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qobject_impl.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qbindingstorage.h \
 		../../Medico.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o Secretario.o ../../Secretario.cpp
 
@@ -3898,6 +4317,9 @@ main.o: ../../main.cpp ../../mainwindow.h \
 		../../Secretario.h \
 		../../Administrador.h \
 		../../Consulta.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/QDate \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qdatetime.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qcalendar.h \
 		../../GerenciadorBanco.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtSql/QSqlDatabase \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtSql/qsqldatabase.h \
@@ -4120,22 +4542,17 @@ mainwindow.o: ../../mainwindow.cpp ../../mainwindow.h \
 		../../Secretario.h \
 		../../Administrador.h \
 		../../Consulta.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/QDate \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qdatetime.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qcalendar.h \
 		ui_mainwindow.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/QVariant \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QApplication \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qapplication.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QMenuBar \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qmenubar.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qmenu.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QStackedWidget \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qstackedwidget.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qframe.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QStatusBar \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qstatusbar.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QWidget \
 		../../telalogin.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QWidget \
 		../../telaregistro.h \
 		../../telaagendacompleta.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/QStandardItemModel \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qstandarditemmodel.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qabstractitemmodel.h \
 		../../telagerenciarprontuarios.h \
 		../../telahistoricomedico.h \
 		../../telainicialadministrador.h \
@@ -4344,24 +4761,7 @@ telacadastrarpaciente.o: ../../telacadastrarpaciente.cpp ../../telacadastrarpaci
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qinputmethod.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qlocale.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qguiapplication_platform.h \
-		ui_telacadastrarpaciente.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/QVariant \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QApplication \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qapplication.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QLabel \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qlabel.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qframe.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qpicture.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qtextdocument.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QLineEdit \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qlineedit.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qtextcursor.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qtextformat.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qpen.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qtextoption.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QPushButton \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qpushbutton.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractbutton.h
+		ui_telacadastrarpaciente.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o telacadastrarpaciente.o ../../telacadastrarpaciente.cpp
 
 telagerenciarconsultas.o: ../../telagerenciarconsultas.cpp ../../telagerenciarconsultas.h \
@@ -4561,43 +4961,31 @@ telagerenciarconsultas.o: ../../telagerenciarconsultas.cpp ../../telagerenciarco
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qinputmethod.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qlocale.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qguiapplication_platform.h \
-		ui_telagerenciarconsultas.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/QVariant \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QApplication \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qapplication.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QHeaderView \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qheaderview.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractitemview.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractscrollarea.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qframe.h \
+		../../Secretario.h \
+		../../Usuario.h \
+		../../Pessoa.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/QStandardItemModel \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qstandarditemmodel.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qabstractitemmodel.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qitemselectionmodel.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qstyleoption.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractspinbox.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qvalidator.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qregularexpression.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qslider.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractslider.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qstyle.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qtabbar.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qtabwidget.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qrubberband.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QLabel \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qlabel.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qpicture.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qtextdocument.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QLineEdit \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qlineedit.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qtextcursor.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qtextformat.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qpen.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qtextoption.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QPushButton \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qpushbutton.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractbutton.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QTableView \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qtableview.h
+		ui_telagerenciarconsultas.h \
+		../../GerenciadorBanco.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtSql/QSqlDatabase \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtSql/qsqldatabase.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtSql/qtsqlglobal.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtSql/qtsql-config.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtSql/qtsqlexports.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qmetaobject.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/QString \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtSql/QSqlQuery \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtSql/qsqlquery.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/QDate \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qdatetime.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qcalendar.h \
+		../../Medico.h \
+		../../Administrador.h \
+		../../Consulta.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/QStandardItem \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/QDateTime
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o telagerenciarconsultas.o ../../telagerenciarconsultas.cpp
 
 telagerenciarpacientes.o: ../../telagerenciarpacientes.cpp ../../telagerenciarpacientes.h \
@@ -4797,43 +5185,10 @@ telagerenciarpacientes.o: ../../telagerenciarpacientes.cpp ../../telagerenciarpa
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qinputmethod.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qlocale.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qguiapplication_platform.h \
-		ui_telagerenciarpacientes.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/QVariant \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QApplication \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qapplication.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QHeaderView \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qheaderview.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractitemview.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractscrollarea.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qframe.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qabstractitemmodel.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qitemselectionmodel.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qstyleoption.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractspinbox.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qvalidator.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qregularexpression.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qslider.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractslider.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qstyle.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qtabbar.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qtabwidget.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qrubberband.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QLabel \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qlabel.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qpicture.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qtextdocument.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QLineEdit \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qlineedit.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qtextcursor.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qtextformat.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qpen.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qtextoption.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QPushButton \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qpushbutton.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractbutton.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QTableView \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qtableview.h
+		../../Secretario.h \
+		../../Usuario.h \
+		../../Pessoa.h \
+		ui_telagerenciarpacientes.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o telagerenciarpacientes.o ../../telagerenciarpacientes.cpp
 
 telainicialadministrador.o: ../../telainicialadministrador.cpp ../../telainicialadministrador.h \
@@ -5033,37 +5388,10 @@ telainicialadministrador.o: ../../telainicialadministrador.cpp ../../telainicial
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qinputmethod.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qlocale.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qguiapplication_platform.h \
-		ui_telainicialadministrador.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/QVariant \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QApplication \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qapplication.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QHeaderView \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qheaderview.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractitemview.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractscrollarea.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qframe.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qabstractitemmodel.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qitemselectionmodel.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qstyleoption.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractspinbox.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qvalidator.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qregularexpression.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qslider.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractslider.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qstyle.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qtabbar.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qtabwidget.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qrubberband.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QLabel \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qlabel.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qpicture.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qtextdocument.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QPushButton \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qpushbutton.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractbutton.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QTableView \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qtableview.h
+		../../Administrador.h \
+		../../Usuario.h \
+		../../Pessoa.h \
+		ui_telainicialadministrador.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o telainicialadministrador.o ../../telainicialadministrador.cpp
 
 telaagendacompleta.o: ../../telaagendacompleta.cpp ../../telaagendacompleta.h \
@@ -5263,43 +5591,29 @@ telaagendacompleta.o: ../../telaagendacompleta.cpp ../../telaagendacompleta.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qinputmethod.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qlocale.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qguiapplication_platform.h \
-		ui_telaagendacompleta.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/QVariant \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QApplication \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qapplication.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QHeaderView \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qheaderview.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractitemview.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractscrollarea.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qframe.h \
+		../../Medico.h \
+		../../Usuario.h \
+		../../Pessoa.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/QStandardItemModel \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qstandarditemmodel.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qabstractitemmodel.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qitemselectionmodel.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qstyleoption.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractspinbox.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qvalidator.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qregularexpression.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qslider.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractslider.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qstyle.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qtabbar.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qtabwidget.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qrubberband.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QLabel \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qlabel.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qpicture.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qtextdocument.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QLineEdit \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qlineedit.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qtextcursor.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qtextformat.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qpen.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qtextoption.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QPushButton \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qpushbutton.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractbutton.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QTableView \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qtableview.h
+		ui_telaagendacompleta.h \
+		../../GerenciadorBanco.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtSql/QSqlDatabase \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtSql/qsqldatabase.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtSql/qtsqlglobal.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtSql/qtsql-config.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtSql/qtsqlexports.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qmetaobject.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/QString \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtSql/QSqlQuery \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtSql/qsqlquery.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/QDate \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qdatetime.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qcalendar.h \
+		../../Secretario.h \
+		../../Administrador.h \
+		../../Consulta.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o telaagendacompleta.o ../../telaagendacompleta.cpp
 
 telagerenciarprontuarios.o: ../../telagerenciarprontuarios.cpp ../../telagerenciarprontuarios.h \
@@ -5499,43 +5813,10 @@ telagerenciarprontuarios.o: ../../telagerenciarprontuarios.cpp ../../telagerenci
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qinputmethod.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qlocale.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qguiapplication_platform.h \
+		../../Medico.h \
+		../../Usuario.h \
+		../../Pessoa.h \
 		ui_telagerenciarprontuarios.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/QVariant \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QApplication \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qapplication.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QHeaderView \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qheaderview.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractitemview.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractscrollarea.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qframe.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qabstractitemmodel.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qitemselectionmodel.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qstyleoption.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractspinbox.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qvalidator.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qregularexpression.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qslider.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractslider.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qstyle.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qtabbar.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qtabwidget.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qrubberband.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QLabel \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qlabel.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qpicture.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qtextdocument.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QLineEdit \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qlineedit.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qtextcursor.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qtextformat.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qpen.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qtextoption.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QPushButton \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qpushbutton.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractbutton.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QTableView \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qtableview.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o telagerenciarprontuarios.o ../../telagerenciarprontuarios.cpp
 
@@ -5736,43 +6017,10 @@ telahistoricomedico.o: ../../telahistoricomedico.cpp ../../telahistoricomedico.h
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qinputmethod.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qlocale.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qguiapplication_platform.h \
-		ui_telahistoricomedico.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/QVariant \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QApplication \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qapplication.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QHeaderView \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qheaderview.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractitemview.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractscrollarea.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qframe.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qabstractitemmodel.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qitemselectionmodel.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qstyleoption.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractspinbox.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qvalidator.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qregularexpression.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qslider.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractslider.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qstyle.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qtabbar.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qtabwidget.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qrubberband.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QLabel \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qlabel.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qpicture.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qtextdocument.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QLineEdit \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qlineedit.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qtextcursor.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qtextformat.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qpen.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qtextoption.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QPushButton \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qpushbutton.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractbutton.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QTableView \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qtableview.h
+		../../Medico.h \
+		../../Usuario.h \
+		../../Pessoa.h \
+		ui_telahistoricomedico.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o telahistoricomedico.o ../../telahistoricomedico.cpp
 
 telalogin.o: ../../telalogin.cpp ../../telalogin.h \
@@ -5972,25 +6220,9 @@ telalogin.o: ../../telalogin.cpp ../../telalogin.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qinputmethod.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qlocale.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qguiapplication_platform.h \
+		../../Usuario.h \
+		../../Pessoa.h \
 		ui_telalogin.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/QVariant \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QApplication \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qapplication.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QLabel \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qlabel.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qframe.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qpicture.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qtextdocument.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QPushButton \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qpushbutton.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractbutton.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QTextEdit \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qtextedit.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractscrollarea.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qtextoption.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qtextcursor.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qtextformat.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qpen.h \
 		../../GerenciadorBanco.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtSql/QSqlDatabase \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtSql/qsqldatabase.h \
@@ -6001,6 +6233,13 @@ telalogin.o: ../../telalogin.cpp ../../telalogin.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/QString \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtSql/QSqlQuery \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtSql/qsqlquery.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/QDate \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qdatetime.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qcalendar.h \
+		../../Medico.h \
+		../../Secretario.h \
+		../../Administrador.h \
+		../../Consulta.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QMessageBox \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qmessagebox.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qdialog.h \
@@ -6204,24 +6443,7 @@ telamarcarconsulta.o: ../../telamarcarconsulta.cpp ../../telamarcarconsulta.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qinputmethod.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qlocale.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qguiapplication_platform.h \
-		ui_telamarcarconsulta.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/QVariant \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QApplication \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qapplication.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QLabel \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qlabel.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qframe.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qpicture.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qtextdocument.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QLineEdit \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qlineedit.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qtextcursor.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qtextformat.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qpen.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qtextoption.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QPushButton \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qpushbutton.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractbutton.h
+		ui_telamarcarconsulta.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o telamarcarconsulta.o ../../telamarcarconsulta.cpp
 
 telaregistro.o: ../../telaregistro.cpp ../../telaregistro.h \
@@ -6422,38 +6644,6 @@ telaregistro.o: ../../telaregistro.cpp ../../telaregistro.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qlocale.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qguiapplication_platform.h \
 		ui_telaregistro.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/QVariant \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QApplication \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qapplication.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QComboBox \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qcombobox.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qstyleoption.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractspinbox.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qvalidator.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qregularexpression.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qslider.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractslider.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qstyle.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qtabbar.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qtabwidget.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qrubberband.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qframe.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qabstractitemmodel.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QLabel \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qlabel.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qpicture.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qtextdocument.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QPushButton \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qpushbutton.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractbutton.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QTextEdit \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qtextedit.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractscrollarea.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qtextoption.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qtextcursor.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qtextformat.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qpen.h \
 		../../GerenciadorBanco.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtSql/QSqlDatabase \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtSql/qsqldatabase.h \
@@ -6464,9 +6654,19 @@ telaregistro.o: ../../telaregistro.cpp ../../telaregistro.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/QString \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtSql/QSqlQuery \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtSql/qsqlquery.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/QDate \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qdatetime.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qcalendar.h \
+		../../Medico.h \
+		../../Usuario.h \
+		../../Pessoa.h \
+		../../Secretario.h \
+		../../Administrador.h \
+		../../Consulta.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/QVariantMap \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qvariantmap.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/QMap \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/QVariant \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QMessageBox \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qmessagebox.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qdialog.h \
@@ -6670,37 +6870,29 @@ telainicialmedico.o: ../../telainicialmedico.cpp ../../telainicialmedico.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qinputmethod.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qlocale.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qguiapplication_platform.h \
-		ui_telainicialmedico.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/QVariant \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QApplication \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qapplication.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QHeaderView \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qheaderview.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractitemview.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractscrollarea.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qframe.h \
+		../../Medico.h \
+		../../Usuario.h \
+		../../Pessoa.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/QStandardItemModel \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qstandarditemmodel.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qabstractitemmodel.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qitemselectionmodel.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qstyleoption.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractspinbox.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qvalidator.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qregularexpression.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qslider.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractslider.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qstyle.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qtabbar.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qtabwidget.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qrubberband.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QLabel \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qlabel.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qpicture.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qtextdocument.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QPushButton \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qpushbutton.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractbutton.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QTableView \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qtableview.h
+		ui_telainicialmedico.h \
+		../../GerenciadorBanco.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtSql/QSqlDatabase \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtSql/qsqldatabase.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtSql/qtsqlglobal.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtSql/qtsql-config.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtSql/qtsqlexports.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qmetaobject.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/QString \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtSql/QSqlQuery \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtSql/qsqlquery.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/QDate \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qdatetime.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qcalendar.h \
+		../../Secretario.h \
+		../../Administrador.h \
+		../../Consulta.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o telainicialmedico.o ../../telainicialmedico.cpp
 
 telainicialsecretario.o: ../../telainicialsecretario.cpp ../../telainicialsecretario.h \
@@ -6900,37 +7092,10 @@ telainicialsecretario.o: ../../telainicialsecretario.cpp ../../telainicialsecret
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qinputmethod.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qlocale.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qguiapplication_platform.h \
-		ui_telainicialsecretario.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/QVariant \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QApplication \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qapplication.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QHeaderView \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qheaderview.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractitemview.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractscrollarea.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qframe.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qabstractitemmodel.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qitemselectionmodel.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qstyleoption.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractspinbox.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qvalidator.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qregularexpression.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qslider.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractslider.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qstyle.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qtabbar.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qtabwidget.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qrubberband.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QLabel \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qlabel.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qpicture.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtGui/qtextdocument.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QPushButton \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qpushbutton.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractbutton.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/QTableView \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtWidgets/qtableview.h
+		../../Secretario.h \
+		../../Usuario.h \
+		../../Pessoa.h \
+		ui_telainicialsecretario.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o telainicialsecretario.o ../../telainicialsecretario.cpp
 
 GerenciadorBanco.o: ../../GerenciadorBanco.cpp ../../GerenciadorBanco.h \
@@ -7066,13 +7231,20 @@ GerenciadorBanco.o: ../../GerenciadorBanco.cpp ../../GerenciadorBanco.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/QString \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtSql/QSqlQuery \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtSql/qsqlquery.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtSql/QSqlError \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtSql/qsqlerror.h \
-		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/QDebug \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/QList \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/QDate \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qdatetime.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qcalendar.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/qlocale.h \
+		../../Medico.h \
+		../../Usuario.h \
+		../../Pessoa.h \
+		../../Secretario.h \
+		../../Administrador.h \
+		../../Consulta.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtSql/QSqlError \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtSql/qsqlerror.h \
+		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtCore/QDebug \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtSql/QSqlRecord \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtSql/qsqlrecord.h \
 		/home/joaoklug/Qt/6.9.1/gcc_64/include/QtSql/QSqlField \

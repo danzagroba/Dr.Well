@@ -29,6 +29,10 @@ public:
     QList<Consulta> recuperarConsultasDia(const QDate& data);
     QList<Consulta> recuperarConsultasMedico(const QString& medico_crm, const QDate& data = QDate()); // QDate() é uma data nula/inválida
     QList<Consulta> recuperarConsultasPaciente(int id_paciente, const QDate& data = QDate());
+    QList<Consulta> recuperarTodasConsultas();
+
+    bool atualizarStatusConsulta(int consultaId, const QString& novoStatus);
+    bool marcarConsulta(const QDateTime& dataHora, float custo, const QString& medicoCrm, const QString& pacienteCpf);
 
 private:
     GerenciadorBanco();
@@ -42,6 +46,7 @@ private:
 
     bool comandoSQL(const QString& comando);
     bool listarSelect(QSqlQuery& q);
+
 };
 
 #endif // GERENCIADORBANCO_H

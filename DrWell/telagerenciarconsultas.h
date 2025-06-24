@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <Secretario.h>
+#include <QStandardItemModel>
 
 namespace Ui {
 class TelaGerenciarConsultas;
@@ -37,8 +38,11 @@ private slots:
 private:
     Ui::TelaGerenciarConsultas *ui;
     std::shared_ptr<Secretario> secretario;
+    QStandardItemModel *m_consultasModel;
 
     void atualizarLabels();
+    void carregarConsultas();
+
 };
 
 #endif // TELAGERENCIARCONSULTAS_H

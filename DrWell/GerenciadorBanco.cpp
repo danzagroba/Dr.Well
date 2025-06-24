@@ -385,7 +385,7 @@ QList<Consulta> GerenciadorBanco::recuperarConsultasPaciente(int id_paciente, co
 
     // A query agora junta com a tabela de pacientes para obter o nome
     QString sql = R"(
-        SELECT c.id, c.data_hora, c.status, c.custo, c.crm AS medico_crm, p.nome AS paciente_nome
+        SELECT c.id, c.data_hora, c.status, c.preco_consulta, c.crm AS medico_crm, p.nome AS paciente_nome
         FROM consultas c
         JOIN pacientes p ON c.id_paciente = p.id
         WHERE c.id_paciente = :id_paciente
@@ -433,7 +433,7 @@ QList<Consulta> GerenciadorBanco::recuperarConsultasDia(const QDate& data) {
     // A query agora junta com a tabela de pacientes para obter o nome
     QSqlQuery query(m_db);
     query.prepare(R"(
-        SELECT c.id, c.data_hora, c.status, c.custo, c.crm AS medico_crm, p.nome AS paciente_nome
+        SELECT c.id, c.data_hora, c.status, c.preco_consulta, c.crm AS medico_crm, p.nome AS paciente_nome
         FROM consultas c
         JOIN pacientes p ON c.id_paciente = p.id
         WHERE DATE(c.data_hora) = :data
@@ -458,5 +458,107 @@ QList<Consulta> GerenciadorBanco::recuperarConsultasDia(const QDate& data) {
     }
 
     return consultas;
+}
+QList<Consulta> GerenciadorBanco::recuperarTodasConsultas() {
+    QList<Consulta> consultas;
+    if (!m_db.isOpen()) {
+        qDebug() << "Banco de dados não está aberto.";
+        return consultas;
+    }
+
+    QString sql = R"(
+        SELECT c.id, c.data_hora, c.status, c.preco_consulta, c.crm AS medico_crm, p.nome AS paciente_nome
+        FROM consultas c
+        JOIN pacientes p ON c.id_paciente = p.id
+    )";
+
+    QSqlQuery query(m_db);
+    query.prepare(sql);
+
+    if (!query.exec()) {
+        qDebug() << "Erro ao buscar todas as consultas:" << query.lastError().text();
+        return consultas;
+    }
+
+    while (query.next()) {
+        int id = query.value("id").toInt();
+        QDateTime dataHoraQt = query.value("data_hora").toDateTime();
+        Horario dataHora = Consulta::fromQDateTime(dataHoraQt);
+        float custo = query.value("preco_consulta").toFloat();
+        std::string status = query.value("status").toString().toStdString();
+        std::string crm = query.value("medico_crm").toString().toStdString();
+        std::string pacienteNome = query.value("paciente_nome").toString().toStdString();
+
+        consultas.append(Consulta(id, dataHora, custo, status, crm, pacienteNome));
+    }
+
+    return consultas;
+}
+bool GerenciadorBanco::atualizarStatusConsulta(int consultaId, const QString& novoStatus) {
+    if (!m_db.isOpen()) {
+        qDebug() << "Banco de dados não está aberto para atualizar status.";
+        return false;
+    }
+
+    QSqlQuery query(m_db);
+    query.prepare("UPDATE consultas SET status = :status WHERE id = :id");
+    query.bindValue(":status", novoStatus);
+    query.bindValue(":id", consultaId);
+
+    if (!query.exec()) {
+        qDebug() << "Erro ao atualizar status da consulta:" << query.lastError().text();
+        return false;
+    }
+
+    qDebug() << "Status da consulta" << consultaId << "atualizado para" << novoStatus;
+    return query.numRowsAffected() > 0;
+}
+bool GerenciadorBanco::marcarConsulta(const QDateTime& dataHora, float custo, const QString& medicoCrm, const QString& pacienteCpf) {
+    if (!m_db.isOpen()) {
+        qDebug() << "Banco de dados não está aberto.";
+        return false;
+    }
+
+    // 1. Encontrar o ID do paciente a partir do CPF
+    QSqlQuery queryPaciente(m_db);
+    queryPaciente.prepare("SELECT id FROM pacientes WHERE cpf = :cpf");
+    queryPaciente.bindValue(":cpf", pacienteCpf);
+    if (!queryPaciente.exec() || !queryPaciente.next()) {
+        qDebug() << "Erro ao encontrar paciente com CPF:" << pacienteCpf << queryPaciente.lastError().text();
+        return false;
+    }
+    int pacienteId = queryPaciente.value("id").toInt();
+
+    // 2. Iniciar a transação
+    if (!m_db.transaction()) {
+        qDebug() << "Falha ao iniciar a transacao:" << m_db.lastError().text();
+        return false;
+    }
+
+    // 3. Inserir a nova consulta
+    QSqlQuery queryConsulta(m_db);
+    queryConsulta.prepare("INSERT INTO consultas (data_hora, preco_consulta, status, crm, id_paciente) "
+                          "VALUES (:data_hora, :custo, :status, :crm, :id_paciente)");
+    queryConsulta.bindValue(":data_hora", dataHora.toString(Qt::ISODate));
+    queryConsulta.bindValue(":custo", custo);
+    queryConsulta.bindValue(":status", "Agendada"); // Status inicial
+    queryConsulta.bindValue(":crm", medicoCrm);
+    queryConsulta.bindValue(":id_paciente", pacienteId);
+
+    if (!queryConsulta.exec()) {
+        qDebug() << "Falha ao inserir na tabela de consultas:" << queryConsulta.lastError().text();
+        m_db.rollback();
+        return false;
+    }
+
+    // 4. Comitar a transação
+    if (!m_db.commit()) {
+        qDebug() << "Falha ao comitar a transacao:" << m_db.lastError().text();
+        m_db.rollback();
+        return false;
+    }
+
+    qDebug() << "Consulta marcada com sucesso!";
+    return true;
 }
 
