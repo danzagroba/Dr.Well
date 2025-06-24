@@ -4,6 +4,7 @@ debug/Consulta.o
 debug/Medico.o
 debug/Paciente.o
 debug/Pessoa.o
+debug/Prontuario.o
 debug/Secretario.o
 debug/Usuario.o
 debug/main.o

@@ -175,7 +175,7 @@ void MainWindow::irParaTelaInicialUsuario(int id, std::shared_ptr<Usuario> usuar
         break;
     case 2:
         irParaTelaInicialSecretario();
-        telaInicialSecretario->setSecretario(std::dynamic_pointer_cast<Secretario>(usuario));
+        // telaInicialSecretario->setSecretario(std::dynamic_pointer_cast<Secretario>(usuario));
         telaGerenciarConsultas->setSecretario(std::dynamic_pointer_cast<Secretario>(usuario));
         telaGerenciarPacientes->setSecretario(std::dynamic_pointer_cast<Secretario>(usuario));
         break;

@@ -4,6 +4,7 @@ release/Consulta.o
 release/Medico.o
 release/Paciente.o
 release/Pessoa.o
+release/Prontuario.o
 release/Secretario.o
 release/Usuario.o
 release/main.o

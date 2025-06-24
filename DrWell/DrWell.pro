@@ -16,6 +16,7 @@ SOURCES += \
     Medico.cpp \
     Paciente.cpp \
     Pessoa.cpp \
+    Prontuario.cpp \
     Secretario.cpp \
     Usuario.cpp \
     main.cpp \
@@ -41,6 +42,7 @@ HEADERS += \
     Medico.h \
     Paciente.h \
     Pessoa.h \
+    Prontuario.h \
     Secretario.h \
     Usuario.h \
     mainwindow.h \

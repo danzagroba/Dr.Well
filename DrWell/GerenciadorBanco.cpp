@@ -50,27 +50,12 @@ void GerenciadorBanco::inicializar(){
     QStringList queriesParaExecutar;
 
     // queriesParaExecutar << R"(
-    //     select pa.nome, pa.sobrenome, p.tipo_registro, p.detalhes from prontuarios as p join consultas as c on p.id_consulta = c.id join pacientes as pa on c.id_paciente = pa.id ;
+    // select pr.id, pa.nome, pa.sobrenome, pr.tipo_registro, pr.detalhes, pr.data_registro
+    // from prontuarios pr
+    //     join consultas c on pr.id_consulta = c.id
+    //     join pacientes pa on c.id_paciente = pa.id
+    // where c.crm = :crm_medico
     // )";
-
-    // queriesParaExecutar << R"(
-    //     select * from historicos join medicos;
-    // )";
-
-    // select para obter nomes completos do medico e do paciente e na consulta e a data hora dessa
-    // c.id, u.nome, u.sobrenome, p.nome, p.sobrenome, c.data_hora
-    // queriesParaExecutar << R"(
-    //     SELECT *
-    //     FROM usuarios u JOIN medicos m ON u.id = m.usuario_id JOIN consultas c ON m.crm = c.crm JOIN pacientes p ON c.id_paciente = p.id
-    //     WHERE m.crm = 'CRM/PR 12347'
-    //     ;
-    // )";
-
-    // queriesParaExecutar << R"(
-    //     select cpf, senha_hash from usuarios;
-    // )";
-
-
 
     for (const QString &query : queriesParaExecutar) {
         comandoSQL(query); // Chamando a sua função para cada item da lista
