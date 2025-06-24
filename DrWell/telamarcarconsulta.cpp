@@ -10,7 +10,7 @@ TelaMarcarConsulta::TelaMarcarConsulta(QWidget *parent)
 {
     ui->setupUi(this);
 
-    ui->lineEditData->setPlaceholderText("dd/MM/yy hh:mm");
+    ui->lineEditData->setPlaceholderText("dd/MM/yyyy hh:mm");
     ui->lineEditMedico->setPlaceholderText("CRM do Médico");
     ui->lineEditPaciente->setPlaceholderText("CPF do Paciente");
     ui->lineEditCusto->setPlaceholderText("Ex: 150.00");
@@ -43,9 +43,9 @@ void TelaMarcarConsulta::on_pushButtonMarcar_clicked()
         return;
     }
 
-    QDateTime dataHora = QDateTime::fromString(dataHoraStr, "dd/MM/yy hh:mm");
+    QDateTime dataHora = QDateTime::fromString(dataHoraStr, "dd/MM/yyyy hh:mm");
     if (!dataHora.isValid()) {
-        QMessageBox::warning(this, "Data Inválida", "Formato de data e hora inválido. Use dd/MM/yy hh:mm.");
+        QMessageBox::warning(this, "Data Inválida", "Formato de data e hora inválido. Use dd/MM/yyyy hh:mm.");
         return;
     }
 
